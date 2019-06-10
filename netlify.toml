@@ -1,0 +1,4 @@
+[build]
+  command = "PATH=$PATH:$GOPATH/bin make functions"
+  functions = "./functions-build"
+  publish = "web"

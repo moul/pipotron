@@ -1,3 +1,4 @@
+functions-build/
 */*-packr.go
 .git/
 *~
