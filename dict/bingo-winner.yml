@@ -1,0 +1,26 @@
+output:
+- "{{pick .bullshit}}, {{pick .bullshit}}, {{pick .bullshit}}, {{pick .bullshit}}, {{pick .bullshit}}... and BINGO!"
+
+bullshit:
+- Curated
+- Rockstar
+- Cloud
+- Disrupt
+- Gamification
+- Guru
+- Lean
+- Badge
+- '"... is dead"'
+- Killer
+- Pivot
+- Web 3.0
+- Personal Brand
+- Frenemy
+- Social
+- Viral
+- Follow
+- Revolutionize
+- Facebook Connect
+- Steve Jobs
+- Ninja
+- Deal of the day
