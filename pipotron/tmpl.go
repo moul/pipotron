@@ -1,4 +1,4 @@
-package main
+package pipotron
 
 import (
 	"bytes"
@@ -6,6 +6,10 @@ import (
 	"math/rand"
 	"text/template"
 )
+
+func Generate(dict *Dict) (string, error) {
+	return executeTemplate("{{pick .output}}", dict)
+}
 
 func executeTemplate(input string, dict *Dict) (string, error) {
 	funcMap := template.FuncMap{

@@ -8,6 +8,7 @@ import (
 	"os"
 	"time"
 
+	"github.com/ultreme/pipotron/pipotron"
 	yaml "gopkg.in/yaml.v2"
 )
 
@@ -19,14 +20,15 @@ func main() {
 		log.Fatal("failed to open file: %v", err)
 	}
 
-	var dict Dict
+	var dict pipotron.Dict
 	if err = yaml.Unmarshal(dictFile, &dict); err != nil {
 		log.Fatal("failed to unmarshal yaml: %v", err)
 	}
 
-	out, err := executeTemplate("{{pick .output}}", &dict)
+	out, err := pipotron.Generate(&dict)
 	if err != nil {
-		log.Fatal("template error: %v", err)
+		log.Fatal("failed to generate %v", err)
 	}
+
 	fmt.Println(out)
 }

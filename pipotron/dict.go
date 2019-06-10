@@ -1,4 +1,4 @@
-package main
+package pipotron
 
 import "encoding/json"
 
