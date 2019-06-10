@@ -1,4 +1,6 @@
 DICTS := $(basename $(notdir $(wildcard dict/*.yml)))
+GORELEASER_GITHUB_TOKEN ?=
+GITHUB_TOKEN ?= $(GORELEASER_GITHUB_TOKEN)
 
 .PHONY: install
 install:
@@ -31,4 +33,8 @@ functions: packr
 
 .PHONY: goreleaser
 goreleaser:
-	goreleaser
+	GORELEASER_GITHUB_TOKEN=$(GORELEASER_GITHUB_TOKEN) GITHUB_TOKEN=$(GITHUB_TOKEN) goreleaser --rm-dist
+
+.PHONY: goreleaser-dry-run
+goreleaser-dry-run:
+	goreleaser --snapshot --skip-publish --rm-dist
