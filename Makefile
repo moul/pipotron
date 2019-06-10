@@ -13,4 +13,4 @@ clean:
 
 %.example.txt: %.yml
 	rm -f $@
-	for i in `seq 10`; do pipotron $< >> $@; done
+	for i in `seq 100`; do pipotron $< >> $@; done
