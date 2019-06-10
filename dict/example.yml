@@ -1,0 +1,33 @@
+output:
+- "{{pick .noun_phrase}} {{pick .passive_verb}}"
+- "{{pick .noun_phrase}} {{pick .passive_verb}} {{pick .preposition}} {{pick .noun_phrase}}"
+- "{{pick .noun_phrase}} {{pick .passive_verb}} {{pick .preposition}} {{pick .noun_phrase}} and {{pick .passive_verb}} {{pick .preposition}} {{pick .noun_phrase}}"
+
+noun_phrase:
+- "the {{pick .noun}}"
+- "the {{pick .adjective}} {{pick .noun}}"
+- "{{pick .name}}"
+
+noun:
+- cat
+- dog
+- fish
+
+name:
+- Bob
+- Alice
+- Mike
+
+preposition:
+- with
+- on
+
+passive_verb:
+- sat
+- eat
+- talked
+- was
+
+adjective:
+- angry
+- frightened
