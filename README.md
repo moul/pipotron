@@ -16,11 +16,11 @@ Lambda functions are hosted on Netlify, give a try here:
 ## Try with Docker
 
 ```console
-docker run -it --rm ultreme/pipotron bingo-winner
+docker run -it --rm moul/pipotron bingo-winner
 Rockstar, Pivot, Ninja, Curated, Social... and BINGO!
 ```
 
-[See on Docker Hub](https://hub.docker.com/r/ultreme/pipotron)
+[See on Docker Hub](https://hub.docker.com/r/moul/pipotron)
 
 ## See examples of generated content
 
@@ -29,10 +29,9 @@ Check out the [`./examples/` folder](./examples).
 ## Install
 
 * Install latest [go](https://golang.org)
-* Run: `GO111MODULE=on go get -u github.com/ultreme/pipotron`
-* Profit: `pipotron dict/bingo-winner.yml` 
+* Run: `GO111MODULE=on go get -u github.com/moul/pipotron`
+* Profit: `pipotron dict/bingo-winner.yml`
 
 ## Contribute
 
-Check out the [`./dict/` folder](./dict), and try updating an existing dictionary or creating a new one. 
-
+Check out the [`./dict/` folder](./dict), and try updating an existing dictionary or creating a new one.

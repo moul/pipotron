@@ -5,9 +5,9 @@ import (
 
 	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
-	"github.com/ultreme/pipotron/dict"
-	"github.com/ultreme/pipotron/pipotron"
 	yaml "gopkg.in/yaml.v2"
+	"moul.io/pipotron/dict"
+	"moul.io/pipotron/pipotron"
 )
 
 func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {

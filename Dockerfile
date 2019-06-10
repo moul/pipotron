@@ -1,5 +1,5 @@
 FROM            golang:1.12-alpine as build
-WORKDIR         /go/src/github.com/ultreme/pipotron
+WORKDIR         /go/src/moul.io/pipotron
 RUN             apk add --no-cache git gcc musl-dev make
 RUN             go get -u github.com/gobuffalo/packr/packr
 COPY            go.* ./

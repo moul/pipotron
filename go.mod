@@ -1,4 +1,4 @@
-module github.com/ultreme/pipotron
+module moul.io/pipotron
 
 go 1.12
 

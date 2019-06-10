@@ -1,4 +1,4 @@
-package main
+package main // import "moul.io/pipotron"
 
 import (
 	"fmt"
@@ -9,9 +9,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ultreme/pipotron/dict"
-	"github.com/ultreme/pipotron/pipotron"
 	yaml "gopkg.in/yaml.v2"
+	"moul.io/pipotron/dict"
+	"moul.io/pipotron/pipotron"
 )
 
 func main() {

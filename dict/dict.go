@@ -1,4 +1,4 @@
-package dict
+package dict // import "moul.io/pipotron/dict"
 
 import "github.com/gobuffalo/packr"
 

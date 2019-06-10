@@ -21,10 +21,14 @@ packr:
 
 .PHONY: docker
 docker:
-	docker build -t ultreme/pipotron .
+	docker build -t moul/pipotron .
 
 .PHONY: functions
 functions: packr
 	mkdir -p functions-build
 	GO111MODULE=on go install
 	go build -o functions-build/pipotron ./functions/pipotron.go
+
+.PHONY: goreleaser
+goreleaser:
+	goreleaser

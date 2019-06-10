@@ -1,4 +1,4 @@
-package pipotron
+package pipotron // import "moul.io/pipotron/pipotron"
 
 import "encoding/json"
 
