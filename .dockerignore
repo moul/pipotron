@@ -1,0 +1,7 @@
+*/*-packr.go
+.git/
+*~
+*#
+.#*
+.gitignore
+.dockerignore

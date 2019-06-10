@@ -2,7 +2,7 @@ DICTS := $(wildcard dict/*.yml)
 
 .PHONY: install
 install:
-	go install
+	GO111MODULE=on go install
 
 .PHONY: examples
 examples: $(DICTS:.yml=.example.txt)
