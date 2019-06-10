@@ -6,7 +6,6 @@ import (
 	"log"
 	"math/rand"
 	"os"
-	"strings"
 	"time"
 
 	yaml "gopkg.in/yaml.v2"
@@ -29,5 +28,5 @@ func main() {
 	if err != nil {
 		log.Fatal("template error: %v", err)
 	}
-	fmt.Println(strings.Title(out))
+	fmt.Println(out)
 }
