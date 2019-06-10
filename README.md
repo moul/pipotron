@@ -22,8 +22,17 @@ Rockstar, Pivot, Ninja, Curated, Social... and BINGO!
 
 [See on Docker Hub](https://hub.docker.com/r/ultreme/pipotron)
 
+## See examples of generated content
+
+Check out the [`./examples/` folder](./examples).
+
 ## Install
 
 * Install latest [go](https://golang.org)
 * Run: `GO111MODULE=on go get -u github.com/ultreme/pipotron`
 * Profit: `pipotron dict/bingo-winner.yml` 
+
+## Contribute
+
+Check out the [`./dict/` folder](./dict), and try updating an existing dictionary or creating a new one. 
+
