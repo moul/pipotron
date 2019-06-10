@@ -1,6 +1,8 @@
 # pipotron
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/6013d277-e47f-47bc-83a3-ddc9ab5dad62/deploy-status)](https://app.netlify.com/sites/pipotron/deploys)
+[![CircleCI](https://circleci.com/gh/moul/pipotron.svg?style=svg)](https://circleci.com/gh/moul/pipotron)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/da26e7a7-179f-49b1-89b4-3103d382ee10/deploy-status)](https://app.netlify.com/sites/pipotron/deploys)
+[![](https://images.microbadger.com/badges/image/moul/pipotron.svg)](https://microbadger.com/images/moul/pipotron "Get your own image badge on microbadger.com")
 
 generic funny text generator
 
