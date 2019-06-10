@@ -1,11 +1,18 @@
-DICTS := $(wildcard dict/*.yml)
+DICTS := $(basename $(notdir $(wildcard dict/*.yml)))
 
 .PHONY: install
 install:
 	GO111MODULE=on go install
 
 .PHONY: examples
-examples: $(DICTS:.yml=.example.txt)
+examples:
+	rm -rf examples
+	mkdir -p examples
+	for dict in $(DICTS); do \
+	  for i in `seq 100`; \
+	    do pipotron $$dict >> examples/$$dict.txt; \
+	  done; \
+	done
 
 .PHONY: packr
 packr:
@@ -21,11 +28,3 @@ functions: packr
 	mkdir -p functions-build
 	GO111MODULE=on go install
 	go build -o functions-build/pipotron ./functions/pipotron.go
-
-.PHONY: clean
-clean:
-	rm -rf dict/*.example.txt
-
-%.example.txt: %.yml
-	rm -f $@
-	for i in `seq 100`; do pipotron $< >> $@; done
