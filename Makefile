@@ -16,8 +16,8 @@ examples:
 
 .PHONY: packr
 packr:
-	go get github.com/gobuffalo/packr/packr
-	packr
+	go get github.com/gobuffalo/packr/v2/packr2
+	packr2
 
 .PHONY: docker
 docker:

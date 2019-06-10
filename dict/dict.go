@@ -1,5 +1,5 @@
 package dict // import "moul.io/pipotron/dict"
 
-import "github.com/gobuffalo/packr"
+import packr "github.com/gobuffalo/packr/v2"
 
-var Box = packr.NewBox(".")
+var Box = packr.New("dict", ".")
