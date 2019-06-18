@@ -8,6 +8,8 @@ generic funny text generator
 
 ## Try online
 
+Basic UI: https://pipotron.netlify.com/
+
 Lambda functions are hosted on Netlify, give a try here:
 
 * https://pipotron.netlify.com/.netlify/functions/pipotron?dict=bingo-winner
