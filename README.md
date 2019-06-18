@@ -14,8 +14,9 @@ Lambda functions are hosted on Netlify, give a try here:
 
 * https://pipotron.netlify.com/.netlify/functions/pipotron?dict=bingo-winner
 * https://pipotron.netlify.com/.netlify/functions/pipotron?dict=example
-* https://pipotron.netlify.com/.netlify/functions/pipotron?dict=pipotron.free.fr
 * https://pipotron.netlify.com/.netlify/functions/pipotron?dict=laboralphy
+* https://pipotron.netlify.com/.netlify/functions/pipotron?dict=moijaime
+* https://pipotron.netlify.com/.netlify/functions/pipotron?dict=pipotron.free.fr
 
 ## Try with Docker
 
