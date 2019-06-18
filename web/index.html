@@ -1,1 +1,44 @@
-<h1>Pipotron</h1>
+<html>
+  <head>
+    <title>Pipotron</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Pipotron</h1>
+      <form class="form-inline">
+        <div class="form-group mb-2">
+          <select id="dict" class="form-control mr-sm-2">
+            <option value="bingo-winner">bingo-winner</option>
+            <option value="example">example</option>
+            <option value="laboralphy">laboralphy</option>
+            <option value="pipotron.free.fr">pipotron.free.fr</option>
+          </select>
+        </div>
+        <input class="btn btn-primary mb-2 mx-sm-3" type="button" id="generate" value="generate" />
+        <a id="source" href="https://github.com/moul/pipotron" class="btn btn-secondary mb-2" target="_blank">Source</a>
+      </form>
+      <hr />
+      <div class="border embed-responsive embed-responsive-21by9 code">
+        <iframe class="embed-responsive-item" id="output">Loading...</iframe>
+      </div>
+      <hr />
+      <footer>
+        <a href="https://github.com/moul/pipotron">Pipotron</a>, by <a href="https://manfred.life/">Manfred Touron</a>.
+      </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+     function generate() {
+       var dict = $('#dict').val();
+       $('#output').attr('src', 'https://pipotron.netlify.com/.netlify/functions/pipotron?dict=' + dict);
+       $('#source').attr('href', 'https://github.com/moul/pipotron/blob/master/dict/'+dict+'.yml');
+     }
+
+     $('#generate').click(generate);
+     $('#dict').change(generate);
+     $(document).ready(generate);
+    </script>
+  </body>
+</html>
