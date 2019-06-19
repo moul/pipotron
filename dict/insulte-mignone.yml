@@ -1,0 +1,24 @@
+output:
+- "{{pick .mot_a}} {{pick .mot_b}}"
+- "{{pick .mot_a}} {{pick .mot_b}} {{pick .mot_b}}"
+- "{{pick .mot_a}} {{pick .mot_b}} {{pick .mot_b}} {{pick .mot_b}}"
+
+mot_a:
+- "crotte"
+- "plat"
+- "moule-à-gauffre"
+- "vandal"
+- "forbant"
+- "ectoplasme"
+- "espèce"
+- "pipi"
+- "caca"
+
+mot_b:
+- "de nouille"
+- "de nez"
+- "de chien"
+- "de freluquet"
+- "de pied"
+- "d'oreille"
+- "de yeux"
