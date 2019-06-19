@@ -3,14 +3,18 @@ output:
 - "{{pick .intro}} {{pick .milieu}} {{pick .fin}}"
 
 intro:
-- "{{pick .intro_a}} {{pick .intro_b}}"
-- "{{pick .intro_a}}"
+- "{{pick .intro_with_prefix}}"
+- "{{pick .intro_b}}"
 
-intro_a:
+intro_with_prefix:
 - "espèce de {{pick .intro_b_consonne}}"
 - "espèce d'{{pick .intro_b_voyelle}}"
-- "minuscule"
-- "espèce de minuscule"
+- "minuscule {{pick .intro_b}}"
+- "espèce de minuscule {{pick .intro_b}}"
+
+intro_b:
+- "{{pick .intro_b_consonne}}"
+- "{{pick .intro_b_voyelle}}"
 
 intro_b_consonne:
 - "crotte"
