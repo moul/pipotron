@@ -14,9 +14,12 @@ Lambda functions are hosted on Netlify, give a try here:
 
 * https://pipotron.moul.io/run?dict=bingo-winner
 * https://pipotron.moul.io/run?dict=example
+* https://pipotron.moul.io/run?dict=insulte-mignone
 * https://pipotron.moul.io/run?dict=laboralphy
+* https://pipotron.moul.io/run?dict=marabout
 * https://pipotron.moul.io/run?dict=moijaime
 * https://pipotron.moul.io/run?dict=pipotron.free.fr
+* https://pipotron.moul.io/run?dict=prenom-compose
 
 ## Try with Docker
 

@@ -1,0 +1,90 @@
+output:
+- "{{pick .marabout}}\n\n{{pick .headline}}\n\nla suite de ce générateur, plus tard..."
+
+marabout:
+  - "{{pick .marabout_titre}} {{pick .marabout_nom}}"
+
+marabout_titre:
+  - Professeur
+  - Monsieur
+  - Mr
+  - Maître
+  - Pr.
+  - Prof.
+  - Monsieur le Professeur
+
+marabout_nom:
+  - Abdoul Rahmane
+  - Adam
+  - Babani
+  - Badjoumo
+  - Bakodaï
+  - Bakoutoubo
+  - Balla
+  - Baraka
+  - Basacko
+  - Bassa
+  - Bâhabo
+  - Dia
+  - Diaby
+  - Fanganafa
+  - Fofana
+  - Habibou
+  - Jacob
+  - Kader
+  - Keba
+  - Lamine
+  - Mamadou
+  - Michel
+  - Mohamed Aly
+  - Nabi
+  - Salimou
+  - Samou
+  - Sankoun
+  - Silla
+  - Souare
+  - Souleymane
+  - Sy
+  - Sylla
+  - Toure
+  - Walabaya
+  - Yadali
+
+headline:
+  - "{{pick .headline_main}}"
+  - "{{pick .headline_prefix}} {{pick .headline_main}}"
+  - "{{pick .headline_main}} {{pick .headline_suffix}}"
+  - "{{pick .headline_prefix}} {{pick .headline_main}} {{pick .headline_suffix}}"
+
+headline_prefix:
+- célèbre
+- grand
+- célèbre grand
+- authentique
+
+headline_main:
+  - guérisseur
+  - voyant médium
+  - voyant
+  - voyant médium guerisseur
+  - médium voyant
+  - médium guerisseur
+  - marabout
+  - marabout voyant
+
+headline_suffix:
+  - discret
+  - sérieux
+  - sérieux, efficace et puissant
+  - héréditaire
+  - international
+  - très puissant
+  - puissant et redoutable
+  - africain
+  - célèbre
+  - african, célèbre
+  - compétent
+  - qui résout tous vos problèmes, même les plus déséspérés
+  - "capable d'une grande protection"
+  - aux dons naturels prodigieux
+  - très compétent
