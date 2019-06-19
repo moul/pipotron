@@ -26,6 +26,10 @@ func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResp
 		return &events.APIGatewayProxyResponse{StatusCode: 500, Body: fmt.Sprintf("%v", err)}, nil
 	}
 
+	if request.QueryStringParameters["show-source"] == "1" {
+		return &events.APIGatewayProxyResponse{StatusCode: 200, Body: string(dictFile)}, nil
+	}
+
 	return &events.APIGatewayProxyResponse{StatusCode: 200, Body: out}, nil
 }
 
