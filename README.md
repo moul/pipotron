@@ -12,11 +12,11 @@ Basic UI: https://pipotron.moul.io/
 
 Lambda functions are hosted on Netlify, give a try here:
 
-* https://pipotron.moul.io/.netlify/functions/pipotron?dict=bingo-winner
-* https://pipotron.moul.io/.netlify/functions/pipotron?dict=example
-* https://pipotron.moul.io/.netlify/functions/pipotron?dict=laboralphy
-* https://pipotron.moul.io/.netlify/functions/pipotron?dict=moijaime
-* https://pipotron.moul.io/.netlify/functions/pipotron?dict=pipotron.free.fr
+* https://pipotron.moul.io/run?dict=bingo-winner
+* https://pipotron.moul.io/run?dict=example
+* https://pipotron.moul.io/run?dict=laboralphy
+* https://pipotron.moul.io/run?dict=moijaime
+* https://pipotron.moul.io/run?dict=pipotron.free.fr
 
 ## Try with Docker
 
