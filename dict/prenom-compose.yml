@@ -7,9 +7,9 @@ output:
 
 
 part:
-- "{{pick .souvent}}
-- "{{pick .souvent}}
-- "{{pick .rarement}}
+- "{{pick .souvent}}"
+- "{{pick .souvent}}"
+- "{{pick .rarement}}"
 
 
 souvent:
