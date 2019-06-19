@@ -1,0 +1,32 @@
+output:
+- "{{pick .souvent}}-{{pick .souvent}}"
+- "{{pick .souvent}}-{{pick .rarement}}"
+- "{{pick .souvent}}-{{pick .part}}-{{pick .part}}"
+- "{{pick .souvent}}-{{pick .part}}"
+- "{{pick .part}}-{{pick .part}}-{{pick .part}}"
+
+
+part:
+- "{{pick .souvent}}
+- "{{pick .souvent}}
+- "{{pick .rarement}}
+
+
+souvent:
+- Pierre
+- Paul
+- Jacques
+- Jean
+- Marie
+
+rarement:
+- Kévin
+- Ryan
+- Kilian
+- Clothilde
+- Eugénie
+- Mohamed
+- Mouloud
+- Germaine
+- Mauricette
+- Jordan
