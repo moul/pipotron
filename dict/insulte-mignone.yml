@@ -7,17 +7,17 @@ intro:
 - "{{pick .intro_a}}"
 
 intro_a:
-- "espèce"
+- "espèce de {{pick .intro_b_consonne}}"
+- "espèce d'{{pick .intro_b_voyelle}}"
 - "minuscule"
 - "espèce de minuscule"
 
-intro_b:
+intro_b_consonne:
 - "crotte"
 - "plat"
 - "moule-à-gauffre"
 - "vandal"
 - "forbant"
-- "ectoplasme"
 - "pipi"
 - "caca"
 - "fromage"
@@ -26,10 +26,13 @@ intro_b:
 - "zizi"
 - "purée"
 - "patate"
-- "andouille"
 - "jus"
 - "résidu"
 - "raclure"
+
+intro_b_voyelle:
+- "andouille"
+- "ectoplasme"
 
 milieu:
 - "{{pick .milieu_a}}"
