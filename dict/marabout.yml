@@ -1,17 +1,27 @@
 output:
-- "{{pick .marabout}}\n\n{{pick .headline}}\n\nla suite de ce générateur, plus tard..."
+- |-
+  {{pick .marabout}}
+
+  {{pick .headline}}
+
+  {{pick .punchline}}
+
+  {{pick .talents}}
+
+  {{pick .conclusion}}
 
 marabout:
   - "{{pick .marabout_titre}} {{pick .marabout_nom}}"
 
 marabout_titre:
-  - Professeur
-  - Monsieur
-  - Mr
+  - Grand
   - Maître
+  - Monsieur
+  - Monsieur le Professeur
+  - Mr
   - Pr.
   - Prof.
-  - Monsieur le Professeur
+  - Professeur
 
 marabout_nom:
   - Abdoul Rahmane
@@ -21,6 +31,7 @@ marabout_nom:
   - Bakodaï
   - Bakoutoubo
   - Balla
+  - Bana
   - Baraka
   - Basacko
   - Bassa
@@ -57,20 +68,21 @@ headline:
   - "{{pick .headline_prefix}} {{pick .headline_main}} {{pick .headline_suffix}}"
 
 headline_prefix:
-- célèbre
-- grand
-- célèbre grand
 - authentique
+- célèbre
+- célèbre grand
+- grand
 
 headline_main:
   - guérisseur
-  - voyant médium
-  - voyant
-  - voyant médium guerisseur
-  - médium voyant
-  - médium guerisseur
+  - mage vaudou
   - marabout
   - marabout voyant
+  - médium guerisseur
+  - médium voyant
+  - voyant
+  - voyant médium
+  - voyant médium guerisseur
 
 headline_suffix:
   - discret
@@ -88,3 +100,59 @@ headline_suffix:
   - "capable d'une grande protection"
   - aux dons naturels prodigieux
   - très compétent
+
+punchline:
+  - désormais vos problèmes trouvent solution
+  - est parmi vous !
+  - Reconnu pour sa clair voyance et son efficacité
+  - "Il vient d'arriver sur Terre"
+  - Authentique plus grand Marabout du monde
+  - "30 ans d'expériences"
+
+talents:
+  - "{{pick .talent}}, {{pick .talent}}, {{pick .talent}}, {{pick .talent}}, {{pick .talent}}, {{pick .talent}}"
+
+talent:
+  - réparation de votre PC par télépathie
+  - pratique la magie blanche
+  - pratique la sorcellerie et les rites vaudou
+  - il pratique des rituels de réparation et désenvoûtement de vos PC par télépathie
+  - dans le monde entier
+  - sans besoin de vous déplacer
+  - "son pouvoir est tel qu'il réparera les secteurs défectueux des disques durs et éliminera vos virus à distance"
+  - enorme puissance héréditaire dans une longue lignée de grands Maîtres
+  - vous aide à régle vos problèmes
+  - "je vous satisfait dans les plus brefs délais grace à l'efficacité de mes préparations occultes"
+  - travail par correspondance possible
+  - soigne le cancer à distance
+  - "soigne les problèmes d'érection"
+  - amour
+  - chance
+  - travail
+  - examens
+  - jeux
+  - grand spécialiste
+  - résout tous les problèmes
+  - pas de solution sans problème
+  - garantie 100% par ses dons et ses secrets de générations depuis avant les Toubabs à Yopougon
+  - attraction clientèle
+  - soutien aux entreprises
+  - aide aux affaires familiales
+  - impuissance sexuelle
+  - protection contre les dangers
+  - fidélité absolue entre époux
+  - mariage
+  - concours
+  - réussit là où les autres échoue
+  - protection contre les ennemis
+  - retour de la chance
+  - rencontre
+  - protection
+  - "retour de l'être aimé ou qui vous est cher"
+
+conclusion:
+  - Facilité de paiement
+  - Résultats garantis 100% après paiement de 250€
+  - Résultat rapide dans tous les domaines
+  - "Paiement d'avance 100€ par CB. Résultats garantis."
+  - Paiement toujours après résultats
