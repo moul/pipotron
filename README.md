@@ -12,6 +12,8 @@ Basic UI: https://pipotron.moul.io/
 
 Lambda functions are hosted on Netlify, give a try here:
 
+* https://pipotron.moul.io/run?dict=accords
+* https://pipotron.moul.io/run?dict=asv
 * https://pipotron.moul.io/run?dict=bingo-winner
 * https://pipotron.moul.io/run?dict=example
 * https://pipotron.moul.io/run?dict=fuu
