@@ -2,7 +2,6 @@ package pipotron // import "moul.io/pipotron/pipotron"
 
 import (
 	"bytes"
-	"fmt"
 	"math/rand"
 	"text/template"
 )
@@ -12,13 +11,26 @@ func Generate(dict *Dict) (string, error) {
 }
 
 func executeTemplate(input string, dict *Dict) (string, error) {
-	funcMap := template.FuncMap{
-		"pick": func(opts []string) string {
-			if len(opts) < 1 {
-				return fmt.Sprintf("$$$ INVALID OPTION $$$")
+	already_picked := map[string]interface{}{}
+
+	funcMap := template.FuncMap{}
+	pickFunc := func(opts []string) string {
+		if len(opts) < 1 {
+			return "$$$ INVALID OPTION $$$"
+		}
+		return opts[rand.Intn(len(opts))]
+	}
+	funcMap["pick"] = pickFunc
+	funcMap["pick_once"] = func(opts []string) string {
+		// FIXME: find a better way to do this :)
+		for i := 0; i < 100; i++ {
+			picked := pickFunc(opts)
+			if _, found := already_picked[picked]; !found {
+				already_picked[picked] = nil
+				return picked
 			}
-			return opts[rand.Intn(len(opts))]
-		},
+		}
+		return "$$$ NO MORE UNIQUE PICKABLE ITEM $$$"
 	}
 
 	tmpl, err := template.New("").Funcs(funcMap).Parse(input)

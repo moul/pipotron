@@ -1,9 +1,9 @@
 output:
 - "{{pick .souvent}}-{{pick .souvent}}"
 - "{{pick .souvent}}-{{pick .rarement}}"
-- "{{pick .souvent}}-{{pick .part}}-{{pick .part}}"
+- "{{pick .souvent}}-{{pick_once .part}}-{{pick_once .part}}"
 - "{{pick .souvent}}-{{pick .part}}"
-- "{{pick .part}}-{{pick .part}}-{{pick .part}}"
+- "{{pick_once .part}}-{{pick_once .part}}-{{pick_once .part}}"
 
 
 part:

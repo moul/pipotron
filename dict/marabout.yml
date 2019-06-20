@@ -110,7 +110,7 @@ punchline:
   - "30 ans d'expériences"
 
 talents:
-  - "{{pick .talent}}, {{pick .talent}}, {{pick .talent}}, {{pick .talent}}, {{pick .talent}}, {{pick .talent}}"
+  - "{{pick_once .talent}}, {{pick_once .talent}}, {{pick_once .talent}}, {{pick_once .talent}}, {{pick_once .talent}}, {{pick_once .talent}}"
 
 talent:
   - réparation de votre PC par télépathie
