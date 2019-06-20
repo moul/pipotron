@@ -1,0 +1,14 @@
+output:
+  - "{{pick .accord}} {{pick .accord}} {{pick .accord}} {{pick .accord}}"
+
+accord:
+  - "{{pick .letter}}"
+  - "{{pick .letter}}{{pick .alteration}}"
+  - "{{pick .letter}}{{pick .mode}}"
+  - "{{pick .letter}}{{pick .alteration}}{{pick .mode}}"
+
+letter: ["A", "B", "C", "D", "E", "F", "G"]
+
+alteration: ["b", "#"]
+
+mode: ["m", "M", "7", "7m", "7M", "aug"]
