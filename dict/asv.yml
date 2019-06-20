@@ -1,0 +1,38 @@
+# ASV (age-sexe-ville) is an old way of introduction message on chats and forums
+
+output:
+  - "{{pick .salutation}} {{pick .age}}-{{pick .sexe}}-{{pick .ville}}"
+
+salutation:
+  - "Salut tout le monde!"
+  - "Kikoolol sa va !!?"
+  - "Bonjour à toutes et à tous."
+  - "Bonjour."
+  - "Salut!"
+  - "lu"
+  - "cc sa va!"
+  - "wesh"
+  - "Bonjour, je cherche des amis."
+  - "La seule chose que je sais, c'est que je ne sais rien. JCVD."
+
+age: [
+16, 17, 18, 19,
+20, 21, 22, 23, 24, 25, 26, 27, 28, 29,
+30, 31, 32, 33, 34, 35, 36, 37, 38, 39,
+40, 41, 42
+]
+
+sexe:
+  - "M"
+  - "H"
+  - "F"
+
+ville:
+  - "Paris"
+  - "Rouen"
+  - "Evreux"
+  - "Amfreville-sur-Iton"
+  - "Conches-en-Ouche"
+  - "La bonneville"
+  - "Saint-Etienne-du-Rouvray"
+  - "DTC"
