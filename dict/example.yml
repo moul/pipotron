@@ -1,3 +1,10 @@
+# this is an example of a very basic enligh grammar
+#
+# <noun> <passive_verb>
+# <noun> <passive_verb> <preposition> <noun>
+# <noun> <passive_verb> <preposition> <noun> and <passive_verb> <preposition> <noun>
+
+
 output:
 - "{{pick .noun_phrase}} {{pick .passive_verb}}"
 - "{{pick .noun_phrase}} {{pick .passive_verb}} {{pick .preposition}} {{pick .noun_phrase}}"
