@@ -17,6 +17,15 @@ import (
 func main() {
 	rand.Seed(time.Now().UTC().UnixNano())
 
+	if len(os.Args) < 2 {
+		for _, file := range dict.Box.List() {
+			if strings.HasSuffix(file, ".yml") {
+				fmt.Println(file[:len(file)-4])
+			}
+		}
+		return
+	}
+
 	dictName := os.Args[1]
 	if !strings.HasSuffix(dictName, ".yml") {
 		dictName += ".yml"
