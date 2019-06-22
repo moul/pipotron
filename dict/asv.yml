@@ -26,6 +26,7 @@ sexe:
   - "M"
   - "H"
   - "F"
+  - "34cm"
 
 ville:
   - "Paris"
