@@ -3,7 +3,11 @@ GORELEASER_GITHUB_TOKEN ?=
 GITHUB_TOKEN ?= $(GORELEASER_GITHUB_TOKEN)
 
 .PHONY: install
-install:
+install: packr
+	GO111MODULE=on go install
+
+.PHONY: dev
+dev: clean
 	GO111MODULE=on go install
 
 .PHONY: examples
@@ -15,6 +19,10 @@ examples:
 	    do pipotron $$dict >> examples/$$dict.txt; \
 	  done; \
 	done
+
+.PHONY: clean
+clean:
+	git clean -fxd
 
 .PHONY: packr
 packr:

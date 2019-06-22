@@ -1,0 +1,95 @@
+output:
+- |-
+  {{pick .hairs}}
+  {{pick .headtop}}
+  {{pick .headspace}}
+  {{pick .eyebrows}}
+  {{pick .eyes}}
+  {{pick .headspace}}
+  {{pick .nose}}
+  {{pick .headspace}}
+  {{pick .mouth}}
+  {{pick .headspace}}
+  {{pick .headbottom}}
+
+hairs:
+  - "           "
+  - "     s     "
+  - "  .......  "
+  - "   s s s   "
+  - "   /\\ /\\   "
+  - "  |||||||  "
+
+headtop:
+  - " /-------\\ "
+  - " /~~~~~~~\\ "
+  - " /|||||||\\ "
+  - " ////////\\ "
+  - " ||||||||| "
+  - " /\\\\\\\\\\\\\\\\ "
+
+
+ear:
+  - "o"
+  - " "
+  - "D"
+  - "O"
+  - "<"
+  - ">"
+  - "."
+  - "|"
+  - ")"
+  - "("
+
+eyes:
+  - "{{pick .ear}}{{pick .eyes_middle}}{{pick .ear}}"
+
+eyebrow:
+  - "~"
+  - "*"
+  - "_"
+  - "."
+
+eyebrows:
+  - " |       | "
+  - " | {{pick .eyebrow}}   {{pick .eyebrow}} | "
+
+eyes_middle:
+  - "| o   o |"
+  - "| o   _ |"
+  - "| _   o |"
+  - "| .   . |"
+  - "| O   O |"
+  - "| v   v |"
+  - "| X   X |"
+  - "| x   X |"
+  - "| X   D |"
+  - "| ~   ~ |"
+
+headspace:
+  - " |       | "
+
+nose:
+  - " |   o   | "
+  - " |   O   | "
+  - " |   V   | "
+  - " |   L   | "
+  - " |   C   | "
+  - " |   ~   | "
+  - " |  . .  | "
+  - " |   .   | "
+
+
+mouth:
+  - " |  __/  | "
+  - " |  \\_/  | "
+  - " |   .   | "
+  - " |  ___  | "
+  - " |  ~~~  | "
+  - " |  ===  | "
+  - " |  <=>  | "
+
+headbottom:
+  - " \\-------/ "
+  - " \\~~~~~~~/ "
+  - " \\_______/ "
