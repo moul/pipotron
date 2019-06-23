@@ -36,11 +36,13 @@ suffix_once:
   - "Ou pas..."
   - "Deux fois."
   - "Mars est aligné avec Jupiter."
+  - "La Terre est alignée horizontalement avec Venus."
   - "Mettez la gomme !"
   - "Ne vous isolez pas."
   - "Restez couché."
   - "C'est le moment de garder le sourire !"
   - "C'est le moment."
+  - "C'est votre jour de chance."
   - "Foncez."
   - "Calmez vos ardeurs."
 
@@ -57,6 +59,9 @@ argent:
   - "En ce moment l'argent n'est pas un problème pour vous."
   - "Vous ne devriez pas avoir les poches percées."
   - "Mauvaise période pour le shopping, n'achetez pas sur un coup de tête."
+  - "Vous allez acheter du pain, on va vous rendre trop de monnaie."
+  - "Vous allez trouver un ticket gagnant par terre."
+  - "Surtout ne jouez pas le numéro 30, il pourrait vous porter malheur."
 
 sante:
   - "Vous allez mourir (un jour)."
@@ -64,6 +69,8 @@ sante:
   - "Vous allez manger au mc-do, sans tomber malade."
   - "Vous allez avoir mal {{pick .body_part}}."
   - "Sans être dans une forme éblouissante, vous vous sentirez plutôt bien."
+  - "Mangez des pommes."
+  - "Vous allez manger des trucs bons."
 
 body_part:
  - "au genou"
@@ -85,6 +92,7 @@ amour:
   - "Ne tentez pas l'impossible, il n'y aura pas de miracle."
   - "Vous ne serez pas particulièrement à l'aise."
   - "Vous avez un bon potentiel de séduction, et vous le savez."
+  - "C'est le néant."
 
 travail:
   - "Vous allez être l'employé du mois."
@@ -96,6 +104,12 @@ travail:
   - "Une météorite s'écrase sur votre bureau."
   - "Tes résultats sont corrects sans être extraordinaires."
   - "Le travail sera laborieux."
+  - "Vos clés sont au dans le bureau."
+  - "Vous allez avoir une bonne idée."
+  - "Vous allez rater une réunion importante."
+  - "Quelqu'un va faire tomber du café sur votre bureau."
+  - "Votre patron va organiser un barbecue."
+  - "Des postes s'ouvrent à vous."
 
 general:
   - "C'est une fin de semaine agréable qui vous attend."
@@ -110,6 +124,8 @@ general:
   - "Vous avez besoin de vous protéger des influences extérieures."
   - "Vous allez vous faire arnaquer par un mauvais horoscope."
   - "Votre horoscope sera bidon."
+  - "L'avenir vient en petit pot."
+  - "L'avenir est aveugle."
 
 truc_agreable:
   - "agréable"
