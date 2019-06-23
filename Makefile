@@ -40,7 +40,7 @@ functions: packr
 	go build -o functions-build/pipotron ./functions/pipotron.go
 
 .PHONY: goreleaser
-goreleaser:
+goreleaser: packr
 	GORELEASER_GITHUB_TOKEN=$(GORELEASER_GITHUB_TOKEN) GITHUB_TOKEN=$(GITHUB_TOKEN) goreleaser --rm-dist
 
 .PHONY: goreleaser-dry-run
