@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 
 	"github.com/aws/aws-lambda-go/events"
@@ -10,27 +11,48 @@ import (
 	"moul.io/pipotron/pipotron"
 )
 
+func reply(request events.APIGatewayProxyRequest, statusCode int, contentType string, body string) (*events.APIGatewayProxyResponse, error) {
+	if contentType == "" {
+		contentType = `text/plain; charset=utf-8`
+	}
+	ret := &events.APIGatewayProxyResponse{
+		StatusCode: statusCode,
+		Body:       body,
+		Headers: map[string]string{
+			"Content-Type": contentType,
+		},
+	}
+
+	if callback := request.QueryStringParameters["callback"]; callback != "" {
+		out, _ := json.Marshal(body)
+		ret.Headers["Content-Type"] = `application/javascript; charset=utf-8`
+		ret.Body = fmt.Sprintf("%s(%s)", callback, string(out))
+	}
+
+	return ret, nil
+}
+
 func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
 	dictFile, err := dict.Box.Find(request.QueryStringParameters["dict"] + ".yml")
 	if err != nil {
-		return &events.APIGatewayProxyResponse{StatusCode: 404, Body: "No such dictionary (?dict=)"}, nil
+		return reply(request, 404, "", "No such dictionary (?dict=)")
 	}
 
 	var dict pipotron.Dict
 	if err = yaml.Unmarshal(dictFile, &dict); err != nil {
-		return &events.APIGatewayProxyResponse{StatusCode: 500, Body: fmt.Sprintf("%v", err)}, nil
+		return reply(request, 500, "", fmt.Sprintf("%v", err))
 	}
 
 	out, err := pipotron.Generate(&dict)
 	if err != nil {
-		return &events.APIGatewayProxyResponse{StatusCode: 500, Body: fmt.Sprintf("%v", err)}, nil
+		return reply(request, 500, "", fmt.Sprintf("%v", err))
 	}
 
 	if request.QueryStringParameters["show-source"] == "1" {
-		return &events.APIGatewayProxyResponse{StatusCode: 200, Body: string(dictFile)}, nil
+		return reply(request, 200, "", string(dictFile))
 	}
 
-	return &events.APIGatewayProxyResponse{StatusCode: 200, Body: out}, nil
+	return reply(request, 200, "", out)
 }
 
 func main() {
