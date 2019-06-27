@@ -3,6 +3,7 @@ package pipotron // import "moul.io/pipotron/pipotron"
 import (
 	"bytes"
 	"math/rand"
+	"strings"
 	"text/template"
 )
 
@@ -20,6 +21,9 @@ func executeTemplate(input string, dict *Dict) (string, error) {
 		}
 		return opts[rand.Intn(len(opts))]
 	}
+	funcMap["title"] = strings.Title
+	funcMap["lower"] = strings.ToLower
+	funcMap["upper"] = strings.ToUpper
 	funcMap["pick"] = pickFunc
 	funcMap["pick_once"] = func(opts []string) string {
 		// FIXME: find a better way to do this :)
