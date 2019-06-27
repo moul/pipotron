@@ -62,18 +62,18 @@ thing:
 
 suffix:
   - 42
+  - IO
   - able
   - ary
   - er
-  - IO
   - ly
 
 technology:
   - APNS
   - BLE/Bluetooth
   - Blockchain
-  - Compiler
   - CRDT
+  - Compiler
   - Cryptocurrency
   - Cryptography
   - DHT
@@ -94,6 +94,7 @@ technology:
   - Lambda/ServerLess
   - Machine-Learning
   - Markdown
+  - Mobile-App
   - P2P
   - Proof-of-Stake
   - Proof-of-Work
@@ -102,4 +103,6 @@ technology:
   - SSH
   - SmartContract
   - TLS
+  - TermUI
+  - Terminal-Pipe
   - Yaml/Json
