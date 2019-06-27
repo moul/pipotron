@@ -72,6 +72,7 @@ technology:
   - APNS
   - BLE/Bluetooth
   - Blockchain
+  - CLI
   - CRDT
   - Compiler
   - Cryptocurrency
@@ -104,5 +105,5 @@ technology:
   - SmartContract
   - TLS
   - TermUI
-  - Terminal-Pipe
+  - Websocket
   - Yaml/Json
