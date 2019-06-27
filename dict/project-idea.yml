@@ -12,11 +12,9 @@ name:
   - "{{pick .thing | title}}{{pick .suffix}}"
 
 technologies:
-  - "#{{pick_once .technology}}, {{pick .technologies_2}}"
-
-technologies_2:
-  - "#{{pick_once .technology}}"
-  - "#{{pick_once .technology}}, {{pick .technologies}}"
+  - "#{{pick_once .technology}}, #{{pick_once .technology}}"
+  - "#{{pick_once .technology}}, #{{pick_once .technology}}, #{{pick_once .technology}}"
+  - "#{{pick_once .technology}}, #{{pick_once .technology}}, #{{pick_once .technology}}, #{{pick_once .technology}}"
 
 adjective:
   - advanced
@@ -28,10 +26,13 @@ adjective:
   - dark
   - flex
   - foreach
+  - future
   - happy
   - hyper
   - light
+  - next
   - nextgen
+  - pure
   - simple
   - super
   - transparent
@@ -46,11 +47,14 @@ thing:
   - crew
   - drive
   - friend
+  - layer
+  - loop
   - mail
   - mocking
   - partner
   - pipeline
   - project
+  - span
   - store
   - team
   - unicorn
@@ -58,30 +62,44 @@ thing:
 
 suffix:
   - 42
-  - ly
+  - able
+  - ary
+  - er
   - IO
+  - ly
 
 technology:
-  - docker
-  - P2P
-  - DHT
+  - APNS
+  - BLE/Bluetooth
+  - Blockchain
+  - Compiler
   - CRDT
-  - SSH
-  - TLS
+  - Cryptocurrency
+  - Cryptography
+  - DHT
+  - DNS
+  - Docker
+  - Email
+  - Gateway
   - Git
   - GitHub
-  - Markdown
+  - GitHub Issues
+  - GitHub Marketplace
   - Google-Drive
-  - IPFS
-  - Blockchain
-  - Cryptocurrency
-  - SmartContract
   - Graph
-  - IPLD
-  - BLE/Bluetooth
-  - Email
-  - Cryptography
-  - Machine-Learning
   - IA
-  - Lambda/ServerLess
+  - IPFS
+  - IPLD
   - IPNS
+  - Lambda/ServerLess
+  - Machine-Learning
+  - Markdown
+  - P2P
+  - Proof-of-Stake
+  - Proof-of-Work
+  - Protobuf
+  - Proxy
+  - SSH
+  - SmartContract
+  - TLS
+  - Yaml/Json
