@@ -57,6 +57,7 @@ thing:
   - span
   - store
   - team
+  - transport
   - unicorn
   - watch
 
@@ -70,7 +71,8 @@ suffix:
 
 technology:
   - APNS
-  - BLE/Bluetooth
+  - AirTable
+  - BLE
   - Blockchain
   - CLI
   - CRDT
@@ -96,14 +98,18 @@ technology:
   - Machine-Learning
   - Markdown
   - Mobile-App
+  - Nat
   - P2P
   - Proof-of-Stake
   - Proof-of-Work
   - Protobuf
   - Proxy
+  - PubSub
+  - QRCode
   - SSH
   - SmartContract
   - TLS
   - TermUI
+  - WebRTC
   - Websocket
   - Yaml/Json
