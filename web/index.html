@@ -54,6 +54,7 @@
        $('#output').attr('src', '/run?dict=' + dict);
        $('#source').attr('href', 'https://github.com/moul/pipotron/blob/master/dict/'+dict+'.yml');
        gtag('event', "generate", {
+         'category': dict,
          'label': dict,
        });
      }
