@@ -60,7 +60,13 @@
 
      $('#generate').click(generate);
      $('#dict').change(generate);
-     $(document).ready(generate);
+     $(document).ready(function() {
+       var qs_dict = (new URL(location.href)).searchParams.get('dict');
+       if (qs_dict !== undefined && qs_dict !== null && qs_dict.length > 0) {
+         $('#dict').val(qs_dict);
+       }
+       generate();
+     });
     </script>
   </body>
 </html>
