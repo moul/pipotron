@@ -1,5 +1,15 @@
 output:
   - "<html>{{pick .tag}}{{pick .tag}}</html>"
+  
+color:
+  - red
+  - green
+  - yellow
+  - blue
+  - magenta
+  - orange
+  - purple
+  - pink
 
 tag:
   - "{{pick .tag}}{{pick .tag}}"
@@ -10,19 +20,63 @@ tag:
   - "<h3{{pick .tag_attributes}}>{{pick .tag}}</h3>"
   - "<h4{{pick .tag_attributes}}>{{pick .tag}}</h4>"
   - "<h5{{pick .tag_attributes}}>{{pick .tag}}</h5>"
-  - "<marquee{{pick .tag_attributes}}>{{pick .tag}}</marquee>"
+  - "<table{{pick .tag_attributes}}>{{pick .table_trs}}</table>"
   - "<b{{pick .tag_attributes}}>{{pick .tag}}</b>"
   - "<section{{pick .tag_attributes}}>{{pick .tag}}</section>"
   - "<footer{{pick .tag_attributes}}>{{pick .tag}}</footer>"
   - "<head{{pick .tag_attributes}}>{{pick .tag}}</head>"
-  - "Lorem Ipsum"
-  - ""
-  - ""
-  - ""
+  - '<img{{pick .tag_attributes}} src="https://placeimg.com/{{pick .size}}/{{pick .size}}/{{pick .random_word}}" />'
+  - "{{pick .text}}"
+  - "<marquee{{pick .tag_attributes}}>{{pick .text}}</marquee>"
+
+size:
+  - 200
+  - 300
+  - 400
+  - 500
+  - 600
+
+random_word:
+  - "{{pick .random_char}}{{pick .random_char}}{{pick .random_char}}{{pick .random_char}}{{pick .random_char}}{{pick .random_char}}{{pick .random_char}}"
+  
+random_char: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+
+table_trs:
+  - "{{pick .table_tr}}"
+  - "{{pick .table_tr}}{{pick .table_tr}}"
+  
+table_tr:
+  - "<tr{{pick .tag_attributes}}>{{pick .table_tds}}</tr>"
+  
+table_tds:
+  - "{{pick .table_td}}"
+  - "{{pick .table_td}}{{pick .table_td}}"
+
+table_td:
+  - "<td{{pick .tag_attributes}}>{{pick .tag}}</td>"
+
+text:
+  - Lorem ipsum dolor sit amet
+  - Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  - Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  - Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  - Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+style_attributes:
+  - "{{pick .style_attributes}}; {{pick .style_attributes}}"
+  - "color: {{pick .color}}"
+  - "background-color: {{pick .color}}"
+  - "border: {{pick .number}}px; border-color: {{pick .color}}"
+
+number:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
 
 tag_attributes:
   - ""
   - ""
-  - ""
-  - ""
+  - ' style="{{pick .style_attributes}}"'
   - ' class="cool"'
