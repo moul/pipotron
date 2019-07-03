@@ -44,14 +44,14 @@ random_char: ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "
 
 table_trs:
   - "{{pick .table_tr}}"
-  - "{{pick .table_tr}}{{pick .table_tr}}"
+  - "{{pick .table_tr}}{{pick .table_trs}}"
 
 table_tr:
   - "<tr{{pick .tag_attributes}}>{{pick .table_tds}}</tr>"
 
 table_tds:
   - "{{pick .table_td}}"
-  - "{{pick .table_td}}{{pick .table_td}}"
+  - "{{pick .table_td}}{{pick .table_tds}}"
 
 table_td:
   - "<td{{pick .tag_attributes}}>{{pick .tag}}</td>"
@@ -82,7 +82,7 @@ tag_attributes:
 
 css_rules:
   - "{{pick .css_rule}}"
-  - "{{pick .css_rule}};{{pick .css_rule}}"
+  - "{{pick .css_rule}};{{pick .css_rules}}"
 
 css_rule:
   - "{{pick .style_attributes}}"
