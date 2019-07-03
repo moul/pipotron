@@ -1,0 +1,40 @@
+output:
+- "<h1>{{pick .title}}</h1><table>{{pick .step}}{{pick .step}}{{pick .step}}{{pick .steps}}</table>"
+
+steps:
+- "{{pick .step}}"
+- "{{pick .step}}{{pick .steps}}"
+
+title:
+- mon premier roman photo
+- mon roman photo
+- mon roman photo romantique
+- mystere dans le roman photo
+- attention aux photos, ceci est un roman
+
+author:
+- Blanchard
+- Michel
+- George
+- Christine
+
+step:
+- '<tr><td><img src="{{pick .image}}"/></td><td><b>{{pick .author}}</b><i>{{pick_once .phrase}}</i></td></tr>'
+
+image:
+- "http://lorempixel.com/400/200/business/?{{randString 3}}"
+- "http://lorempixel.com/400/200/people/?{{randString 3}}"
+- "https://loremflickr.com/400/200/businessmen?{{randString 3}}"
+
+phrase:
+- "Salut, comment ca va aujourd'hui?"
+- "T'as l'heure Michel?"
+- "Alors, la piece a mis un peu de temps a chauffer, mais la on est bons"
+- "On a un petit 35º matin, midi et soir"
+- "Ma cheffe est passee me voir ce matin, je n'avais que deux fenetres ouvertes"
+- "Hier j'ai pris une cuite avec des alcools de merde, alors j'ai un effroyable mal de crane et envie de gerber."
+- "Je peux comprendre que ca fasse peur"
+- "Ouais, je sais pas trop comment ca se passe"
+- "He, arrete!"
+- "Mais demain je vais me baigner au lac du Salagou, et ca c'est chouette!"
+- "Je n'ai pas peur de me faire des tatouages"
