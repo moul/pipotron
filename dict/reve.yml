@@ -19,6 +19,13 @@ phrases:
  {{pick .phrases}}
 
 phrase:
+- "J'etais {{pick_once .dans_endroit}}, avec {{pick .une_personne}}, {{pick_once .action_avec_quelquun}}."
+- "On etait {{pick_once .dans_endroit}}, {{pick_once .action_avec_quelquun}}."
+- "A cote de moi, je vois {{pick_once .une_personne}}, j'etais {{pick_once .adjectif_d_etat}}."
+- "{{pick_once .une_personne | title}} etait avec {{pick_once .une_personne}}."
+- "{{pick_once .phrase_toute_faite}}"
+
+phrase_toute_faite:
 - "J'etais avec ma famille."
 - "Mon cousin etait redevenu plus jeune, genre de 8 a 10 ans, genre il avait des pouvoirs magiques."
 - "J'etais dans le sud avec mes parents, dans la provence."
@@ -35,6 +42,38 @@ phrase:
 - "J'etais en colloc a Amiens avec le chinois qui avait passe une semaine a peter dans ma chambre d'hopital de Grenobles."
 - "J'étais dans un magasin avec des clients qui avaient tous des cravates et qui devaient passer leur cravate au caissier pour pouvoir acheter leurs articles."
 
+adjectif_d_etat:
+- content
+- anxieux
+- joyeux
+- perspicace
+- amoureux
+- lucide
+
+dans_endroit:
+- a Marseille
+- dans l'espace
+- dans ma baignoire
+- au canada
+- dans un pays chaud
+- dans une autre dimension
+- dans un fauteuil
+- dans mon propre pied
+
+une_personne:
+- ma soeur
+- ma soeur qui n'etait pas ma soeur
+- mon prof de francais
+- mon ami imaginaire
+- mon sosie parfait
+- chuck norris
+- un panda qui ressemblait a une tourterelle
+
+action_avec_quelquun:
+- nous mangions des pommes
+- je volais dans les airs
+- je recitais shakespear sans les mains
+- je faisais du velo tres tres tres lentement
 
 conclusion:
 - "FIN."
