@@ -11,6 +11,17 @@ func Generate(dict *Dict) (string, error) {
 	return executeTemplate("{{pick .output}}", dict)
 }
 
+const letterBytes = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+func randStringBytes(n int) string {
+    b := make([]byte, n)
+    for i := range b {
+        b[i] = letterBytes[rand.Intn(len(letterBytes))]
+    }
+    return string(b)
+}
+
+
 func executeTemplate(input string, dict *Dict) (string, error) {
 	already_picked := map[string]interface{}{}
 
@@ -21,6 +32,8 @@ func executeTemplate(input string, dict *Dict) (string, error) {
 		}
 		return opts[rand.Intn(len(opts))]
 	}
+
+	funcMap["randString"] = randStringBytes
 	funcMap["title"] = strings.Title
 	funcMap["lower"] = strings.ToLower
 	funcMap["upper"] = strings.ToUpper
