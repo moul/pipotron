@@ -25,7 +25,8 @@
             <option value="example">example</option>
             <option value="fuu">fuu</option>
             <option value="horoscope">horoscope</option>
-            <option value="html">html</option>
+            <option value="html" data-content-type="text/html">html (rendering)</option>
+            <option value="html">html (source)</option>
             <option value="laboralphy">laboralphy</option>
             <option value="insulte-mignone" selected="selected">insulte-mignone</option>
             <option value="marabout">marabout</option>
@@ -52,7 +53,8 @@
     <script>
      function generate() {
        var dict = $('#dict').val();
-       $('#output').attr('src', '/run?dict=' + dict);
+       var contentType = $('#dict').attr('data-content-type');
+       $('#output').attr('src', '/run?dict=' + dict + "&content-type=" + contentType);
        $('#source').attr('href', 'https://github.com/moul/pipotron/blob/master/dict/'+dict+'.yml');
        gtag('event', "generate", {
          'category': dict,

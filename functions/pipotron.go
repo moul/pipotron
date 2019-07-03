@@ -52,7 +52,7 @@ func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResp
 		return reply(request, 200, "", string(dictFile))
 	}
 
-	return reply(request, 200, "", out)
+	return reply(request, 200, request.QueryStringParameters["content-type"], out)
 }
 
 func main() {
