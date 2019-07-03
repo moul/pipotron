@@ -6,9 +6,11 @@ GITHUB_TOKEN ?= $(GORELEASER_GITHUB_TOKEN)
 install: packr
 	GO111MODULE=on go install
 
+
 .PHONY: dev
 dev: clean
 	GO111MODULE=on go install
+	cd web; browser-sync
 
 .PHONY: examples
 examples:
@@ -46,3 +48,7 @@ goreleaser: packr
 .PHONY: goreleaser-dry-run
 goreleaser-dry-run:
 	goreleaser --snapshot --skip-publish --rm-dist
+
+.PHONY: netlify-dev
+netlify-dev:
+	netlify dev -c 'make dev'
