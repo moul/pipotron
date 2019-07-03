@@ -20,12 +20,28 @@ tag:
   - "<h3{{pick .tag_attributes}}>{{pick .tag}}</h3>"
   - "<h4{{pick .tag_attributes}}>{{pick .tag}}</h4>"
   - "<h5{{pick .tag_attributes}}>{{pick .tag}}</h5>"
+  - "<table{{pick .tag_attributes}}>{{pick .table_trs}}</table>"
   - "<marquee{{pick .tag_attributes}}>{{pick .tag}}</marquee>"
   - "<b{{pick .tag_attributes}}>{{pick .tag}}</b>"
   - "<section{{pick .tag_attributes}}>{{pick .tag}}</section>"
   - "<footer{{pick .tag_attributes}}>{{pick .tag}}</footer>"
   - "<head{{pick .tag_attributes}}>{{pick .tag}}</head>"
+  - '<img{{pick .tag_attributes}} src="https://placeimg.com/300/300/any" />'
   - "{{pick .text}}"
+
+table_trs:
+  - "{{pick .table_tr}}"
+  - "{{pick .table_tr}}{{pick .table_tr}}"
+  
+table_tr:
+  - "<tr{{pick .tag_attributes}}>{{pick .table_tds}}</tr>"
+  
+table_tds:
+  - "{{pick .table_td}}"
+  - "{{pick .table_td}}{{pick .table_td}}"
+
+table_td:
+  - "<td{{pick .tag_attributes}}>{{pick .tag}}</td>"
 
 text:
   - Lorem ipsum dolor sit amet
