@@ -1,6 +1,6 @@
 output:
   - "<html>{{pick .tag}}{{pick .tag}}</html>"
-  
+
 color:
   - red
   - green
@@ -38,16 +38,16 @@ size:
 
 random_word:
   - "{{pick .random_char}}{{pick .random_char}}{{pick .random_char}}{{pick .random_char}}{{pick .random_char}}{{pick .random_char}}{{pick .random_char}}"
-  
-random_char: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+
+random_char: ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 
 table_trs:
   - "{{pick .table_tr}}"
   - "{{pick .table_tr}}{{pick .table_tr}}"
-  
+
 table_tr:
   - "<tr{{pick .tag_attributes}}>{{pick .table_tds}}</tr>"
-  
+
 table_tds:
   - "{{pick .table_td}}"
   - "{{pick .table_td}}{{pick .table_td}}"
