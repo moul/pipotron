@@ -21,13 +21,25 @@ tag:
   - "<h4{{pick .tag_attributes}}>{{pick .tag}}</h4>"
   - "<h5{{pick .tag_attributes}}>{{pick .tag}}</h5>"
   - "<table{{pick .tag_attributes}}>{{pick .table_trs}}</table>"
-  - "<marquee{{pick .tag_attributes}}>{{pick .tag}}</marquee>"
   - "<b{{pick .tag_attributes}}>{{pick .tag}}</b>"
   - "<section{{pick .tag_attributes}}>{{pick .tag}}</section>"
   - "<footer{{pick .tag_attributes}}>{{pick .tag}}</footer>"
   - "<head{{pick .tag_attributes}}>{{pick .tag}}</head>"
-  - '<img{{pick .tag_attributes}} src="https://placeimg.com/300/300/any" />'
+  - '<img{{pick .tag_attributes}} src="https://placeimg.com/{{pick .size}}/{{pick .size}}/{{pick .random_word}}" />'
   - "{{pick .text}}"
+  - "<marquee{{pick .tag_attributes}}>{{pick .text}}</marquee>"
+
+size:
+  - 200
+  - 300
+  - 400
+  - 500
+  - 600
+
+random_word:
+  - "{{pick .random_char}}{{pick .random_char}}{{pick .random_char}}{{pick .random_char}}{{pick .random_char}}{{pick .random_char}}{{pick .random_char}}"
+  
+random_char: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
 table_trs:
   - "{{pick .table_tr}}"
