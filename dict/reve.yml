@@ -1,0 +1,41 @@
+output:
+- |
+  {{pick .intro}}
+  {{pick .phrases}}
+  {{pick .conclusion}}
+
+intro:
+- "Cette nuit j'ai reve que..."
+- "La nuit d'avant celle-ci, j'ai reve que..."
+- "Cette nuit j'ai fait un reve..."
+- "Hey, j'ai fait un reve cette nuit... enfin... c'etait un cauchemard..."
+- "Cette nuit, mon reve etait en deux parties."
+- "Vendredi soir j'ai fait un reve qui m'a fait me reveiller tellement je riais..."
+
+phrases:
+- "{{pick_once .phrase}}"
+- |
+ {{pick_once .phrase}}
+ {{pick .phrases}}
+
+phrase:
+- "J'etais avec ma famille."
+- "Mon cousin etait redevenu plus jeune, genre de 8 a 10 ans, genre il avait des pouvoirs magiques."
+- "J'etais dans le sud avec mes parents, dans la provence."
+- "On visitait des grottes prehistoriques, ou les mecs avaient foutu du platre partout sur les oeuvres pour avoir des traces."
+- "Je disais a la conservatrice que c'etait une methode de gros con et qu'ils allaient casser toutes les oeuvres."
+- "La conservatrice etait tres sympa, du coup, je ne lui en voulait pas d'utiliser une mauvaise methode de conservation des oeuvres."
+- "Il faisait tres chaud, les paysages ressemblaient plus a la sardaigne qu'a la provence."
+- "Je me retrouvais seul sur les bords d'un lac, sous un soleil de plomb, et je me mis a bronzer."
+- "Des campeurs passant pres de moi, se croyaient seuls, se mirent nus pour aller se baigner."
+- "J'etais bambin dans une famille d'inconnus riches, avec une soeur qui n'est pas ma soeur."
+- "On etait dans la France de Vichy, ca allait etre la rentree, sauf que pas de bol, j'avais une famille juive, et les allemands envahissaient le sud de la France."
+- "Mon grand-pere, passait par la, et faisait la blague du 'je t'ai pique ton nez'"
+- "J'etais avec plein d'Antillais, et leur decrivais ma recette de planteur en disant bien 'goyave', du coup ils disaient que j'etais un vrai Creole."
+- "J'etais en colloc a Amiens avec le chinois qui avait passe une semaine a peter dans ma chambre d'hopital de Grenobles."
+
+conclusion:
+- "FIN."
+- "Puis je me suis reveille a ce moment la."
+- "Et le reve s'est arrete, alors que j'etais encore au milieu."
+- "Mes reves sont vraiment pas geniaux en ce moment."
