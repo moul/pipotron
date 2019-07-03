@@ -50,5 +50,5 @@ number:
 tag_attributes:
   - ""
   - ""
-  - ' style="color: {{pick .color}}"'
+  - ' style="{{pick .style_attributes}}"'
   - ' class="cool"'
