@@ -37,7 +37,15 @@ text:
 style_attributes:
   - "{{pick .style_attributes}}; {{pick .style_attributes}}"
   - "color: {{pick .color}}"
-  - "border-color: {{pick .color}}"
+  - "background-color: {{pick .color}}"
+  - "border: {{pick .number}}px; border-color: {{pick .color}}"
+
+number:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
 
 tag_attributes:
   - ""
