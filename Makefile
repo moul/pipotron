@@ -46,3 +46,7 @@ goreleaser: packr
 .PHONY: goreleaser-dry-run
 goreleaser-dry-run:
 	goreleaser --snapshot --skip-publish --rm-dist
+
+.PHONY: netlify-dev
+netlify-dev:
+	netlify dev -c 'make dev'
