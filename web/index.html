@@ -53,7 +53,7 @@
     <script>
      function generate() {
        var dict = $('#dict').val();
-       var contentType = $('#dict').attr('data-content-type');
+       var contentType = $('#dict :selected').data('content-type');
        var url = '/run?dict=' + dict;
        if (contentType != undefined) {
          url += "&content-type=" + contentType;
