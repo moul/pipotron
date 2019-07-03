@@ -1,5 +1,6 @@
 output:
   - "<html>{{pick .tag}}{{pick .tag}}</html>"
+  - "<html><head><style>{{pick .css_rules}}</style></head>{{pick .tag}}{{pick .tag}}</html>"
 
 color:
   - red
@@ -66,17 +67,23 @@ style_attributes:
   - "{{pick .style_attributes}}; {{pick .style_attributes}}"
   - "color: {{pick .color}}"
   - "background-color: {{pick .color}}"
-  - "border: {{pick .number}}px; border-color: {{pick .color}}"
+  - "border: {{pick .small_number}}px; border-color: {{pick .color}}"
+  - "font-size: {{pick .medium_number}}px"
 
-number:
-  - 1
-  - 2
-  - 3
-  - 4
-  - 5
+small_number: ["1","2","3","4","5"]
+
+medium_number: ["10","11","12","13","14","15","16","17","18","19","20"]
 
 tag_attributes:
   - ""
   - ""
   - ' style="{{pick .style_attributes}}"'
   - ' class="cool"'
+
+css_rules:
+  - "{{pick .css_rule}}"
+  - "{{pick .css_rule}};{{pick .css_rule}}"
+
+css_rule:
+  - "{{pick .style_attributes}}"
+  - ""
