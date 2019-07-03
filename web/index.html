@@ -54,7 +54,11 @@
      function generate() {
        var dict = $('#dict').val();
        var contentType = $('#dict').attr('data-content-type');
-       $('#output').attr('src', '/run?dict=' + dict + "&content-type=" + contentType);
+       var url = '/run?dict=' + dict;
+       if (contentType != undefined) {
+         url += "&content-type=" + contentType;
+       }
+       $('#output').attr('src', url);
        $('#source').attr('href', 'https://github.com/moul/pipotron/blob/master/dict/'+dict+'.yml');
        gtag('event', "generate", {
          'category': dict,
