@@ -19,7 +19,7 @@ author:
 - Christine
 
 step:
-- '<tr><td><img src="{{pick .image}}"/></td><td><b>{{pick .author}}</b><i>{{pick_once .phrase}}</i></td></tr>'
+- '<tr><td><img src="{{pick .image}}"/></td><td><b>{{pick .author}}:</b> <i>{{pick_once .phrase}}</i></td></tr>'
 
 image:
 - "http://lorempixel.com/400/200/business/?{{randString 3}}"
