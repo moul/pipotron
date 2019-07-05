@@ -5,12 +5,13 @@ output:
   {{pick .conclusion}}
 
 intro:
-- "Cette nuit j'ai reve que..."
-- "La nuit d'avant celle-ci, j'ai reve que..."
-- "Cette nuit j'ai fait un reve..."
-- "Hey, j'ai fait un reve cette nuit... enfin... c'etait un cauchemard..."
-- "Cette nuit, mon reve etait en deux parties."
-- "Vendredi soir j'ai fait un reve qui m'a fait me reveiller tellement je riais..."
+- "Cette nuit j'ai rêvé que"
+- "La nuit d'avant celle-ci, j'ai rêvé que"
+- "Cette nuit j'ai fait un rêve"
+- "J'ai fait un rêve cette nuit... enfin... c'etait un cauchemard"
+- "Cette nuit, mon rêve était en deux parties."
+- "Vendredi soir j'ai fait un rêve qui m'a fait me réveiller tellement je riais."
+- "Cette nuit, dans mon rêve"
 
 phrases:
 - "{{pick_once .phrase}}"
@@ -19,27 +20,27 @@ phrases:
  {{pick .phrases}}
 
 phrase:
-- "J'etais {{pick_once .dans_endroit}}, avec {{pick .une_personne}}, {{pick_once .action_avec_quelquun}}."
-- "On etait {{pick_once .dans_endroit}}, {{pick_once .action_avec_quelquun}}."
-- "A cote de moi, je vois {{pick_once .une_personne}}, j'etais {{pick_once .adjectif_d_etat}}."
-- "{{pick_once .une_personne | title}} etait avec {{pick_once .une_personne}}."
+- "J'étais {{pick_once .dans_endroit}}, avec {{pick .une_personne}}, {{pick_once .action_avec_quelquun}}."
+- "On était {{pick_once .dans_endroit}}, {{pick_once .action_avec_quelquun}}."
+- "À côté de moi, je vois {{pick_once .une_personne}}, j'étais {{pick_once .adjectif_d_etat}}."
+- "{{pick_once .une_personne | title}} était avec {{pick_once .une_personne}}."
 - "{{pick_once .phrase_toute_faite}}"
 
 phrase_toute_faite:
-- "J'etais avec ma famille."
-- "Mon cousin etait redevenu plus jeune, genre de 8 a 10 ans, genre il avait des pouvoirs magiques."
-- "J'etais dans le sud avec mes parents, dans la provence."
-- "On visitait des grottes prehistoriques, ou les mecs avaient foutu du platre partout sur les oeuvres pour avoir des traces."
-- "Je disais a la conservatrice que c'etait une methode de gros con et qu'ils allaient casser toutes les oeuvres."
-- "La conservatrice etait tres sympa, du coup, je ne lui en voulait pas d'utiliser une mauvaise methode de conservation des oeuvres."
-- "Il faisait tres chaud, les paysages ressemblaient plus a la sardaigne qu'a la provence."
+- "J'étais avec ma famille."
+- "Mon cousin était redevenu plus jeune, genre 8-10 ans, il avait des pouvoirs magiques."
+- "J'étais dans le sud avec mes parents, dans la provence."
+- "On visitait des grottes préhistoriques, ou les mecs avaient foutu du platre partout sur les oeuvres pour avoir des traces."
+- "Je disais a la conservatrice que c'était une methode de gros con et qu'ils allaient casser toutes les oeuvres."
+- "La conservatrice était très sympa, du coup, je ne lui en voulait pas d'utiliser une mauvaise méthode de conservation des oeuvres."
+- "Il faisait très chaud, les paysages ressemblaient plus a la sardaigne qu'a la provence."
 - "Je me retrouvais seul sur les bords d'un lac, sous un soleil de plomb, et je me mis a bronzer."
-- "Des campeurs passant pres de moi, se croyaient seuls, se mirent nus pour aller se baigner."
-- "J'etais bambin dans une famille d'inconnus riches, avec une soeur qui n'est pas ma soeur."
-- "On etait dans la France de Vichy, ca allait etre la rentree, sauf que pas de bol, j'avais une famille juive, et les allemands envahissaient le sud de la France."
-- "Mon grand-pere, passait par la, et faisait la blague du 'je t'ai pique ton nez'"
-- "J'etais avec plein d'Antillais, et leur decrivais ma recette de planteur en disant bien 'goyave', du coup ils disaient que j'etais un vrai Creole."
-- "J'etais en colloc a Amiens avec le chinois qui avait passe une semaine a peter dans ma chambre d'hopital de Grenobles."
+- "Des campeurs passant près de moi, se croyaient seuls, se mirent nus pour aller se baigner."
+- "J'étais bambin dans une famille d'inconnus riches, avec une soeur qui n'est pas ma soeur."
+- "On etait dans la France de Vichy, ca allait etre la rentrée, sauf que pas de bol, j'avais une famille juive, et les allemands envahissaient le sud de la France."
+- "Mon grand-père, passait par là, et faisait la blague du 'je t'ai piqué ton nez'"
+- "J'étais avec plein d'Antillais, et leur décrivais ma recette de planteur en disant bien 'goyave', du coup ils disaient que j'étais un vrai Créole."
+- "J'étais en colloc a Amiens avec le chinois qui avait passé une semaine à péter dans ma chambre d'hôpital de Grenobles."
 - "J'étais dans un magasin avec des clients qui avaient tous des cravates et qui devaient passer leur cravate au caissier pour pouvoir acheter leurs articles."
 
 adjectif_d_etat:
@@ -51,7 +52,7 @@ adjectif_d_etat:
 - lucide
 
 dans_endroit:
-- a Marseille
+- à Marseille
 - dans l'espace
 - dans ma baignoire
 - au canada
@@ -59,24 +60,27 @@ dans_endroit:
 - dans une autre dimension
 - dans un fauteuil
 - dans mon propre pied
+- dans ma chambre qui ne ressemblait pas du tout à ma chambre
 
 une_personne:
 - ma soeur
-- ma soeur qui n'etait pas ma soeur
-- mon prof de francais
+- ma soeur qui n'était pas ma soeur
+- mon prof de français
 - mon ami imaginaire
 - mon sosie parfait
 - chuck norris
-- un panda qui ressemblait a une tourterelle
+- un panda qui ressemblait à une tourterelle
 
 action_avec_quelquun:
 - nous mangions des pommes
 - je volais dans les airs
-- je recitais shakespear sans les mains
-- je faisais du velo tres tres tres lentement
+- je récitais shakespeare sans les mains
+- je faisais du velo très très très lentement
 
 conclusion:
 - "FIN."
-- "Puis je me suis reveille a ce moment la."
-- "Et le reve s'est arrete, alors que j'etais encore au milieu."
-- "Mes reves sont vraiment pas geniaux en ce moment."
+- "Puis je me suis réveillé à ce moment là."
+- "Et le rêve s'est arrêté, alors que j'etais encore au milieu."
+- "Mes rêves sont vraiment pas géniaux en ce moment."
+- "Et là mon réveil à sonné."
+
