@@ -17,6 +17,7 @@ Lambda functions are hosted on Netlify, give a try here:
 * https://pipotron.moul.io/run?dict=asv
 * https://pipotron.moul.io/run?dict=bingo-winner
 * https://pipotron.moul.io/run?dict=example
+* https://pipotron.moul.io/run?dict=excuse-a-2-balles
 * https://pipotron.moul.io/run?dict=fuu
 * https://pipotron.moul.io/run?dict=horoscope
 * https://pipotron.moul.io/run?dict=html
