@@ -1,0 +1,25 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+
+Globals:
+  Function:
+    Timeout: 5
+
+Resources:
+  PipotronFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: functions-build/pipotron
+      Runtime: go1.x
+      Tracing: Active
+      Events:
+        Request:
+          Type: Api
+          Properties:
+            Path: /run
+            Method: GET
+
+Outputs:
+  GraphmanAPI:
+  PipotronFunction:
+    Value: !GetAtt PipotronFunction.Arn

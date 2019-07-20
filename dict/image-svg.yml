@@ -1,0 +1,38 @@
+output:
+- |-
+  <?xml version="1.0" encoding="UTF-8"?>
+  <svg width="800px" height="600px" viewBox="0 0 800 600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs></defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+      {{range N (randMinMax 3 6) -}}
+        {{pick $.shape}}
+      {{end}}
+    </g>
+  </svg>
+
+shape:
+  - '<rect{{pick .rect_attributes}}></rect>'
+  - '<ellipse{{pick .ellipse_attributes}}></ellipse>'
+#  - '<polygon{{pick .polygon_attributes}}></polygon>'
+#  - '<path{{pick .path_attributes}}></path>'
+
+common_attributes:
+  - ' stroke="{{pick .color}}" stroke-width="{{randMinMax 0 7}}" fill="{{pick .color}}"{{pick .transform_attribute}}{{pick .opacity_attribute}}'
+
+opacity_attribute:
+  - ''
+  - ' opacity="{{rand}}"'
+
+transform_attribute:
+  - ''
+  - ' transform="rotate({{randMinMax -179 179}}.0)"'
+
+rect_attributes:
+  - '{{pick .common_attributes}} x="{{randMinMax 100 700}}" y="{{randMinMax 100 500}}" width="{{randMinMax 20 400}}" height="{{randMinMax 20 400}}"'
+ellipse_attributes:
+  - '{{pick .common_attributes}} cx="{{randMinMax 100 700}}" rx="{{randMinMax 100 700}}" cy="{{randMinMax 100 500}}" ry="{{randMinMax 100 500}}"'
+
+color:
+  - "#{{pick .hexadec}}{{pick .hexadec}}{{pick .hexadec}}{{pick .hexadec}}{{pick .hexadec}}{{pick .hexadec}}"
+
+hexadec: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"]
