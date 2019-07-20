@@ -5,6 +5,8 @@ import (
 	"math/rand"
 	"strings"
 	"text/template"
+
+	"github.com/Masterminds/sprig"
 )
 
 func Generate(dict *Dict) (string, error) {
@@ -14,18 +16,20 @@ func Generate(dict *Dict) (string, error) {
 const letterBytes = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 func randStringBytes(n int) string {
-    b := make([]byte, n)
-    for i := range b {
-        b[i] = letterBytes[rand.Intn(len(letterBytes))]
-    }
-    return string(b)
+	b := make([]byte, n)
+	for i := range b {
+		b[i] = letterBytes[rand.Intn(len(letterBytes))]
+	}
+	return string(b)
 }
-
 
 func executeTemplate(input string, dict *Dict) (string, error) {
 	already_picked := map[string]interface{}{}
 
 	funcMap := template.FuncMap{}
+	for k, v := range sprig.FuncMap() {
+		funcMap[k] = v
+	}
 	pickFunc := func(opts []string) string {
 		if len(opts) < 1 {
 			return "$$$ INVALID OPTION $$$"
@@ -38,6 +42,19 @@ func executeTemplate(input string, dict *Dict) (string, error) {
 	funcMap["lower"] = strings.ToLower
 	funcMap["upper"] = strings.ToUpper
 	funcMap["pick"] = pickFunc
+	funcMap["rand"] = rand.Float64
+	funcMap["randIntn"] = rand.Intn
+	funcMap["N"] = func(n int) (stream chan int) {
+		stream = make(chan int)
+		go func() {
+			for i := 0; i <= n; i++ {
+				stream <- i
+			}
+			close(stream)
+		}()
+		return
+	}
+	funcMap["randMinMax"] = func(min, max int) int { return rand.Intn(max-min) + min + 1 }
 	funcMap["pick_once"] = func(opts []string) string {
 		// FIXME: find a better way to do this :)
 		for i := 0; i < 100; i++ {

@@ -52,3 +52,12 @@ goreleaser-dry-run:
 .PHONY: netlify-dev
 netlify-dev:
 	netlify dev -c 'make dev'
+
+
+.PHONY: sam-local
+sam-local: packr
+	@echo ""
+	@echo "Open: http://localhost:3000/index.html"
+	@echo ""
+	GO111MODULE=on GOOS=linux GOARCH=amd64 go build -o functions-build/pipotron ./functions/pipotron.go
+	sam local start-api --static-dir=web
