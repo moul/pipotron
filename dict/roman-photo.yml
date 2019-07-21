@@ -1,9 +1,22 @@
 output:
-- "<h1>{{pick .title}}</h1><table>{{pick .step}}{{pick .step}}{{pick .step}}{{pick .steps}}</table>"
+- |-
+  <h1>{{pick "title"}}</h1>
+  <table>
+    {{range N (randMinMax 4 10) -}}
+      {{pick "step"}}
+    {{end}}
+  </table>'
 
-steps:
-- "{{pick .step}}"
-- "{{pick .step}}{{pick .steps}}"
+step:
+- |-
+  <tr>
+    <td><img src="{{pick "image"}}"/></td>
+    <td><b>{{pick "author"}}:</b> <i>{{pick_once "phrase"}}</i></td>
+  </tr>
+
+
+init:
+  - '{{$.Scratch.Set "content-type" "text/html"}}'
 
 title:
 - mon premier roman photo
@@ -18,13 +31,10 @@ author:
 - George
 - Christine
 
-step:
-- '<tr><td><img src="{{pick .image}}"/></td><td><b>{{pick .author}}:</b> <i>{{pick_once .phrase}}</i></td></tr>'
-
 image:
-- "http://lorempixel.com/400/200/business/?{{randString 3}}"
-- "http://lorempixel.com/400/200/people/?{{randString 3}}"
-- "https://loremflickr.com/400/200/businessmen?{{randString 3}}"
+- 'http://lorempixel.com/400/200/business/?{{randString 3}}'
+- 'http://lorempixel.com/400/200/people/?{{randString 3}}'
+- 'https://loremflickr.com/400/200/businessmen?{{randString 3}}'
 
 phrase:
 - "Salut, comment ca va aujourd'hui?"

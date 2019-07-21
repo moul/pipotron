@@ -1,16 +1,16 @@
 output:
 - |-
-  {{pick .hairs}}
-  {{pick .headtop}}
-  {{pick .headspace}}
-  {{pick .eyebrows}}
-  {{pick .eyes}}
-  {{pick .headspace}}
-  {{pick .nose}}
-  {{pick .headspace}}
-  {{pick .mouth}}
-  {{pick .headspace}}
-  {{pick .headbottom}}
+  {{pick "hairs"}}
+  {{pick "headtop"}}
+  {{pick "headspace"}}
+  {{pick "eyebrows"}}
+  {{pick "eyes"}}
+  {{pick "headspace"}}
+  {{pick "nose"}}
+  {{pick "headspace"}}
+  {{pick "mouth"}}
+  {{pick "headspace"}}
+  {{pick "headbottom"}}
 
 hairs:
   - "           "
@@ -42,7 +42,7 @@ ear:
   - "("
 
 eyes:
-  - "{{pick .ear}}{{pick .eyes_middle}}{{pick .ear}}"
+  - '{{pick "ear"}}{{pick "eyes_middle"}}{{pick "ear"}}'
 
 eyebrow:
   - "~"
@@ -52,7 +52,7 @@ eyebrow:
 
 eyebrows:
   - " |       | "
-  - " | {{pick .eyebrow}}   {{pick .eyebrow}} | "
+  - ' | {{pick "eyebrow"}}   {{pick "eyebrow"}} | '
 
 eyes_middle:
   - "| o   o |"

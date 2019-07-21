@@ -1,136 +1,136 @@
 output:
 - |-
-  {{pick .signe}}
+  {{pick "signe"}}
 
-  Résultats - Argent: {{pick .score}}, Santé: {{pick .score}}, Amour: {{pick .score}}, Travail: {{pick .score}}, Général: {{pick .score}}
+  Résultats - Argent: {{pick "score"}}, Santé: {{pick "score"}}, Amour: {{pick "score"}}, Travail: {{pick "score"}}, Général: {{pick "score"}}
 
-  Argent:  {{pick .argent}} {{pick .suffix}}
-  Santé:   {{pick .sante}} {{pick .suffix}}
-  Amour:   {{pick .amour}} {{pick .suffix}}
-  Travail: {{pick .travail}} {{pick .suffix}}
-  Général: {{pick .general}}
+  Argent:  {{pick "argent"}} {{pick "suffix"}}
+  Santé:   {{pick "sante"}} {{pick "suffix"}}
+  Amour:   {{pick "amour"}} {{pick "suffix"}}
+  Travail: {{pick "travail"}} {{pick "suffix"}}
+  Général: {{pick "general"}}
 
 score: [
-"1", "2", "3", "4", "5"
+'1', '2', '3', '4', '5'
 ]
 
 signe:
-  - "Bélier"
-  - "Taureau"
-  - "Gémeaux"
-  - "Cancer"
-  - "Lion"
-  - "Vierge"
-  - "Balance"
-  - "Scorpion"
-  - "Sagittaire"
-  - "Capricorne"
-  - "Verseau"
-  - "Poissons"
+  - 'Bélier'
+  - 'Taureau'
+  - 'Gémeaux'
+  - 'Cancer'
+  - 'Lion'
+  - 'Vierge'
+  - 'Balance'
+  - 'Scorpion'
+  - 'Sagittaire'
+  - 'Capricorne'
+  - 'Verseau'
+  - 'Poissons'
 
 suffix:
-  - ""
-  - "{{pick_once .suffix_once}}"
+  - ''
+  - '{{pick_once "suffix_once"}}'
 
 suffix_once:
-  - "Ou pas..."
-  - "Deux fois."
-  - "Mars est aligné avec Jupiter."
-  - "La Terre est alignée horizontalement avec Venus."
-  - "Mettez la gomme !"
-  - "Ne vous isolez pas."
-  - "Restez couché."
-  - "C'est le moment de garder le sourire !"
-  - "C'est le moment."
-  - "C'est votre jour de chance."
-  - "Foncez."
-  - "Calmez vos ardeurs."
+  - 'Ou pas...'
+  - 'Deux fois.'
+  - 'Mars est aligné avec Jupiter.'
+  - 'La Terre est alignée horizontalement avec Venus.'
+  - 'Mettez la gomme !'
+  - 'Ne vous isolez pas.'
+  - 'Restez couché.'
+  - 'C’est le moment de garder le sourire !'
+  - 'C’est le moment.'
+  - 'C’est votre jour de chance.'
+  - 'Foncez.'
+  - 'Calmez vos ardeurs.'
 
 argent:
-  - "Vous allez gagner au loto."
-  - "Vous allez gagner au bingo."
-  - "Vous allez vous faire arnaquer."
-  - "Vous allez gagner à la tombola."
-  - "Vous allez gagner les 3 télés."
-  - "Vous allez trouver un euro par terre."
-  - "Vous allez retirer de l'argent au distributeur de billet."
-  - "Vous allez trouver un trésor caché dans une cheminée."
-  - "Vous allez gagner des billets de monopoly."
-  - "En ce moment l'argent n'est pas un problème pour vous."
-  - "Vous ne devriez pas avoir les poches percées."
-  - "Mauvaise période pour le shopping, n'achetez pas sur un coup de tête."
-  - "Vous allez acheter du pain, on va vous rendre trop de monnaie."
-  - "Vous allez trouver un ticket gagnant par terre."
-  - "Surtout ne jouez pas le numéro 30, il pourrait vous porter malheur."
+  - 'Vous allez gagner au loto.'
+  - 'Vous allez gagner au bingo.'
+  - 'Vous allez vous faire arnaquer.'
+  - 'Vous allez gagner à la tombola.'
+  - 'Vous allez gagner les 3 télés.'
+  - 'Vous allez trouver un euro par terre.'
+  - 'Vous allez retirer de l’argent au distributeur de billet.'
+  - 'Vous allez trouver un trésor caché dans une cheminée.'
+  - 'Vous allez gagner des billets de monopoly.'
+  - 'En ce moment l’argent n’est pas un problème pour vous.'
+  - 'Vous ne devriez pas avoir les poches percées.'
+  - 'Mauvaise période pour le shopping, n’achetez pas sur un coup de tête.'
+  - 'Vous allez acheter du pain, on va vous rendre trop de monnaie.'
+  - 'Vous allez trouver un ticket gagnant par terre.'
+  - 'Surtout ne jouez pas le numéro 30, il pourrait vous porter malheur.'
 
 sante:
-  - "Vous allez mourir (un jour)."
-  - "Vous allez mieux."
-  - "Vous allez manger au mc-do, sans tomber malade."
-  - "Vous allez avoir mal {{pick .body_part}}."
-  - "Sans être dans une forme éblouissante, vous vous sentirez plutôt bien."
-  - "Mangez des pommes."
-  - "Vous allez manger des trucs bons."
+  - 'Vous allez mourir (un jour).'
+  - 'Vous allez mieux.'
+  - 'Vous allez manger au mc-do, sans tomber malade.'
+  - 'Vous allez avoir mal {{pick "body_part"}}.'
+  - 'Sans être dans une forme éblouissante, vous vous sentirez plutôt bien.'
+  - 'Mangez des pommes.'
+  - 'Vous allez manger des trucs bons.'
 
 body_part:
- - "au genou"
- - "au ventre"
- - "aux yeux"
- - "au crane"
+ - 'au genou'
+ - 'au ventre'
+ - 'aux yeux'
+ - 'au crane'
 
 amour:
-  - "Vous allez pouvoir baiser."
-  - "Vous allez rencontrer l'ame soeur."
-  - "Vous allez avoir besoin d'une nouvelle boite de Kleenex."
-  - "Vous allez retomber sur votre ex."
-  - "Vous allez avoir un enfant."
-  - "Vous avez peut-être une MST."
-  - "On va vous faire le coup de la panne."
-  - "Vous avez un peu de mal à exprimer sobrement vos ressentis, vous en faites tout de suite des tonnes..."
-  - "Vous flottez sur un petit nuage romantique."
-  - "Vous allez avoir un plan à 3."
-  - "Ne tentez pas l'impossible, il n'y aura pas de miracle."
-  - "Vous ne serez pas particulièrement à l'aise."
-  - "Vous avez un bon potentiel de séduction, et vous le savez."
-  - "C'est le néant."
+  - 'Vous allez pouvoir baiser.'
+  - 'Vous allez rencontrer l’ame soeur.'
+  - 'Vous allez avoir besoin d’une nouvelle boite de Kleenex.'
+  - 'Vous allez retomber sur votre ex.'
+  - 'Vous allez avoir un enfant.'
+  - 'Vous avez peut-être une MST.'
+  - 'On va vous faire le coup de la panne.'
+  - 'Vous avez un peu de mal à exprimer sobrement vos ressentis, vous en faites tout de suite des tonnes...'
+  - 'Vous flottez sur un petit nuage romantique.'
+  - 'Vous allez avoir un plan à 3.'
+  - 'Ne tentez pas l’impossible, il n’y aura pas de miracle.'
+  - 'Vous ne serez pas particulièrement à l’aise.'
+  - 'Vous avez un bon potentiel de séduction, et vous le savez.'
+  - 'C’est le néant.'
 
 travail:
-  - "Vous allez être l'employé du mois."
-  - "Vous allez compter jusqu'à l'infini."
-  - "Vous allez avoir une augmentation."
-  - "Vous allez aller au bureau en trotinette."
-  - "Vous atteignez les objectifs."
-  - "Vous êtes licencié."
-  - "Une météorite s'écrase sur votre bureau."
-  - "Tes résultats sont corrects sans être extraordinaires."
-  - "Le travail sera laborieux."
-  - "Vos clés sont au dans le bureau."
-  - "Vous allez avoir une bonne idée."
-  - "Vous allez rater une réunion importante."
-  - "Quelqu'un va faire tomber du café sur votre bureau."
-  - "Votre patron va organiser un barbecue."
-  - "Des postes s'ouvrent à vous."
+  - 'Vous allez être l’employé du mois.'
+  - 'Vous allez compter jusqu’à l’infini.'
+  - 'Vous allez avoir une augmentation.'
+  - 'Vous allez aller au bureau en trotinette.'
+  - 'Vous atteignez les objectifs.'
+  - 'Vous êtes licencié.'
+  - 'Une météorite s’écrase sur votre bureau.'
+  - 'Tes résultats sont corrects sans être extraordinaires.'
+  - 'Le travail sera laborieux.'
+  - 'Vos clés sont au dans le bureau.'
+  - 'Vous allez avoir une bonne idée.'
+  - 'Vous allez rater une réunion importante.'
+  - 'Quelqu’un va faire tomber du café sur votre bureau.'
+  - 'Votre patron va organiser un barbecue.'
+  - 'Des postes s’ouvrent à vous.'
 
 general:
-  - "C'est une fin de semaine agréable qui vous attend."
-  - "Vous serez vraiment prêt à vous remettre en question et à prendre en compte les critiques que l'on vous a faites."
-  - "Vous avez besoin d'action concrète et de vous dépasser."
-  - "Rien ne sert de courir, dit le proverbe."
-  - "En ce moment, c'est plutôt {{pick .truc_agreable}}..."
-  - "En ce moment, vous feriez mieux de rester au lit..."
-  - "En ce moment, vous pouvez tout entreprendre..."
-  - "Vous savez ce que vous voulez."
-  - "Vous saisissez les occasions et les opportunités."
-  - "Vous avez besoin de vous protéger des influences extérieures."
-  - "Vous allez vous faire arnaquer par un mauvais horoscope."
-  - "Votre horoscope sera bidon."
-  - "L'avenir vient en petit pot."
-  - "L'avenir est aveugle."
+  - 'C’est une fin de semaine agréable qui vous attend.'
+  - 'Vous serez vraiment prêt à vous remettre en question et à prendre en compte les critiques que l’on vous a faites.'
+  - 'Vous avez besoin d’action concrète et de vous dépasser.'
+  - 'Rien ne sert de courir, dit le proverbe.'
+  - 'En ce moment, c’est plutôt {{pick "truc_agreable"}}...'
+  - 'En ce moment, vous feriez mieux de rester au lit...'
+  - 'En ce moment, vous pouvez tout entreprendre...'
+  - 'Vous savez ce que vous voulez.'
+  - 'Vous saisissez les occasions et les opportunités.'
+  - 'Vous avez besoin de vous protéger des influences extérieures.'
+  - 'Vous allez vous faire arnaquer par un mauvais horoscope.'
+  - 'Votre horoscope sera bidon.'
+  - 'L’avenir vient en petit pot.'
+  - 'L’avenir est aveugle.'
 
 truc_agreable:
-  - "agréable"
-  - "la joie"
-  - "le bonheur"
-  - "génial"
-  - "divin"
-  - "cool"
+  - 'agréable'
+  - 'la joie'
+  - 'le bonheur'
+  - 'génial'
+  - 'divin'
+  - 'cool'

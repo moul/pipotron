@@ -8,6 +8,7 @@ import (
 
 	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
+	"github.com/gohugoio/hugo/common/maps"
 	yaml "gopkg.in/yaml.v2"
 	"moul.io/pipotron/dict"
 	"moul.io/pipotron/pipotron"
@@ -40,12 +41,13 @@ func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResp
 		return reply(request, 404, "", "No such dictionary (?dict=)")
 	}
 
-	var dict pipotron.Dict
-	if err = yaml.Unmarshal(dictFile, &dict); err != nil {
+	var context pipotron.Context
+	if err = yaml.Unmarshal(dictFile, &context.Dict); err != nil {
 		return reply(request, 500, "", fmt.Sprintf("%v", err))
 	}
+	context.Scratch = maps.NewScratch()
 
-	out, err := pipotron.Generate(&dict)
+	out, err := pipotron.Generate(&context)
 	if err != nil {
 		return reply(request, 500, "", fmt.Sprintf("%v", err))
 	}
@@ -54,7 +56,14 @@ func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResp
 		return reply(request, 200, "", string(dictFile))
 	}
 
-	return reply(request, 200, request.QueryStringParameters["content-type"], out)
+	contentType := `text/plain; charset=utf-8`
+	if override := context.Scratch.Get("content-type"); override != nil {
+		contentType = override.(string)
+	}
+	if override := request.QueryStringParameters["content-type"]; override != "" {
+		contentType = override
+	}
+	return reply(request, 200, contentType, out)
 }
 
 func main() {

@@ -1,7 +1,7 @@
 ﻿# based on pipotron.free.fr
 
 output:
-- "{{pick .pipo1}} {{pick .pipo2}} {{pick .pipo3}} {{pick .pipo4}} {{pick .pipo6}} {{pick .pipo7}} {{pick .pipo8}} {{pick .pipo9}}"
+- '{{pick "pipo1"}} {{pick "pipo2"}} {{pick "pipo3"}} {{pick "pipo4"}} {{pick "pipo6"}} {{pick "pipo7"}} {{pick "pipo8"}} {{pick "pipo9"}}'
 
 pipo1:
 - "Avec"
@@ -57,10 +57,10 @@ pipo3:
 - "que nous constatons"
 
 pipo4:
-- "{{pick .pipo4_a}} d'{{pick .pipo5_a}}"
-- "{{pick .pipo4_a}} de {{pick .pipo5_b}}"
-- "{{pick .pipo4_b}} {{pick .pipo5_a}}"
-- "{{pick .pipo4_b}} {{pick .pipo5_b}}"
+- '{{pick "pipo4_a"}} d’{{pick "pipo5_a"}}'
+- '{{pick "pipo4_a"}} de {{pick "pipo5_b"}}'
+- '{{pick "pipo4_b"}} {{pick "pipo5_a"}}'
+- '{{pick "pipo4_b"}} {{pick "pipo5_b"}}'
 
 pipo4_a:
 - "il convient"

@@ -1,7 +1,7 @@
 # ASV (age-sexe-ville) is an old way of introduction message on chats and forums
 
 output:
-  - "{{pick .salutation}} {{pick .age}}-{{pick .sexe}}-{{pick .ville}}"
+  - '{{pick "salutation"}} {{pick "age"}}-{{pick "sexe"}}-{{pick "ville"}}'
 
 salutation:
   - "Salut tout le monde!"

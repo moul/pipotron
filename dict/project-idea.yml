@@ -1,20 +1,20 @@
 output:
 - |-
-  Project Name: {{pick .name}}
+  Project Name: {{pick "name"}}
 
-  Technologies: {{pick .technologies}}
+  Technologies: {{pick "technologies"}}
 
 name:
-  - "{{pick .adjective | title}} {{pick .thing | title}}"
-  - "{{pick .adjective | title}}{{pick .thing | title}}"
-  - "{{pick .adjective}}-{{pick .thing}}"
-  - "{{pick .adjective | title}}{{pick .suffix}}"
-  - "{{pick .thing | title}}{{pick .suffix}}"
+  - '{{pick "adjective | title"}} {{pick "thing | title"}}'
+  - '{{pick "adjective | title"}}{{pick "thing | title"}}'
+  - '{{pick "adjective"}}-{{pick "thing"}}'
+  - '{{pick "adjective | title"}}{{pick "suffix"}}'
+  - '{{pick "thing | title"}}{{pick "suffix"}}'
 
 technologies:
-  - "#{{pick_once .technology}}, #{{pick_once .technology}}"
-  - "#{{pick_once .technology}}, #{{pick_once .technology}}, #{{pick_once .technology}}"
-  - "#{{pick_once .technology}}, #{{pick_once .technology}}, #{{pick_once .technology}}, #{{pick_once .technology}}"
+  - '#{{pick_once "technology"}}, #{{pick_once "technology"}}'
+  - '#{{pick_once "technology"}}, #{{pick_once "technology"}}, #{{pick_once "technology"}}'
+  - '#{{pick_once "technology"}}, #{{pick_once "technology"}}, #{{pick_once "technology"}}, #{{pick_once "technology"}}'
 
 adjective:
   - advanced
