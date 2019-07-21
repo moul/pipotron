@@ -1,4 +1,4 @@
 [build]
-  command = "PATH=$PATH:$GOPATH/bin make functions"
+  command = "PATH=$PATH:$GOPATH/bin make _netlify_prepare functions"
   functions = "./functions-build"
   publish = "web"
