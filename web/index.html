@@ -18,6 +18,7 @@
       <form class="form-inline">
         <div class="form-group mb-2">
           <select id="dict" class="form-control mr-sm-2">
+            <option value="custom">** custom **</option>
             <option value="accords">accords</option>
             <option value="ascii-face">ascii-face</option>
             <option value="asv">asv</option>
@@ -42,8 +43,8 @@
         </div>
         <input class="btn btn-primary mb-2 mx-sm-3" type="button" id="generate" value="generate" />
         <a id="source" href="https://github.com/moul/pipotron" class="btn btn-secondary mb-2" target="_blank">Source</a>
+        <textarea class="form-control" rows="10" id="source">Loading...</textarea>
       </form>
-      <hr />
       <div class="border embed-responsive embed-responsive-16by9 code">
         <iframe class="embed-responsive-item" id="output">Loading...</iframe>
       </div>

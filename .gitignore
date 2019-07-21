@@ -1,3 +1,4 @@
+web/dicts.js
 dist/
 functions-build/
 *-packr.go
