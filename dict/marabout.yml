@@ -1,17 +1,17 @@
 output:
 - |-
-  {{pick .marabout}}
+  {{pick "marabout"}}
 
-  {{pick .headline}}
+  {{pick "headline"}}
 
-  {{pick .punchline}}
+  {{pick "punchline"}}
 
-  {{pick .talents}}
+  {{pick "talents"}}
 
-  {{pick .conclusion}}
+  {{pick "conclusion"}}
 
 marabout:
-  - "{{pick .marabout_titre}} {{pick .marabout_nom}}"
+  - '{{pick "marabout_titre"}} {{pick "marabout_nom"}}'
 
 marabout_titre:
   - Grand
@@ -62,10 +62,10 @@ marabout_nom:
   - Yadali
 
 headline:
-  - "{{pick .headline_main}}"
-  - "{{pick .headline_prefix}} {{pick .headline_main}}"
-  - "{{pick .headline_main}} {{pick .headline_suffix}}"
-  - "{{pick .headline_prefix}} {{pick .headline_main}} {{pick .headline_suffix}}"
+  - '{{pick "headline_main"}}'
+  - '{{pick "headline_prefix"}} {{pick "headline_main"}}'
+  - '{{pick "headline_main"}} {{pick "headline_suffix"}}'
+  - '{{pick "headline_prefix"}} {{pick "headline_main"}} {{pick "headline_suffix"}}'
 
 headline_prefix:
 - authentique
@@ -110,7 +110,7 @@ punchline:
   - "30 ans d'expériences"
 
 talents:
-  - "{{pick_once .talent}}, {{pick_once .talent}}, {{pick_once .talent}}, {{pick_once .talent}}, {{pick_once .talent}}, {{pick_once .talent}}"
+  - '{{pick_once "talent"}}{{range N (randMinMax 4 6)}}, {{pick_once "talent"}}{{end}}'
 
 talent:
   - réparation de votre PC par télépathie

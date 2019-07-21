@@ -9,34 +9,56 @@ output:
   <svg width="800px" height="600px" viewBox="0 0 800 600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs></defs>
     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-      {{/* <rect x="0" y="0" width="800" height="600" fill="{{pick .color}}" opacity="0.5"></rect> -- this one is to add a background*/}}
-      {{ pick .shapes }}
+      {{/* <rect x="0" y="0" width="800" height="600" fill="{{$.Scratch.Get "color"}}" opacity="0.5"></rect> -- this one is to add a background*/}}
+      {{ pick "shapes" }}
     </g>
   </svg>
+
+init:
+  - '{{pick "common_init"}}{{$.Scratch.Set "color" "{{pick \"palette1\"}}"}}'
+  - '{{pick "common_init"}}{{$.Scratch.Set "color" "{{pick \"palette2\"}}"}}'
+  - '{{pick "common_init"}}{{$.Scratch.Set "color" "{{pick \"any_color\"}}"}}'
+
+common_init:
+  - '{{$.Scratch.Set "content-type" "image/svg+xml"}}'
 
 shapes:
   - |-
     {{range N (randMinMax 4 10) -}}
-      {{pick $.any_shape}}
+      {{pick "any_shape"}}
     {{end}}
   - |-
     {{range N (randMinMax 4 10) -}}
-      {{pick $.path_shape}}
+      {{pick "path_shape"}}
     {{end}}
 
 any_shape:
-  - '<rect{{pick .common_attributes}} x="{{randMinMax 0 800}}" y="{{randMinMax 0 600}}" width="{{randMinMax 20 400}}" height="{{randMinMax 20 400}}"></rect>'
-  - '<ellipse{{pick .common_attributes}} cx="{{randMinMax 0 800}}" rx="{{randMinMax 30 450}}" cy="{{randMinMax 0 600}}" ry="{{randMinMax 30 350}}"></ellipse>'
-  - '<polygon{{pick .common_attributes}} points="{{range N (randMinMax 3 7)}}{{randMinMax 0 800}} {{randMinMax 0 600}} {{end}}"></polygon>'
-  - '{{pick .path_shape}}'
+  - '<rect{{pick "common_attributes"}} x="{{randMinMax 0 800}}" y="{{randMinMax 0 600}}" width="{{randMinMax 20 400}}" height="{{randMinMax 20 400}}"></rect>'
+  - '<ellipse{{pick "common_attributes"}} cx="{{randMinMax 0 800}}" rx="{{randMinMax 30 450}}" cy="{{randMinMax 0 600}}" ry="{{randMinMax 30 350}}"></ellipse>'
+  - '<polygon{{pick "common_attributes"}} points="{{range N (randMinMax 3 7)}}{{randMinMax 0 800}} {{randMinMax 0 600}} {{end}}"></polygon>'
+  - '{{pick "path_shape"}}'
 
 path_shape:
-  - '<path{{pick .common_attributes}} d="M {{randMinMax 100 700}},{{randMinMax 100 500}} {{range N (randMinMax 2 10)}} C {{randMinMax 100 700}},{{randMinMax 100 500}} {{randMinMax 100 700}},{{randMinMax 100 500}} {{randMinMax 100 700}},{{randMinMax 100 500}}{{end}} Z"></path>'
+  - '<path{{pick "common_attributes"}} d="M {{randMinMax 100 700}},{{randMinMax 100 500}} {{range N (randMinMax 2 10)}} C {{randMinMax 100 700}},{{randMinMax 100 500}} {{randMinMax 100 700}},{{randMinMax 100 500}} {{randMinMax 100 700}},{{randMinMax 100 500}}{{end}} Z"></path>'
 
 common_attributes:
-  - ' stroke="{{pick .color}}" stroke-width="{{randMinMax 0 7}}" fill="{{pick .color}}" opacity="{{rand}}" transform="rotate({{randMinMax -179 179}}.0 400 300)"'
+  - ' stroke="{{$.Scratch.Get "color"}}" stroke-width="{{randMinMax 0 7}}" fill="{{$.Scratch.Get "color"}}" opacity="{{rand}}" stroke-opacity="{{rand}}" transform="rotate({{randMinMax -179 179}}.0 400 300)"'
 
-color:
-  - "#{{pick .hexadec}}{{pick .hexadec}}{{pick .hexadec}}{{pick .hexadec}}{{pick .hexadec}}{{pick .hexadec}}"
+palette1:
+  - '#0fa6d8'
+  - '#f559a0'
+  - '#fe9225'
+  - '#02eb6b'
+  - '#2cd3f3'
+
+palette2:
+  - "#ed2b2c"
+  - "#f27630"
+  - "#f9d84b"
+  - "#31a06b"
+  - "#2b55f7"
+
+any_color:
+  - '#{{pick "hexadec"}}{{pick "hexadec"}}{{pick "hexadec"}}{{pick "hexadec"}}{{pick "hexadec"}}{{pick "hexadec"}}'
 
 hexadec: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D"] # voluntarily remove "E" and "F", to make colors a little bit darker

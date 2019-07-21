@@ -1,5 +1,5 @@
 output:
-- "{{pick .bullshit}}, {{pick .bullshit}}, {{pick .bullshit}}, {{pick .bullshit}}, {{pick .bullshit}}... and BINGO!"
+- '{{pick_once "bullshit"}}, {{pick_once "bullshit"}}, {{pick_once "bullshit"}}, {{pick_once "bullshit"}}, {{pick_once "bullshit"}}... and BINGO!'
 
 bullshit:
 - Curated

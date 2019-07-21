@@ -9,6 +9,7 @@ import (
 	"strings"
 	"time"
 
+	"github.com/gohugoio/hugo/common/maps"
 	yaml "gopkg.in/yaml.v2"
 	"moul.io/pipotron/dict"
 	"moul.io/pipotron/pipotron"
@@ -40,12 +41,13 @@ func main() {
 		}
 	}
 
-	var dict pipotron.Dict
-	if err = yaml.Unmarshal(dictFile, &dict); err != nil {
+	var context pipotron.Context
+	context.Scratch = maps.NewScratch()
+	if err = yaml.Unmarshal(dictFile, &context.Dict); err != nil {
 		log.Fatal("failed to unmarshal yaml: %v", err)
 	}
 
-	out, err := pipotron.Generate(&dict)
+	out, err := pipotron.Generate(&context)
 	if err != nil {
 		log.Fatal("failed to generate %v", err)
 	}

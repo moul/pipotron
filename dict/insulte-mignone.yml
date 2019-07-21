@@ -1,68 +1,68 @@
 output:
-- "{{pick .intro}} {{pick .milieu}}"
-- "{{pick .intro}} {{pick .milieu}} {{pick .fin}}"
+- '{{pick "intro"}} {{pick "milieu"}}'
+- '{{pick "intro"}} {{pick "milieu"}} {{pick "fin"}}'
 
 intro:
-- "{{pick .intro_with_prefix}}"
-- "{{pick .intro_b}}"
+- '{{pick "intro_with_prefix"}}'
+- '{{pick "intro_b"}}'
 
 intro_with_prefix:
-- "espèce de {{pick .intro_b_consonne}}"
-- "espèce d'{{pick .intro_b_voyelle}}"
-- "minuscule {{pick .intro_b}}"
-- "espèce de minuscule {{pick .intro_b}}"
+- 'espèce de {{pick "intro_b_consonne"}}'
+- 'espèce d’{{pick "intro_b_voyelle"}}'
+- 'minuscule {{pick "intro_b"}}'
+- 'espèce de minuscule {{pick "intro_b"}}'
 
 intro_b:
-- "{{pick .intro_b_consonne}}"
-- "{{pick .intro_b_voyelle}}"
+- '{{pick "intro_b_consonne"}}'
+- '{{pick "intro_b_voyelle"}}'
 
 intro_b_consonne:
-- "crotte"
-- "plat"
-- "moule-à-gauffre"
-- "vandal"
-- "forbant"
-- "pipi"
-- "caca"
-- "fromage"
-- "fesse"
-- "prout"
-- "zizi"
-- "purée"
-- "patate"
-- "jus"
-- "résidu"
-- "raclure"
+- 'crotte'
+- 'plat'
+- 'moule-à-gauffre'
+- 'vandal'
+- 'forbant'
+- 'pipi'
+- 'caca'
+- 'fromage'
+- 'fesse'
+- 'prout'
+- 'zizi'
+- 'purée'
+- 'patate'
+- 'jus'
+- 'résidu'
+- 'raclure'
 
 intro_b_voyelle:
-- "andouille"
-- "ectoplasme"
+- 'andouille'
+- 'ectoplasme'
 
 milieu:
-- "{{pick .milieu_a}}"
-- "{{pick .milieu_a}} {{pick .milieu_a}}"
-- "{{pick .milieu_a}} {{pick .milieu_a}} {{pick .milieu_a}}"
+- '{{pick "milieu_a"}}'
+- '{{pick "milieu_a"}} {{pick "milieu_a"}}'
+- '{{pick "milieu_a"}} {{pick "milieu_a"}} {{pick "milieu_a"}}'
 
 milieu_a:
-- "de nouille"
-- "de nez"
-- "de chien"
-- "de freluquet"
-- "de pied"
-- "d'oreille"
-- "de yeux"
-- "de fesse"
-- "de poubelle"
+- 'de nouille'
+- 'de nez'
+- 'de chien'
+- 'de freluquet'
+- 'de pied'
+- 'd’oreille'
+- 'de yeux'
+- 'de fesse'
+- 'de poubelle'
 
 fin:
-- "en carton"
-- "en platre"
-- "en toc"
-- "d'occasion"
-- "en papier maché"
-- "en bout de papier"
-- "en papier recyclé"
-- "en bois d'arbre"
-- "en contre-plaqué"
-- "en formica"
-- "gigantesque"
+- 'en carton'
+- 'en platre'
+- 'en toc'
+- 'd’occasion'
+- 'en papier maché'
+- 'en bout de papier'
+- 'en papier recyclé'
+- 'en bois d’arbre'
+- 'en contre-plaqué'
+- 'en formica'
+- 'gigantesque'

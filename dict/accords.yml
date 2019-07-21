@@ -1,11 +1,11 @@
 output:
-  - "{{pick .accord}} {{pick .accord}} {{pick .accord}} {{pick .accord}}"
+  - '{{pick "accord"}} {{pick "accord"}} {{pick "accord"}} {{pick "accord"}}'
 
 accord:
-  - "{{pick .letter}}"
-  - "{{pick .letter}}{{pick .alteration}}"
-  - "{{pick .letter}}{{pick .mode}}"
-  - "{{pick .letter}}{{pick .alteration}}{{pick .mode}}"
+  - '{{pick "letter"}}'
+  - '{{pick "letter"}}{{pick "alteration"}}'
+  - '{{pick "letter"}}{{pick "mode"}}'
+  - '{{pick "letter"}}{{pick "alteration"}}{{pick "mode"}}'
 
 letter: ["A", "B", "C", "D", "E", "F", "G"]
 

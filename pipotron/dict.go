@@ -1,12 +1,19 @@
 package pipotron // import "moul.io/pipotron/pipotron"
 
-import "encoding/json"
+import (
+	"encoding/json"
 
-type Dict map[string][]string
+	"github.com/gohugoio/hugo/common/maps"
+)
+
+type Context struct {
+	Scratch *maps.Scratch
+	Dict    map[string][]string
+}
 
 // FIXME: an option should be a string or a string with a weight
 
-func (d Dict) String() string {
+func (d Context) String() string {
 	out, _ := json.MarshalIndent(d, "", "  ")
 	return string(out)
 }

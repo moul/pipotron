@@ -12,147 +12,147 @@
 ### rules
 
 output:
-- "{{pick .global_prefix}} {{pick .man_atomic_insult_combo}}"
-- "{{pick .global_prefix}} {{pick .woman_atomic_insult_combo}}"
+- '{{pick "global_prefix"}} {{pick "man_atomic_insult_combo"}}'
+- '{{pick "global_prefix"}} {{pick "woman_atomic_insult_combo"}}'
 
 man_prefix_combo:
-- "{{pick .man_prefix}}"
-- "{{pick .man_prefix}} {{pick .man_prefix}}"
-- "{{pick .man_prefix}} {{pick .man_prefix}} {{pick .man_prefix}}"
+- '{{pick "man_prefix"}}'
+- '{{pick "man_prefix"}} {{pick "man_prefix"}}'
+- '{{pick "man_prefix"}} {{pick "man_prefix"}} {{pick "man_prefix"}}'
 man_suffix_combo:
-- "{{pick .man_suffix}}"
-- "{{pick .man_suffix}} {{pick .man_suffix}}"
-- "{{pick .man_suffix}} {{pick .man_suffix}} {{pick .man_suffix}}"
+- '{{pick "man_suffix"}}'
+- '{{pick "man_suffix"}} {{pick "man_suffix"}}'
+- '{{pick "man_suffix"}} {{pick "man_suffix"}} {{pick "man_suffix"}}'
 man_atomic_insult_combo:
-- "{{pick .man_atomic_insult}}"
-- "{{pick .man_atomic_insult}}{{pick .atomic_link}}{{pick .man_atomic_insult_combo}}" # recursion
+- '{{pick "man_atomic_insult"}}'
+- '{{pick "man_atomic_insult"}}{{pick "atomic_link"}}{{pick "man_atomic_insult_combo"}}' # recursion
 man_atomic_insult:
-- "{{pick .man_name}}"
-- "{{pick .man_name}} {{pick .man_suffix_combo}}"
-- "{{pick .man_prefix_combo}} {{pick .man_name}}"
-- "{{pick .man_prefix_combo}} {{pick .man_name}} {{pick .man_suffix_combo}}"
+- '{{pick "man_name"}}'
+- '{{pick "man_name"}} {{pick "man_suffix_combo"}}'
+- '{{pick "man_prefix_combo"}} {{pick "man_name"}}'
+- '{{pick "man_prefix_combo"}} {{pick "man_name"}} {{pick "man_suffix_combo"}}'
 
 woman_prefix_combo:
-- "{{pick .woman_prefix}}"
-- "{{pick .woman_prefix}} {{pick .woman_prefix}}"
-- "{{pick .woman_prefix}} {{pick .woman_prefix}} {{pick .woman_prefix}}"
+- '{{pick "woman_prefix"}}'
+- '{{pick "woman_prefix"}} {{pick "woman_prefix"}}'
+- '{{pick "woman_prefix"}} {{pick "woman_prefix"}} {{pick "woman_prefix"}}'
 woman_suffix_combo:
-- "{{pick .woman_suffix}}"
-- "{{pick .woman_suffix}} {{pick .woman_suffix}}"
-- "{{pick .woman_suffix}} {{pick .woman_suffix}} {{pick .woman_suffix}}"
+- '{{pick "woman_suffix"}}'
+- '{{pick "woman_suffix"}} {{pick "woman_suffix"}}'
+- '{{pick "woman_suffix"}} {{pick "woman_suffix"}} {{pick "woman_suffix"}}'
 woman_atomic_insult_combo:
-- "{{pick .woman_atomic_insult}}"
-- "{{pick .woman_atomic_insult}}{{pick .atomic_link}}{{pick .woman_atomic_insult_combo}}" # recursion
+- '{{pick "woman_atomic_insult"}}'
+- '{{pick "woman_atomic_insult"}}{{pick "atomic_link"}}{{pick "woman_atomic_insult_combo"}}' # recursion
 woman_atomic_insult:
-- "{{pick .woman_name}}"
-- "{{pick .woman_name}} {{pick .woman_suffix_combo}}"
-- "{{pick .woman_prefix_combo}} {{pick .woman_name}}"
-- "{{pick .woman_prefix_combo}} {{pick .woman_name}} {{pick .woman_suffix_combo}}"
+- '{{pick "woman_name"}}'
+- '{{pick "woman_name"}} {{pick "woman_suffix_combo"}}'
+- '{{pick "woman_prefix_combo"}} {{pick "woman_name"}}'
+- '{{pick "woman_prefix_combo"}} {{pick "woman_name"}} {{pick "woman_suffix_combo"}}'
 
 ### dict
 
 global_prefix:
-- "Espèce de"
+- 'Espèce de'
 
 atomic_link:
-- " de "
-- ", "
+- ' de '
+- ', '
 
 man_name:
-- "raton-laveur"
-- "grumly"
-- "lépreux"
-- "hamster"
-- "branloman"
-- "chuck norris"
-- "morbak"
-- "jésus"
-- "jedi"
-- "haricot"
-- "poireau"
-- "triton"
-- "larve"
-- "chnoque"
+- 'raton-laveur'
+- 'grumly'
+- 'lépreux'
+- 'hamster'
+- 'branloman'
+- 'chuck norris'
+- 'morbak'
+- 'jésus'
+- 'jedi'
+- 'haricot'
+- 'poireau'
+- 'triton'
+- 'larve'
+- 'chnoque'
 
 man_prefix:
-- "gros"
-- "con de"
-- "moche"
-- "fils de"
-- "ptit"
-- "bite de"
-- "crouton de"
-- "foutre de"
-- "poil de"
-- "marchand de"
-- "suceur de"
-- "mangeur de"
-- "buveur de"
-- "dealer de"
-- "fabriquant de"
-- "rongeur de"
-- "voleur de"
+- 'gros'
+- 'con de'
+- 'moche'
+- 'fils de'
+- 'ptit'
+- 'bite de'
+- 'crouton de'
+- 'foutre de'
+- 'poil de'
+- 'marchand de'
+- 'suceur de'
+- 'mangeur de'
+- 'buveur de'
+- 'dealer de'
+- 'fabriquant de'
+- 'rongeur de'
+- 'voleur de'
 
 man_suffix:
-- "vert"
-- "orange"
-- "communiste"
-- "capitaliste"
-- "immonde"
-- "gaulliste"
-- "jaune"
-- "bleu"
-- "marron"
-- "sale"
-- "obèse"
-- "infecte"
-- "poilu"
-- "puant"
-- "végétarien"
-- "pédéraste"
-- "végétatif"
-- "néandertalien"
-- "de nazareth"
+- 'vert'
+- 'orange'
+- 'communiste'
+- 'capitaliste'
+- 'immonde'
+- 'gaulliste'
+- 'jaune'
+- 'bleu'
+- 'marron'
+- 'sale'
+- 'obèse'
+- 'infecte'
+- 'poilu'
+- 'puant'
+- 'végétarien'
+- 'pédéraste'
+- 'végétatif'
+- 'néandertalien'
+- 'de nazareth'
 
 woman_name:
-- "conne"
-- "grosse autiste"
-- "vache"
-- "louloute"
-- "tache"
-- "punaise"
-- "mamie"
-- "pomme-de-terre"
-- "moule"
-- "raclure"
-- "vieille ordure"
-- "larve"
-- "chnoque"
+- 'conne'
+- 'grosse autiste'
+- 'vache'
+- 'louloute'
+- 'tache'
+- 'punaise'
+- 'mamie'
+- 'pomme-de-terre'
+- 'moule'
+- 'raclure'
+- 'vieille ordure'
+- 'larve'
+- 'chnoque'
 
 woman_prefix:
-- "grosse"
-- "conne"
-- "moche"
-- "immonde"
-- "ptite"
-- "bite de"
-- "crouton de"
-- "foutre de"
-- "poil de"
-- "marchande de"
-- "suceuse de"
-- "mangeuse de"
-- "buveuse de"
-- "dealeuse de"
-- "rongeuse de"
-- "voleuse de"
+- 'grosse'
+- 'conne'
+- 'moche'
+- 'immonde'
+- 'ptite'
+- 'bite de'
+- 'crouton de'
+- 'foutre de'
+- 'poil de'
+- 'marchande de'
+- 'suceuse de'
+- 'mangeuse de'
+- 'buveuse de'
+- 'dealeuse de'
+- 'rongeuse de'
+- 'voleuse de'
 
 woman_suffix:
-- "verte"
-- "orange"
-- "communiste"
-- "poilue"
-- "puante"
-- "vegetarienne"
-- "moche"
-- "neandertalienne"
+- 'verte'
+- 'orange'
+- 'communiste'
+- 'poilue'
+- 'puante'
+- 'vegetarienne'
+- 'moche'
+- 'neandertalienne'

@@ -1,6 +1,9 @@
 output:
-  - "<html>{{pick .tag}}{{pick .tag}}</html>"
-  - "<html><head><style>{{pick .css_rules}}</style></head>{{pick .tag}}{{pick .tag}}</html>"
+  - '<html>{{pick "tag"}}{{pick "tag"}}</html>'
+  - '<html><head><style>{{pick "css_rules"}}</style></head>{{pick "tag"}}{{pick "tag"}}</html>'
+
+init:
+  - '{{$.Scratch.Set "content-type" "text/html"}}'
 
 color:
   - red
@@ -13,22 +16,22 @@ color:
   - pink
 
 tag:
-  - "{{pick .tag}}{{pick .tag}}"
-  - "<div{{pick .tag_attributes}}>{{pick .tag}}</div>"
-  - "<span{{pick .tag_attributes}}>{{pick .tag}}</span>"
-  - "<h1{{pick .tag_attributes}}>{{pick .tag}}</h1>"
-  - "<h2{{pick .tag_attributes}}>{{pick .tag}}</h2>"
-  - "<h3{{pick .tag_attributes}}>{{pick .tag}}</h3>"
-  - "<h4{{pick .tag_attributes}}>{{pick .tag}}</h4>"
-  - "<h5{{pick .tag_attributes}}>{{pick .tag}}</h5>"
-  - "<table{{pick .tag_attributes}}>{{pick .table_trs}}</table>"
-  - "<b{{pick .tag_attributes}}>{{pick .tag}}</b>"
-  - "<section{{pick .tag_attributes}}>{{pick .tag}}</section>"
-  - "<footer{{pick .tag_attributes}}>{{pick .tag}}</footer>"
-  - "<head{{pick .tag_attributes}}>{{pick .tag}}</head>"
-  - '<img{{pick .tag_attributes}} src="https://placeimg.com/{{pick .size}}/{{pick .size}}/{{pick .random_word}}" />'
-  - "{{pick .text}}"
-  - "<marquee{{pick .tag_attributes}}>{{pick .text}}</marquee>"
+  - '{{pick "tag"}}{{pick "tag"}}'
+  - '<div{{pick "tag_attributes"}}>{{pick "tag"}}</div>'
+  - '<span{{pick "tag_attributes"}}>{{pick "tag"}}</span>'
+  - '<h1{{pick "tag_attributes"}}>{{pick "tag"}}</h1>'
+  - '<h2{{pick "tag_attributes"}}>{{pick "tag"}}</h2>'
+  - '<h3{{pick "tag_attributes"}}>{{pick "tag"}}</h3>'
+  - '<h4{{pick "tag_attributes"}}>{{pick "tag"}}</h4>'
+  - '<h5{{pick "tag_attributes"}}>{{pick "tag"}}</h5>'
+  - '<table{{pick "tag_attributes"}}>{{pick "table_trs"}}</table>'
+  - '<b{{pick "tag_attributes"}}>{{pick "tag"}}</b>'
+  - '<section{{pick "tag_attributes"}}>{{pick "tag"}}</section>'
+  - '<footer{{pick "tag_attributes"}}>{{pick "tag"}}</footer>'
+  - '<head{{pick "tag_attributes"}}>{{pick "tag"}}</head>'
+  - '<img{{pick "tag_attributes"}} src="https://placeimg.com/{{pick "size"}}/{{pick "size"}}/{{pick "random_word"}}" />'
+  - '{{pick "text"}}'
+  - '<marquee{{pick "tag_attributes"}}>{{pick "text"}}</marquee>'
 
 size:
   - 200
@@ -38,23 +41,23 @@ size:
   - 600
 
 random_word:
-  - "{{pick .random_char}}{{pick .random_char}}{{pick .random_char}}{{pick .random_char}}{{pick .random_char}}{{pick .random_char}}{{pick .random_char}}"
+  - '{{pick "random_char"}}{{pick "random_char"}}{{pick "random_char"}}{{pick "random_char"}}{{pick "random_char"}}{{pick "random_char"}}{{pick "random_char"}}'
 
 random_char: ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 
 table_trs:
-  - "{{pick .table_tr}}"
-  - "{{pick .table_tr}}{{pick .table_trs}}"
+  - '{{pick "table_tr"}}'
+  - '{{pick "table_tr"}}{{pick "table_trs"}}'
 
 table_tr:
-  - "<tr{{pick .tag_attributes}}>{{pick .table_tds}}</tr>"
+  - '<tr{{pick "tag_attributes"}}>{{pick "table_tds"}}</tr>'
 
 table_tds:
-  - "{{pick .table_td}}"
-  - "{{pick .table_td}}{{pick .table_tds}}"
+  - '{{pick "table_td"}}'
+  - '{{pick "table_td"}}{{pick "table_tds"}}'
 
 table_td:
-  - "<td{{pick .tag_attributes}}>{{pick .tag}}</td>"
+  - '<td{{pick "tag_attributes"}}>{{pick "tag"}}</td>'
 
 text:
   - Lorem ipsum dolor sit amet
@@ -64,26 +67,26 @@ text:
   - Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 style_attributes:
-  - "{{pick .style_attributes}}; {{pick .style_attributes}}"
-  - "color: {{pick .color}}"
-  - "background-color: {{pick .color}}"
-  - "border: {{pick .small_number}}px; border-color: {{pick .color}}"
-  - "font-size: {{pick .medium_number}}px"
+  - '{{pick "style_attributes"}}; {{pick "style_attributes"}}'
+  - 'color: {{pick "color"}}'
+  - 'background-color: {{pick "color"}}'
+  - 'border: {{pick "small_number"}}px; border-color: {{pick "color"}}'
+  - 'font-size: {{pick "medium_number"}}px'
 
 small_number: ["1","2","3","4","5"]
 
 medium_number: ["10","11","12","13","14","15","16","17","18","19","20"]
 
 tag_attributes:
-  - ""
-  - ""
-  - ' style="{{pick .style_attributes}}"'
+  - ''
+  - ''
+  - ' style="{{pick "style_attributes"}}"'
   - ' class="cool"'
 
 css_rules:
-  - "{{pick .css_rule}}"
-  - "{{pick .css_rule}};{{pick .css_rules}}"
+  - '{{pick "css_rule"}}'
+  - '{{pick "css_rule"}};{{pick "css_rules"}}'
 
 css_rule:
-  - "{{pick .style_attributes}}"
-  - ""
+  - '{{pick "style_attributes"}}'
+  - ''

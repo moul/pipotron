@@ -1,8 +1,8 @@
 # Based on https://github.com/ultreme/moi-j-aime-generator/blob/master/moijaime.go
 
 output:
-- "Moi j'aime {{pick .verb}} {{pick .object}}"
-- "Moi j'aime {{pick .verb}} {{pick .object}} {{pick .attribute}}"
+- 'Moi j’aime {{pick "verb"}} {{pick "object"}}'
+- 'Moi j’aime {{pick "verb"}} {{pick "object"}} {{pick "attribute"}}'
 
 verb:
 - "manger"
