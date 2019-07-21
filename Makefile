@@ -1,9 +1,10 @@
 DICTS := $(basename $(notdir $(wildcard dict/*.yml)))
 GORELEASER_GITHUB_TOKEN ?=
 GITHUB_TOKEN ?= $(GORELEASER_GITHUB_TOKEN)
+DEPS := ./web/dicts.js ./dict/dict-packr.go
 
 .PHONY: install
-install: packr
+install: $(DEPS)
 	GO111MODULE=on go install
 
 
@@ -11,6 +12,17 @@ install: packr
 dev: clean
 	GO111MODULE=on go install
 	cd web; browser-sync
+
+./web/dicts.js: $(wildcard ./dict/*.yml)
+	cd dict; fs-bundler --format=js --callback=dicts *.yml > ../$@.tmp
+	mv $@.tmp $@
+
+./dict/dict-packr.go: $(wildcard ./dict/*.go) $(wildcard ./dict/*.yml)
+	GO111MODULE=off go get github.com/gobuffalo/packr/v2/packr2
+	rm -f ./dict/*~
+	rm -f ./dict/.#*
+	rm -f ./dict/*#
+	packr2
 
 .PHONY: examples
 examples:
@@ -25,24 +37,20 @@ examples:
 .PHONY: clean
 clean:
 	git clean -fxd
-
-.PHONY: packr
-packr:
-	GO111MODULE=off go get github.com/gobuffalo/packr/v2/packr2
-	packr2
+	rm -f $(DEPS)
 
 .PHONY: docker
 docker:
 	docker build -t moul/pipotron .
 
 .PHONY: functions
-functions: packr
+functions: $(DEPS)
 	mkdir -p functions-build
 	GO111MODULE=on go install
 	go build -o functions-build/pipotron ./functions/pipotron.go
 
 .PHONY: goreleaser
-goreleaser: packr
+goreleaser: $(DEPS)
 	GORELEASER_GITHUB_TOKEN=$(GORELEASER_GITHUB_TOKEN) GITHUB_TOKEN=$(GITHUB_TOKEN) goreleaser --rm-dist
 
 .PHONY: goreleaser-dry-run
@@ -53,11 +61,11 @@ goreleaser-dry-run:
 netlify-dev:
 	netlify dev -c 'make dev'
 
-
 .PHONY: sam-local
-sam-local: packr
+sam-local: $(DEPS)
+	@# pip install --user sam-aws-cli
 	@echo ""
 	@echo "Open: http://localhost:3000/index.html"
 	@echo ""
 	GO111MODULE=on GOOS=linux GOARCH=amd64 go build -o functions-build/pipotron ./functions/pipotron.go
-	sam local start-api --static-dir=web
+	sam local start-api --host=0.0.0.0 --static-dir=web
