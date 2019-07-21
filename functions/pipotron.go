@@ -6,6 +6,7 @@ import (
 	"math/rand"
 	"time"
 
+	"github.com/ajg/form"
 	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
 	"github.com/gohugoio/hugo/common/maps"
@@ -36,9 +37,28 @@ func reply(request events.APIGatewayProxyRequest, statusCode int, contentType st
 }
 
 func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
-	dictFile, err := dict.Box.Find(request.QueryStringParameters["dict"] + ".yml")
-	if err != nil {
-		return reply(request, 404, "", "No such dictionary (?dict=)")
+	var dictFile []byte
+	var err error
+
+	switch request.HTTPMethod {
+	case "GET":
+		dictFile, err = dict.Box.Find(request.QueryStringParameters["dict"] + ".yml")
+		if err != nil {
+			return reply(request, 404, "", "No such dictionary (?dict=)")
+		}
+	case "POST":
+		type input struct {
+			Dict   string `form:"dict"`
+			Source string `form:"source"`
+		}
+		var i input
+		d := form.NewDecoder(nil)
+		if err := d.DecodeString(&i, request.Body); err != nil {
+			return reply(request, 400, "", "invalid input")
+		}
+		dictFile = []byte(i.Source)
+	default:
+		return reply(request, 400, "", "No such method (GET or POST only)")
 	}
 
 	var context pipotron.Context

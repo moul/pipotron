@@ -57,6 +57,10 @@ goreleaser: $(DEPS)
 goreleaser-dry-run:
 	goreleaser --snapshot --skip-publish --rm-dist
 
+.PHONY: _netlify_prepare
+_netlify_prepare:
+	go get moul.io/fs-bundler
+
 .PHONY: netlify-dev
 netlify-dev:
 	netlify dev -c 'make dev'
