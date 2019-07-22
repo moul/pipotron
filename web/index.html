@@ -1,5 +1,7 @@
 <html>
   <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="UTF-8" />
     <title>Pipotron</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
@@ -10,75 +12,130 @@
       gtag('js', new Date());
       gtag('config', 'UA-133664781-4');
     </script>
-
   </head>
   <body>
-    <div class="container">
-      <h1>Pipotron</h1>
-      <form class="form-inline">
-        <div class="form-group mb-2">
-          <select id="dict" class="form-control mr-sm-2">
-            <option value="accords">accords</option>
-            <option value="ascii-face">ascii-face</option>
-            <option value="asv">asv</option>
-            <option value="bingo-winner">bingo-winner</option>
-            <option value="example">example</option>
-            <option value="excuse-a-2-balles">excuse-a-2-balles</option>
-            <option value="fuu">fuu</option>
-            <option value="horoscope">horoscope</option>
-            <option value="html">html (rendering)</option>
-            <option value="html" data-content-type="text/plain">html (source)</option>
-            <option value="laboralphy">laboralphy</option>
-            <option value="image-svg">image-svg</option>
-            <option value="insulte-mignone" selected="selected">insulte-mignone</option>
-            <option value="marabout">marabout</option>
-            <option value="moijaime">moijaime</option>
-            <option value="pipotron.free.fr">pipotron.free.fr</option>
-            <option value="prenom-compose">prénom composé</option>
-            <option value="project-idea">project idea</option>
-            <option value="reve">reve</option>
-            <option value="roman-photo">roman photo</option>
-          </select>
-        </div>
-        <input class="btn btn-primary mb-2 mx-sm-3" type="button" id="generate" value="generate" />
-        <a id="source" href="https://github.com/moul/pipotron" class="btn btn-secondary mb-2" target="_blank">Source</a>
-      </form>
-      <hr />
-      <div class="border embed-responsive embed-responsive-16by9 code">
-        <iframe class="embed-responsive-item" id="output">Loading...</iframe>
+    <form action="/run" method="post" target="output" id="form">
+      <div class="container">
+        <nav class="navbar py-0 navbar-expand-lg navbar-expand-md navbar-light bg-light">
+          <a class="navbar-brand" href="#"><h1>Pipotron</h1></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-labels="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="form-inline my-2 my-lg-0">
+              <select id="dict" class="form-control mr-sm-2" name="dict">
+                <option value="custom">** custom **</option>
+              </select>
+              <input class="btn btn-primary mx-1" type="button" id="generate" value="Generate" />
+              <button type="button" class="btn btn-secondary" data-toggle="collapse" data-target="#collapse" aria-expanded="false" aria-controls="collapse">Editor</button>
+              <!--<a id="source-link" href="https://github.com/moul/pipotron" class="btn btn-secondary mb-2" target="_blank">Source</a>-->
+            </div>
+          </div>
+        </nav>
       </div>
-      <hr />
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="form-group mb-2">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="form-group md-form collapse" id="collapse">
+              <textarea name="source" class="form-control code bg-dark text-light" style="font-size: 0.8em" rows="10" id="source">Loading...</textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="border embed-responsive embed-responsive-16by9 code">
+            <iframe name="output" class="embed-responsive-item" id="output">Loading...</iframe>
+          </div>
+        </div>
+      </div>
       <footer>
+        <hr />
         <a href="https://github.com/moul/pipotron">Pipotron</a>, by <a href="https://manfred.life/">Manfred Touron</a>.
       </footer>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="./dicts.js"></script>
     <script>
-     function generate() {
-       var dict = $('#dict').val();
-       var contentType = $('#dict :selected').data('content-type');
-       var url = '/run?dict=' + dict;
-       if (contentType != undefined) {
-         url += "&content-type=" + contentType;
-       }
-       $('#output').attr('src', url);
-       $('#source').attr('href', 'https://github.com/moul/pipotron/blob/master/dict/'+dict+'.yml');
-       gtag('event', "generate", {
-         'category': dict,
-         'label': dict,
-       });
-     }
+      function generate() {
+        var dict = $('#dict').val();
+        var contentType = $('#dict :selected').data('content-type');
+        var url = '/run?dict=' + dict;
+        if (contentType != undefined) {
+          url += "&content-type=" + contentType;
+        }
 
-     $('#generate').click(generate);
-     $('#dict').change(generate);
-     $(document).ready(function() {
-       var qs_dict = (new URL(location.href)).searchParams.get('dict');
-       if (qs_dict !== undefined && qs_dict !== null && qs_dict.length > 0) {
-         $('#dict').val(qs_dict);
-       }
-       generate();
-     });
+        if (dict == "custom") {
+          $('#form').submit();
+        } else {
+          $('#output').attr('src', url);
+        }
+        gtag('event', "generate", {
+          'category': dict,
+          'label': dict,
+        });
+      }
+
+      function b64DecodeUnicode(str) {
+        return decodeURIComponent(atob(str).split('').map(function(c) {
+          return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+        }).join(''));
+      }
+
+      function b64EncodeUnicode(str) {
+        return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, function toSolidBytes(match, p1) {
+          return String.fromCharCode('0x' + p1);
+        }));
+      }
+
+      function loadDict() {
+        var dict = $('#dict').val();
+        if (dict == 'custom') {
+          return;
+        }
+        $('#source').html('loading');
+        for (var i = 0; i < dicts.files.length; i++) {
+          if (dicts.files[i].name == dict + '.yml') {
+            $('#source').html(b64DecodeUnicode(dicts.files[i].content));
+          }
+        }
+        $('#source-link').removeAttr('disabled');
+        $('#source-link').attr('href', 'https://github.com/moul/pipotron/blob/master/dict/'+dict+'.yml');
+        generate();
+      }
+
+      $('#source').keyup(function() {
+        $('#source-link').attr('disabled', 'disabled');
+        $('#source-link').attr('href', '');
+        $('#dict').val('custom');
+      });
+      $('#generate').click(generate);
+      $('#dict').change(loadDict);
+      $(document).ready(function() {
+        for (var i = 0; i < dicts.files.length; i++) {
+          var name = dicts.files[i].name;
+          name = name.substring(0, name.length-4);
+          $('#dict').append($('<option />').val(name).html(name));
+        }
+        $('#dict').val('marabout');
+
+        var qs_dict = (new URL(location.href)).searchParams.get('dict');
+        if (qs_dict !== undefined && qs_dict !== null && qs_dict.length > 0) {
+          $('#dict').val(qs_dict);
+        }
+        loadDict();
+      });
     </script>
   </body>
 </html>

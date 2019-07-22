@@ -6,7 +6,7 @@ Globals:
     Timeout: 5
 
 Resources:
-  PipotronFunction:
+  PipotronGetFunction:
     Type: AWS::Serverless::Function
     Properties:
       Handler: functions-build/pipotron
@@ -18,8 +18,22 @@ Resources:
           Properties:
             Path: /run
             Method: GET
+  PipotronPostFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: functions-build/pipotron
+      Runtime: go1.x
+      Tracing: Active
+      Events:
+        Request:
+          Type: Api
+          Properties:
+            Path: /run
+            Method: POST
 
 Outputs:
   GraphmanAPI:
-  PipotronFunction:
-    Value: !GetAtt PipotronFunction.Arn
+  PipotronGetFunction:
+    Value: !GetAtt PipotronGetFunction.Arn
+  PipotronPostFunction:
+    Value: !GetAtt PipotronPostFunction.Arn

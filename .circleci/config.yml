@@ -8,6 +8,7 @@ jobs:
       GO111MODULE: "on"
     steps:
       - checkout
+      - run: go get moul.io/fs-bundler
       - run: go mod download
       - run: make install
       - run: make functions
