@@ -11,5 +11,6 @@ jobs:
       - run: go get moul.io/fs-bundler
       - run: go mod download
       - run: make install
+      - run: make test
       - run: make functions
       - run: pipotron example

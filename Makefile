@@ -24,6 +24,10 @@ dev: clean
 	rm -f ./dict/*#
 	packr2
 
+.PHONY: test
+test:
+	go test -v -cover -race ./...
+
 .PHONY: examples
 examples:
 	rm -rf examples

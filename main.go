@@ -37,19 +37,19 @@ func main() {
 	if err != nil {
 		dictFile, err = ioutil.ReadFile(dictName)
 		if err != nil {
-			log.Fatal("failed to open file: %v", err)
+			log.Fatalf("failed to open file: %v", err)
 		}
 	}
 
 	var context pipotron.Context
 	context.Scratch = maps.NewScratch()
 	if err = yaml.Unmarshal(dictFile, &context.Dict); err != nil {
-		log.Fatal("failed to unmarshal yaml: %v", err)
+		log.Fatalf("failed to unmarshal yaml: %v", err)
 	}
 
 	out, err := pipotron.Generate(&context)
 	if err != nil {
-		log.Fatal("failed to generate %v", err)
+		log.Fatalf("failed to generate %v", err)
 	}
 
 	fmt.Println(out)
