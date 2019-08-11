@@ -5,13 +5,14 @@ output:
   {{pick "conclusion"}}
 
 intro:
-- "Cette nuit j’ai rêvé que"
-- "La nuit d’avant celle-ci, j’ai rêvé que"
+- "Cette nuit j’ai rêvé que..."
+- "La nuit d’avant celle-ci, j’ai rêvé que..."
 - "Cette nuit j’ai fait un rêve"
-- "J’ai fait un rêve cette nuit... enfin... c’etait un cauchemard"
+- "J’ai fait un rêve cette nuit... enfin... c’etait un cauchemard."
 - "Cette nuit, mon rêve était en deux parties."
 - "Vendredi soir j’ai fait un rêve qui m’a fait me réveiller tellement je riais."
-- "Cette nuit, dans mon rêve"
+- "Cette nuit, dans mon rêve..."
+- "Cette nuit, j'ai fait un rêve très court, dans lequel..."
 
 phrases:
 - |-
@@ -27,6 +28,7 @@ phrase:
 - '{{pick_once "phrase_toute_faite"}}'
 
 phrase_toute_faite:
+- "Je voyais un commentaire sur soundcloud de CALC à la fin de mes morceaux. C'était juste écrit \"euh...\" tout à la fin du morceau."
 - "J’étais avec ma famille."
 - "Mon cousin était redevenu plus jeune, genre 8-10 ans, il avait des pouvoirs magiques."
 - "J’étais dans le sud avec mes parents, dans la provence."
