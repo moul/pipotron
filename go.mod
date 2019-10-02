@@ -4,8 +4,8 @@ go 1.12
 
 require (
 	github.com/Masterminds/goutils v1.1.0 // indirect
-	github.com/Masterminds/semver v1.4.2 // indirect
-	github.com/Masterminds/sprig v2.20.0+incompatible
+	github.com/Masterminds/semver/v3 v3.0.1 // indirect
+	github.com/Masterminds/sprig v3.0.0+incompatible
 	github.com/ajg/form v1.5.1
 	github.com/aws/aws-lambda-go v1.11.1
 	github.com/gobuffalo/packr/v2 v2.5.2
