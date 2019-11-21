@@ -1,6 +1,6 @@
 output:
 - |-
-  <html>
+  <html lang="fr">
     <head>
       <meta charset="utf-8" />
       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-51632370-6"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-51632370-6');</script>
@@ -14,6 +14,8 @@ output:
     <body>
       <h1>Question pour un Balèze</h1>
       <h2>{{pick "question"}}</h2>
+      <input type="button" id="lire" value="lire la question" />
+      <hr />
       <form method="GET">
         <input type="hidden" name="dict" value="question-baleze" />
         <input type="submit" value="{{pick_once "reponse_moyenne"}}" />
@@ -21,6 +23,35 @@ output:
         <input type="submit" value="{{pick_once "reponse_moyenne"}}" />
         <input type="submit" value="{{pick_once "reponse_moyenne"}}" />
       </form>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script type="text/javascript">
+        $('#lire').hide();
+        if ('speechSynthesis' in window) {
+          $('#lire').show();
+          $('#lire').click(function() {
+            var text = $('h2').text();
+            var msg = new SpeechSynthesisUtterance();
+            var voices = window.speechSynthesis.getVoices();
+            //msg.voice = voices[null];
+            msg.lang = "fr"
+            msg.rate = 1;
+            msg.pitch = Math.floor(Math.random() * Math.floor(3));
+            msg.text = text;
+            speechSynthesis.speak(msg);
+          });
+        }
+        $('input[type="submit"]').click(function(e) {
+          var text = $(this).val();
+          var msg = new SpeechSynthesisUtterance();
+          var voices = window.speechSynthesis.getVoices();
+          msg.rate = 1;
+          msg.pitch = Math.floor(Math.random() * Math.floor(3));
+          msg.lang = 'fr'
+          msg.text = text;
+          speechSynthesis.speak(msg);
+          alert("bravo")
+        });
+      </script>
     </body>
   </html>
 
