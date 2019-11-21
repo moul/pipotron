@@ -1,0 +1,60 @@
+output:
+- |-
+  <html>
+    <head>
+      <meta charset="utf-8" />
+      <title>Question pour un Balèze</title>
+      <style>
+        body {
+          background-color: {{pick "color"}};
+        }
+      </style>
+    </head>
+    <body>
+      <h1>Question pour un Balèze</h1>
+      <h2>{{pick "question"}}</h2>
+      <form>
+        <input type="button" value="{{pick_once "reponse_moyenne"}}" />
+        <input type="button" value="{{pick_once "reponse_moyenne"}}" />
+        <input type="button" value="{{pick_once "reponse_moyenne"}}" />
+        <input type="button" value="{{pick_once "reponse_moyenne"}}" />
+      </form>
+    </body>
+  </html>
+
+init:
+  - '{{$.Scratch.Set "content-type" "text/html"}}'
+
+color:
+  - red
+  - green
+  - yellow
+  - blue
+  - magenta
+  - orange
+  - purple
+  - pink
+
+question:
+  - ça va ?
+  - coucou, comment ça va ?
+  - êtes-vous pour ?
+
+prefix:
+  - bien sûr que
+  - normalement,
+  - peut-être que
+  - je ne suis pas sûr.e, mais je dirais que
+  - je dirais que
+
+reponse_moyenne:
+  - "{{pick "prefix"}} {{pick "middle"}}"
+  - "{{pick "middle"}}"
+
+middle:
+  - bof
+  - non
+  - ça depend
+  - peut-être
+  - oui
+  - pour sûr
