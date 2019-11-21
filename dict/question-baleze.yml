@@ -13,7 +13,7 @@ output:
     <body>
       <h1>Question pour un Balèze</h1>
       <h2>{{pick "question"}}</h2>
-      <form>
+      <form method="POST">
         <input type="button" value="{{pick_once "reponse_moyenne"}}" />
         <input type="button" value="{{pick_once "reponse_moyenne"}}" />
         <input type="button" value="{{pick_once "reponse_moyenne"}}" />
@@ -36,25 +36,33 @@ color:
   - pink
 
 question:
-  - ça va ?
-  - coucou, comment ça va ?
-  - êtes-vous pour ?
-
-prefix:
-  - bien sûr que
-  - normalement,
-  - peut-être que
-  - je ne suis pas sûr.e, mais je dirais que
-  - je dirais que
+  - 'ça va ?'
+  - 'coucou, comment ça va ?'
+  - 'êtes-vous pour ?'
+  - 'quelle est la meilleure réponse ?'
+  - "est-ce qu'au pôle nord la mousse pousse tout autour des arbres ?"
+  - 'tu veux bien être ma plage ?'
+  - 'pourquoi ?'
+  - "n'est-il pas pas vrai que ce n'est pas pas bien ? ou pas ?"
+  - "si les icebergs étaient jaune/orange, est-ce que le titanic existerait encore ?"
+  - "pourquoi il n'y a pas de nourriture pour chat saveur souris ?"
 
 reponse_moyenne:
-  - "{{pick "prefix"}} {{pick "middle"}}"
-  - "{{pick "middle"}}"
+  - '{{pick "prefix"}} {{pick "middle"}}'
+  - '{{pick "middle"}}'
+
+prefix:
+  - 'bien sûr que'
+  - 'normalement,'
+  - 'peut-être que'
+  - 'je ne suis pas sûr.e, mais je dirais que'
+  - 'je dirais que'
+
 
 middle:
-  - bof
-  - non
-  - ça depend
-  - peut-être
-  - oui
-  - pour sûr
+  - 'bof'
+  - 'non'
+  - 'ça depend'
+  - 'peut-être'
+  - 'oui'
+  - 'pour sûr'
