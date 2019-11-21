@@ -48,6 +48,8 @@ question:
   - "n'est-il pas pas vrai que ce n'est pas pas bien ? ou pas ?"
   - "si les icebergs étaient jaune/orange, est-ce que le titanic existerait encore ?"
   - "pourquoi il n'y a pas de nourriture pour chat saveur souris ?"
+  - "qu'est-ce qui est petit et marron ?"
+  - "c’est pas parce qu’on est jeune qu’on n’a pas le droit de pas dire n’importe quoi, ok ?"
 
 reponse_moyenne:
   - '{{pick "prefix"}} {{pick "middle"}}'
@@ -59,7 +61,10 @@ prefix:
   - 'peut-être que'
   - 'je ne suis pas sûr.e, mais je dirais que'
   - 'je dirais que'
-
+  - 'nonobstant le fait que tout est relatif, je dirais que'
+  - "alors là, c'est facile, la réponse est"
+  - "j'ai un doute, mais je dirais que"
+  - "au pif, je dirais:"
 
 middle:
   - 'bof'
@@ -68,3 +73,8 @@ middle:
   - 'peut-être'
   - 'oui'
   - 'pour sûr'
+  - 'comme-ci comme-ça'
+  - 'mouais'
+  - 'moui'
+  - 'bof bof'
+  - 'tout à fait'
