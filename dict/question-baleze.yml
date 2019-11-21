@@ -1,0 +1,70 @@
+output:
+- |-
+  <html>
+    <head>
+      <meta charset="utf-8" />
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-51632370-6"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-51632370-6');</script>
+      <title>Question pour un Balèze</title>
+      <style>
+        body {
+          background-color: {{pick "color"}};
+        }
+      </style>
+    </head>
+    <body>
+      <h1>Question pour un Balèze</h1>
+      <h2>{{pick "question"}}</h2>
+      <form method="GET">
+        <input type="hidden" name="dict" value="question-baleze" />
+        <input type="submit" value="{{pick_once "reponse_moyenne"}}" />
+        <input type="submit" value="{{pick_once "reponse_moyenne"}}" />
+        <input type="submit" value="{{pick_once "reponse_moyenne"}}" />
+        <input type="submit" value="{{pick_once "reponse_moyenne"}}" />
+      </form>
+    </body>
+  </html>
+
+init:
+  - '{{$.Scratch.Set "content-type" "text/html"}}'
+
+color:
+  - red
+  - green
+  - yellow
+  - blue
+  - magenta
+  - orange
+  - purple
+  - pink
+
+question:
+  - 'ça va ?'
+  - 'coucou, comment ça va ?'
+  - 'êtes-vous pour ?'
+  - 'quelle est la meilleure réponse ?'
+  - "est-ce qu'au pôle nord la mousse pousse tout autour des arbres ?"
+  - 'tu veux bien être ma plage ?'
+  - 'pourquoi ?'
+  - "n'est-il pas pas vrai que ce n'est pas pas bien ? ou pas ?"
+  - "si les icebergs étaient jaune/orange, est-ce que le titanic existerait encore ?"
+  - "pourquoi il n'y a pas de nourriture pour chat saveur souris ?"
+
+reponse_moyenne:
+  - '{{pick "prefix"}} {{pick "middle"}}'
+  - '{{pick "middle"}}'
+
+prefix:
+  - 'bien sûr que'
+  - 'normalement,'
+  - 'peut-être que'
+  - 'je ne suis pas sûr.e, mais je dirais que'
+  - 'je dirais que'
+
+
+middle:
+  - 'bof'
+  - 'non'
+  - 'ça depend'
+  - 'peut-être'
+  - 'oui'
+  - 'pour sûr'
