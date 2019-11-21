@@ -29,13 +29,14 @@ output:
         if ('speechSynthesis' in window) {
           $('#lire').show();
           $('#lire').click(function() {
-            var text = $('h2').text();
+            var text = 'top! ' + $('h2').text();
             var msg = new SpeechSynthesisUtterance();
             var voices = window.speechSynthesis.getVoices();
             //msg.voice = voices[null];
             msg.lang = "fr"
-            msg.rate = 1;
-            msg.pitch = Math.floor(Math.random() * Math.floor(3));
+            msg.rate = 1.2;
+            //msg.pitch = Math.floor(Math.random() * Math.floor(3));
+            msg.pitch = 1;
             msg.text = text;
             speechSynthesis.speak(msg);
           });
@@ -44,12 +45,14 @@ output:
           var text = $(this).val();
           var msg = new SpeechSynthesisUtterance();
           var voices = window.speechSynthesis.getVoices();
-          msg.rate = 1;
+          msg.rate = 0.8;
           msg.pitch = Math.floor(Math.random() * Math.floor(3));
           msg.lang = 'fr'
           msg.text = text;
           speechSynthesis.speak(msg);
           alert("bravo")
+          // mettre un vrai mp3
+          e.preventDefault();
         });
       </script>
     </body>
