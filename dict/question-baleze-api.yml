@@ -3,10 +3,10 @@ output:
   - |-
     {{pick "question"}}
 
-    {{pick "response"}}
-    {{pick "response"}}
-    {{pick "response"}}
-    {{pick "response"}}
+    {{pick_once "response"}}
+    {{pick_once "response"}}
+    {{pick_once "response"}}
+    {{pick_once "response"}}
 
 #init:
 #  - '{{$.Scratch.Set "content-type" "text/html"}}'
@@ -36,8 +36,13 @@ question:
   - "c’est pas parce qu’on est jeune qu’on n’a pas le droit de pas dire n’importe quoi, ok ?"
 
 response:
-  - '{{pick "prefix"}} {{pick "middle"}}'
-  - '{{pick "middle"}}'
+  - '{{pick_once "special_response"}}'
+  - '{{pick "prefix"}} {{pick "prefix"}} {{pick_once "middle"}}'
+  - '{{pick "prefix"}} {{pick_once "middle"}}'
+  - '{{pick_once "middle"}}'
+
+special_response:
+  - la mer noire
 
 prefix:
   - 'bien sûr que'
@@ -46,14 +51,14 @@ prefix:
   - 'je ne suis pas sûr.e, mais je dirais que'
   - 'je dirais que'
   - 'nonobstant le fait que tout est relatif, je dirais que'
-  - "alors là, c'est facile, la réponse est"
+  - "alors là, c'est facile, la réponse est:"
   - "j'ai un doute, mais je dirais que"
   - "au pif, je dirais:"
 
 middle:
   - 'bof'
   - 'non'
-  - 'ça depend'
+  - 'ça dépend'
   - 'peut-être'
   - 'oui'
   - 'pour sûr'
