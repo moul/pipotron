@@ -5,7 +5,7 @@ get_dict:
   - '{{dict "question" (pick "question") "responses" (list (pick "response") (pick "response") (pick "response") (pick "response")) | toPrettyJson}}'
 
 init:
-  - '{{$.Scratch.Set "content-type" "application/json"}}'
+  - '{{$.Scratch.Set "content-type" "application/json; charset=utf-8"}}'
 
 color:
   - red
