@@ -2,11 +2,13 @@ package pipotron // import "moul.io/pipotron/pipotron"
 
 import (
 	"bytes"
+	"fmt"
 	"math/rand"
 	"strings"
 	"text/template"
 
 	"github.com/Masterminds/sprig"
+	"moul.io/godev"
 )
 
 func Generate(ctx *Context) (string, error) {
@@ -37,7 +39,12 @@ func executeTemplate(input string, ctx *Context) (string, error) {
 		if len(opts) < 1 {
 			return "$$$ INVALID OPTION $$$"
 		}
-		return opts[rand.Intn(len(opts))]
+		elem := opts[rand.Intn(len(opts))]
+		evaluated, err := executeTemplate(elem, ctx)
+		if err != nil {
+			return elem
+		}
+		return evaluated
 	}
 	funcMap["randString"] = randStringBytes
 	funcMap["title"] = strings.Title
@@ -45,6 +52,10 @@ func executeTemplate(input string, ctx *Context) (string, error) {
 	funcMap["upper"] = strings.ToUpper
 	funcMap["rand"] = rand.Float64
 	funcMap["randIntn"] = rand.Intn
+	funcMap["debug"] = func(v interface{}) string {
+		fmt.Println(godev.PrettyJSON(v))
+		return fmt.Sprintf("%#v", v)
+	}
 	funcMap["N"] = func(n int) (stream chan int) {
 		stream = make(chan int)
 		go func() {
@@ -64,7 +75,11 @@ func executeTemplate(input string, ctx *Context) (string, error) {
 		i := rand.Intn(len(opts))
 		elem := opts[i]
 		opts = append(opts[:i], opts[i+1:]...)
-		return elem
+		evaluated, err := executeTemplate(elem, ctx)
+		if err != nil {
+			return elem
+		}
+		return evaluated
 	}
 
 	tmpl, err := template.New("").Funcs(funcMap).Parse(input)
