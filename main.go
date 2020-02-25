@@ -7,16 +7,16 @@ import (
 	"math/rand"
 	"os"
 	"strings"
-	"time"
 
 	"github.com/gohugoio/hugo/common/maps"
 	yaml "gopkg.in/yaml.v2"
 	"moul.io/pipotron/dict"
 	"moul.io/pipotron/pipotron"
+	"moul.io/srand"
 )
 
 func main() {
-	rand.Seed(time.Now().UTC().UnixNano())
+	rand.Seed(srand.Fast())
 
 	if len(os.Args) < 2 {
 		for _, file := range dict.Box.List() {

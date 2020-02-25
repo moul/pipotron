@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"math/rand"
-	"time"
 
 	"github.com/ajg/form"
 	"github.com/aws/aws-lambda-go/events"
@@ -13,6 +12,7 @@ import (
 	yaml "gopkg.in/yaml.v2"
 	"moul.io/pipotron/dict"
 	"moul.io/pipotron/pipotron"
+	"moul.io/srand"
 )
 
 func reply(request events.APIGatewayProxyRequest, statusCode int, contentType string, body string) (*events.APIGatewayProxyResponse, error) {
@@ -87,6 +87,6 @@ func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResp
 }
 
 func main() {
-	rand.Seed(time.Now().UTC().UnixNano())
+	rand.Seed(srand.Fast())
 	lambda.Start(handler)
 }
