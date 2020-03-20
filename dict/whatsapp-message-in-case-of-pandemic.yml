@@ -1,0 +1,57 @@
+output:
+- |-
+  {{pick "part_1"}}
+
+  {{pick "part_2"}} {{pick "part_3"}}
+
+  {{pick "part_4"}}
+
+  {{pick "part_5"}}
+
+  {{pick "part_6"}}
+
+  {{pick "part_7"}}
+
+part_1:
+  - ⚠️ URGENT 🚨🚨
+  - ☢️ IMPORTANT ☣️
+  - ❗️FAITES VITES TOURNER ‼️
+  - URGENT !!!!
+
+part_2:
+  - Un décret
+  - Une nouvelle loi
+  - Un nouveau projet gouvernemental
+  - Une mesure d’urgence
+
+
+part_3:
+  - va être annoncé(e) demain  !
+  - va être voté(e) ce soir !
+  - va passer ce midi !
+  - va être effectif(ve) dans moins de 48h !
+
+part_4:
+- Je le sais de source sûre car la coiffeuse de mon oncle chauve qui travaille au Ministère des Sports me l’a dit.
+- C’est un fait 100% confirmé car la cousine de la mère de mon orthopédiste daltonien dont le chien est surdoué, a eu une vision de médiumnité confirmée par un comité d’experts scientifiques.
+- La soeur du frère de ma soeur me l’a dit et elle a été stagiaire d’observation au Ministère de l’Intérieur en mai 2004.
+- C’est évident que ça va avoir lieu, ouvrez les yeux, tous les indices le disent !
+
+
+part_5:
+  - Dès mercredi, tous les chiens devront faire caca dans un sac en plastique gardé dans votre réfrigérateur sous peine d’avoir une amende de 2700€.
+  - À partir de ce soir, toutes les mouches qui entreront dans votre maison par votre fenêtre devront donner lieu à la venue d’une équipe d’experts sanitaires pour désinfecter l’intégralité de votre maison et la mise en quarantaine de votre famille (interdiction de sortir d’une boîte en verre fermée pendant 40 jours).
+  - Dans moins de 24 heures, toute sortie justifiée avec l’attestation sera réprimandée d’une exécution au fusil à plomb sur la place publique.
+  - "Dès maintenant, toute personne qui achètera à mangera sera emmenée en garde à vue avec visio-interrogatoire de tous ses proches pour prouver qu’elle avait vraiment besoin de manger."
+
+part_6:
+  - "Pour vous protéger, allez vite acheter un paquet de pain de mie car le moelleux de la mie protège du virus. Source : le médecin légiste Wu Ming-Ma de Wuhan."
+  - "Afin de prendre vos précautions vis-à-vis de cette mesure, rasez-vous les sourcils car les poils du sourcil humain sont une zone privilégiée par le virus. En effet, les poils constituent un nid douillet où le virus aime se loger et il peut y survivre jusqu’à 2 mois et demi, plus longtemps que la quarantaine ! 😱😱😱 Si le gouvernement apprend ça il prolongera la quarantaine donc, par précaution, rasez-vous les sourcils !!!"
+  - "Pour agir, achetez des barquettes de surimi au rayon frais. C’est très important, les docteurs dans les hôpitaux insistent là-dessus : la couleur orange du surimi contient un actif qui permet de lutter contre la propagation du coronavirus. Pour cela, coupez des petites rondelles de surimi et placez-la devant chaque porte et fenêtre de votre maison pour éviter que le virus rentre. Source : Elon Musk"
+  - "Si vous souhaitez vous protéger dès maintenant avant que la mesure soit prise en place, achetez de la lessive et buvez-en un shooter tous les soirs avant de vous coucher. La lessive contient un actif qui vous protège des infections virales et renforce votre système immunitaire. En boire avant de dormir permet de faire effet durant votre sommeil, quand votre corps est au repos et qu’il est le plus en mesure de bénéficier de ses effets."
+
+part_7:
+  - Faites vites tourner si ce n’est pas déjà fait !
+  - Transférez ce message à tous vos proches, notre santé et la leur est en jeu !
+  - Partagez ce message au max pour éviter la propagation du virus.
+  - Partagez au max, c’est autant de vies que vous sauverez.

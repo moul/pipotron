@@ -21,8 +21,8 @@ Lambda functions are hosted on Netlify, give a try here:
 * https://pipotron.moul.io/run?dict=fuu
 * https://pipotron.moul.io/run?dict=horoscope
 * https://pipotron.moul.io/run?dict=html
-* https://pipotron.moul.io/run?dict=insulte-mignone
 * https://pipotron.moul.io/run?dict=image-svg
+* https://pipotron.moul.io/run?dict=insulte-mignone
 * https://pipotron.moul.io/run?dict=laboralphy
 * https://pipotron.moul.io/run?dict=marabout
 * https://pipotron.moul.io/run?dict=moijaime
@@ -31,6 +31,7 @@ Lambda functions are hosted on Netlify, give a try here:
 * https://pipotron.moul.io/run?dict=project-idea
 * https://pipotron.moul.io/run?dict=reve
 * https://pipotron.moul.io/run?dict=roman-photo
+* https://pipotron.moul.io/run?dict=whatsapp-message-in-case-of-pandemic
 
 ## Try with Docker
 
