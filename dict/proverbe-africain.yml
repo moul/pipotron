@@ -1,0 +1,51 @@
+output:
+  - '{{pick_once "intro"}} {{pick_once "animal"}} {{pick_once "action"}}{{pick "between"}} {{pick_once "animal"}} {{pick_once "action"}}'
+
+intro:
+  - "si"
+  - "parfois"
+  - "quand"
+  - "lorsque"
+  - "parfois, quand"
+  - "parfois, si"
+  - "parfois, lorsque"
+
+between:
+  - " alors"
+  - ","
+
+action:
+  - dit coucou
+  - dit oulala
+  - chatouille {{pick_once "animal"}}
+  - renverse un caillou
+  - nage dans la tourbe
+  - cogne un arbre
+  - ronge ses ongles
+  - chatouille le pied
+  - peut chanter
+  - chasse {{pick_once "animal" }}
+  - mange {{pick_once "animal" }}
+  - prépare le bissap
+  - traverse une rivière
+  - piétine un grain de sable
+  - voit le soleil sour les nuages
+  - rencontre {{pick_once "animal"}}
+  - se cache derrière {{pick_once "animal"}}
+  - nargue {{pick_once "animal"}}
+  - peut croquer les hyènes
+  - "machonne les brindilles de l'arbre centenaire"
+
+animal:
+  - "la fourmi"
+  - "le crocodile"
+  - "l'hippopotame"
+  - "la girafe"
+  - "la mangouste"
+  - "l'ibis"
+  - "l'éléphant"
+  - "le lézard"
+  - "le serpent"
+  - "le lion"
+  - "le jaguar"
+  - "l'oiseau"
