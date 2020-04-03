@@ -1,7 +1,5 @@
 output:
 - |-
-output:
-- |-
   {{pick "part_1"}}
 
   {{pick "part_2"}} {{pick "part_3"}}
