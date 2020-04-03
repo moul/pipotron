@@ -16,12 +16,17 @@ intro:
   - "Alors j'ai rêvé que..."
   - "J'ai rêvé que..."
   - "J'ai encore rêvé que..."
+  - "j'ai fait un cauchemar où..."
+  - "C'était il y a quelques jours, j'ai rêvé que..."
 
 
 phrases:
   - |-
+    {{pick_once "phrase"}}
     {{range N (randMinMax 2 5) -}}
-      {{pick_once "phrase"}}
+      {{if gt (randMinMax 0 5) 4}}{{pick_once "phrase_intermediaire"}}
+    {{end}}
+    {{- pick_once "phrase"}}
     {{end}}
 
 phrase:
@@ -66,13 +71,29 @@ phrase_toute_faite:
   - "J’étais dans un magasin avec des clients qui avaient tous des cravates et qui devaient passer leur cravate au caissier pour pouvoir acheter leurs articles."
   - 'J’étais {{pick "dans_endroit"}} et que {{pick "une_personne"}} qui est très grand, genre 8 ans, alors que je l’ai vu y a deux mois (il a 3 ans), je lui dis "dis donc ça pousse !.'
   - "Ça fait quelques jours que je suis tout seul sans croiser personne. J’envoie un message à Sarah-Louise pour lui demander si on va finir par se croiser sachant qu’on est sous le même toit."
-  - "J’arrive dans la cuisine où il y a des gens que je ne connais pas qui lavent des verres et cuisinent de la purée dans l’évier. Je prends un verre pour me servir de l’eau au robinet, et je n'arrive plus à fermer le robinet qui coule un peu dans la purée. On s'y met à plusieurs pour essayer de le fermer, les mains pleines de purée, ça glisse."
+  - "J’arrive dans la cuisine où il y a des gens que je ne connais pas qui lavent des verres et cuisinent de la purée dans l’évier. Je prends un verre pour me servir de l’eau au robinet, et je n’arrive plus à fermer le robinet qui coule un peu dans la purée. On s’y met à plusieurs pour essayer de le fermer, les mains pleines de purée, ça glisse."
+  - "Je me rasais la moustache, mais pas la barbe."
   - 'Dans un canapé avec {{pick "une_personne"}} on discute et on chante sa reprise de "un jour mon prince viendra" de blanche neige.'
+  - "Des gendarmes (sans abris) voulaient me refiler le coronavirus, ils me demandaient de les héberger chez moi, j’ai accepté."
+  - 'J’étais {{pick "dans_endroit"}} et je devais désarmer {{pick "une_personne"}}, on était attachés ensemble, je devais appuyé sur des mécanismes pour récuperer une arme.'
+  - 'Je cherchais des choses et plus j’essayais de trouver, plus je me déshabillais.'
+  - 'J’avais un nouveau follower sur snapchat: {{pick "une_personne"}}.'
+  - 'Je pars {{pick "dans_endroit"}}, {{pick "dans_endroit"}} je crois. je suis dans un bus avec deux autres amis.'
+  - 'On arrive {{pick "dans_endroit"}}. Je reçois un SMS de {{pick "une_personne"}} dans la réalité pour me demander si je suis {{pick "dans_endroit"}}, je réponds dans mon rêve que non je suis en {{pick "dans_endroit"}}.'
+  - 'Je range mes affaires dans un casier {{pick "dans_endroit"}} puis on se baigne dans la mer dont la température est idéale.'
+  - 'Je vois à l’horizon qu’il y a l’air d’y avoir des grosses vagues avec de l’écume. je le montre à quelqu’un en disant que ça doit être un cool spot pour des surfeurs. sauf que la vague se rapproche et elle est vraiment gigantesque, à peu près la taille d’un gros immeuble.'
+  - 'Tout le monde se met à courir, je réussi à me cacher derrière un gîte, sous le toit végétale d’une terrasse, je tient la main d’une dame qui à l’air très paniquée, on se prends pas mal d’eau sur la tête mais ça va.'
+  - 'Je parle en anglais à des jeunes bulgares. Je leur dis "mais c’est quoi ce délire c’est la mer méditérannée non ? en france elle est pas comme ça". en plaisantant je leur dis que c’est surement parce qu’on est dans les pays de l’est et que tout est plus abrupt/bourru/slave.'
+  - 'Des gens essaient de m’apprendre des mots en bulgare.'
+  - 'Je remarque qu’on essaie de me voler mon porte-feuille dans ma banane. Je m’éloigne des gens, il y a des vagues qui dévastent la plage. Il y a encore des gens dans la mer, dont des enfants.'
 
-intermediaire_phrases:
+phrase_intermediaire:
   - "Dans ce rêve..."
   - "Finalement..."
-  - "Puis, j'ai rêvé..."
+  - "Puis, j'ai rêvé que..."
+  - "Puis, ça a dérivé..."
+  - "Là, d'un coup..."
+  - "Et pendant ce temps..."
 
 adjectif_d_etat:
   - content
@@ -83,18 +104,30 @@ adjectif_d_etat:
   - lucide
 
 dans_endroit:
+  - '{{pick "dans_endroit"}}, {{pick "dans_endroit"}}'
   - dans une brocante
+  - "dans un pays de l'est de l'europe"
+  - "sur la côte de la mer méditérannée"
+  - en allemagne
+  - chez un ami
   - à Marseille
+  - dans un minibus
+  - sur une plage avec un grand gîte comme une colonie de vacances
   - à Casse-Tête
+  - à Paris
   - dans l’espace
   - en Slovaquie
+  - en Bulgarie
   - dans ma baignoire
   - au canada
   - dans un pays chaud
+  - "dans un parc d'attraction"
   - dans une autre dimension
   - dans un fauteuil
   - dans mon propre pied
+  - dans un manège
   - dans ma chambre qui ne ressemblait pas du tout à ma chambre
+  - dans une sorte de salle de sport spéciale avec des jeux et énigmes
 
 une_personne:
   - ma soeur
@@ -104,9 +137,12 @@ une_personne:
   - mon ami imaginaire
   - Jean-Luc le Ténia
   - mon sosie parfait
+  - un faux policier
   - Chuck Norris
+  - "Maeva (une fille des marseillais)"
   - un panda qui ressemblait à une tourterelle
   - Audrey Carmes
+  - Audrey Moyen-âge
   - Manfred
   - Sassou
   - Jean-Loup
@@ -137,3 +173,5 @@ conclusion:
   - "Et là mon réveil à sonné."
   - "Voila c’était assez étrange, j'ai pas plus de souvenirs."
   - "Je me réveille."
+  - "Puis, je ne me rappelle pas de la suite."
+  - "C'est génant..."
