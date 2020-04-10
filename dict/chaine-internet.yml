@@ -1,0 +1,105 @@
+output:
+- '{{pick "phrase_complete_sans_intro_sans_conclusion"}}{{pick "emojis"}}'
+- |
+  {{pick "intros"}}
+  {{pick "middle"}}
+  {{pick "conclusion"}}
+- |
+  {{pick "intros"}}{{pick "emojis"}}
+  {{pick "middle"}}{{pick "emojis"}}
+  {{pick "conclusion"}}{{pick "emojis"}}
+- |
+  {{pick "intros"}}
+  {{pick "middle"}}
+  {{pick "conclusion"}}
+  {{pick "emojis"}}
+- |
+  {{pick "emojis"}}
+  {{pick "intros"}}
+  {{pick "middle"}}
+  {{pick "conclusion"}}
+  {{pick "emojis"}}
+  
+phrase_complete_sans_intro_sans_conclusion:
+- Aujourd'hui c'est le jour du câlin sur Messenger. Envoie-le à tous tes contacts et regarde combien tu en reçois. À partir de 5 tu es quelqu'un de spécial, mais surtout ne m'oublie pas.
+- Tu es une femme très spéciale et j'ai décidé de t'envoyer ce message car tu fais partie de celles qui m'inspirent. À ton tour, envoie ce message aux femmes iconiques de ta région et ajoute une photo du patrimoine local pour montrer que tu es forte comme les monuments ! 
+- Aujourd'hui c'est la nuit de l'ange gardien. Je te l'envoie pour te protéger pendant 8 ans. C'est important de le passer à 8 personnes dans les 8 minutes quand tu ouvres ce message dont moi, si tu en as envie.
+- En ce moment, quatre étoiles qui ne brillent jamais au même moment sont alignées dans le ciel. Fais un voeu en lisant ce message et envoie-le à quatre personnes pour qu'il se réalise.
+- Au sujet du blocage national citoyen du 17/11, Le président va faire une allocution télévisée le 15/11 pour expliquer qu'il ne cèdera pas devant nos revendications. Nous préconisons une extinction des TV ce soir là pour que son Audimat soit au même niveau que sa cote de popularité. {{pick "conclusion"}}
+
+
+intros:
+- Si tu reçois ce message, c'est que je pense à toi.
+- J'ai une idée !!
+- J'espère que tout vas bien et que tu restes sagement chez toi.
+- Merci de faire tourner ce message
+- Tiens, regarde cette super vidéo trop drôle.
+- Allez, soyons fous.
+- Lis jusqu'à la fin, c'est trop mignon.
+- ⚠️ ALERTE ⚠️ 
+- S'il te plait, transmets à tous tes contacts de ta liste messenger.
+- Très beau texte. Je le dédie à mes amis. 
+- 1 million de signataires en 48h... Est-ce que ça va suffire ?
+- Ca c'est pour toi.....
+- Coucou peux-tu diffuser ce lien ?
+
+middle:
+- si on faisait la plus grande chaine d'internet, en envoyant ce bisou à tous ses ami(e)s
+- tu es une personne très importante pour moi et je voudrais te voir encore après covid-19
+- tu fais partie des personnes qui me sont le plus chères
+- SI TU CONNAIS DES GENS FORMIDABLES PARTAGE CE COEUR
+- une prophétie indienne dit qu'il faut savoir exprimer sa gratitude envers ceux qu'on aime
+- une légende maya raconte que l'amour est comme une flamme et qu'il faut le répandre pour allumer le monde
+- Envoyons tous un gros BISOU à tous nos ami(e)s Facebook. Je commence cette chaine, à toi de faire suivre.
+- Voici la photo d'une fée qui te portera chance si tu l'envoies à tous tes contacts
+- Ce message a été codé par Elon Musk et protège tous ceux qui le reçoivent 
+- Les gens que tu aimes, c'est comme les ballons. Si tu les laisses partir, tu ne peux plus les rattraper ! Je vais donc t'attacher avec la corde de mon coeur afin de ne pas te perdre car je tiens beaucoup à toi.
+- L'amour est comme un océan, il faut apprendre à nager pour aller dedans et ce message est une bouée d'amour que je t'adresse ! 
+- Ne pas accepter la demande d'amitié de {{pick "pseudo"}}. C'est un hacker qui a un système connecté à ton compte Facebook. Si un de tes contacts l'accepte, tu seras aussi piraté. Assure toi également que tous tes contacts le sachent.
+- J'offre ce MUGUET pour qu'il apporte du bonheur là où il va.
+- La vie sur terre est un passage. L'amour est un mirage, mais l'amitié est un "fil d'or" qui ne se brise qu'à la mort.
+- MERRY CHRISTMAS.
+- On dit que de l'autre côté du monde il y a de l'eor. Moi je ne sais pas. Mais je sais que de l'autre côté de cet écran, il y a une personne qui vaut de l'or, et que j'estime beaucoup !
+- A chaque diffusion la SPA gagne 1€. Et c'est payé par une société d'autoroutes alors !
+
+conclusion:
+- '{{pick "conclusion"}} {{pick "conclusion"}}'
+- Merci.
+- Garde ton doigts appuyé sur le message. En bas, au milieu, il sera dit transmettre. Appuie dessus et clique sur les noms qui sont sur ta liste et cela leur sera envoyé.
+- Retransmets tel que reçu.
+- Je prie Dieu qu'il te protège contre cette maladie
+- Envoie à toutes les personnes que tu aimes
+- Envoie-le à tous ceux que tu veux et moi aussi si je compte pour toi ;)
+- Envoie-le aux trente-trois personnes qui comptent le plus pour toi
+- PARTAGER EN MASSE !!!
+- Ce message porte chance à ceux qui le reçoit... Il porte plus de chance à ceux qui la partage.
+- Oseras-tu partager...?
+- FAITES TOURNER
+- Qui va oser jouer le jeu ? Moi c'est fait...
+- On ne sera que quelques-uns au début mais petit à petit, cela va se répandre...
+- "Ce message est comme un virus : un rien suffit à le répandre mais il fait l'effet inverse, alors, à toi de jouer !"
+- Envoie ce message à tous ceux que tu aimes d'amitié ou d'amour, moi inclus. Si 4 messages te reviennent, ça veut dire qu'on ne veut pas te perdre. Alors envoie beaucoup de messages.
+- Si tu ne partages pas ce message, un malheur pourrait t'arriver alors tu sais ce qu'il te reste à faire ;) 
+- Envoie ce message à tous ceux que tu aimes 
+- 100% des personnes qui ont partagé ce message ont observé une perte de poids significative, une prise de muscles immédiate et la rencontre de l'âme soeur dans les jours qui ont suivi ! 
+-  Nous vous proposons de faire suivre et partager ce post en masse à tous vos amis en France et ailleurs où qu'ils soient. Transférez.
+- Envoie ce sms à tous ceux que tu aimes en amour ou en amitié à moi si j'en fais partie.
+- Cette affaire, c'est la nôtre. Et le bouche-à-oreille 2.0, c'est ton pouvoir !
+- A faire circuler uniquement en MP m'a-t'on demandé. Merci et bisous.
+- Partage si tu es d'accord.
+- Envoie ce message à tous ceux que tu adores, et à mois si j'en fais parti ! Si plus de 3 te reviennent, à 10h demain quelqu'un t'annoncera une nouvelle longuement attendue...
+- STP, ne brise pas la chaine et envoie ce message à 7 amis au moins.
+- Bye bizou
+
+pseudo:
+- Dominique Amblard
+- bogossdu78
+
+emojis:
+- 🎅
+- 😎
+- 💋
+- ❤️
+- 👍
+- '{{pick "emojis"}}{{pick "emojis"}}'
+- '{{pick "emojis"}}{{pick "emojis"}}{{pick "emojis"}}'
