@@ -3,7 +3,7 @@ output:
   - '{{ pick "collection_fenetre" }}'
 
 collection_pipotron:
-  - si tu n'existait pas, je piquerais quand même tes frites
+  - si tu n'existais pas, je piquerais quand même tes frites
   - tu es plus cool {{ pick "fin_tu_es_mieux_que" }}
   - tu es plus beau/belle {{ pick "fin_tu_es_mieux_que" }}
   - tu brilles plus {{ pick "fin_tu_es_mieux_que" }}
@@ -12,6 +12,8 @@ collection_pipotron:
   - tu as le teint rose comme {{ pick "fin_comme" }}
   - tes yeux vont super bien avec la couleur des {{ pick "objet_cool_pluriel" }}
   - j'aime bien {{ pick "partie_de_toi" }}
+  - si tu étais {{ pick "si_tu_étais_féminin"}} {{ pick "tu_serais_féminin" }}
+  - si tu étais {{ pick "si_tu_étais_masculin"}} {{ pick "tu_serais_masculin" }}
 
 fin_tu_es_mieux_que:
   - '{{ pick "autre_personne_avec_que" }} {{ pick "adjectif_autre_personne" }}'
@@ -37,7 +39,7 @@ autre_personne_avec_que:
   - que Tony Hawk
   - que la version améliorée {{ pick "autre_personne_avec_de" }}
   - qu'Einstein
-  - que Gandi
+  - que Gandhi
   - qu'Iron Man
 
 autre_personne_avec_de:
@@ -50,7 +52,7 @@ autre_personne_avec_de:
   - du marchand de sable
   - d'une licorne
   - d'Einstein
-  - de Gandi
+  - de Gandhi
   - d'Iron Man
 
 autre_personne:
@@ -63,20 +65,46 @@ autre_personne:
   - Tony Hawk
   - toi
   - Einstein
-  - Gandi
+  - Gandhi
   - Iron Man
 
 objet_cool_pluriel:
   - paillettes
   - slips
   - PQ ultra-moelleux
-  - fraise tagada
+  - fraises tagada
 
 adjectif_autre_personne:
   - déguisé.e en {{ pick "autre_personne" }}
   - dans un océan de {{ pick "objet_cool_pluriel" }}
+  - dans un ciel de {{ pick "objet_cool_pluriel" }}
+  
+si_tu_étais_féminin:
+  - une planète
+  - l'une de mes chaussettes
+  - une fleur
+  - une vache
+  - une chanson
+  - à court de liquide vaisselle
 
+tu_serais_féminin:
+  - tu serais une super chanson
+  - tu serais quand même la plus belle
+  - tu pourrais être la présidente des {{ pick "objet_cool_pluriel" }}
+  - ton odeur serait puissante mais belle
+  
+si_tu_étais_masculin:
+  - un ordinateur
+  - mon slip préféré
+  - un poil
+  - un tiroir
 
+tu_serais_masculin:
+  - tu serais mon préféré
+  - tu porterais les plus belles couleurs
+  - le monde entier serait fan de toi
+  - tes poils seraient les plus doux
+  
 collection_fenetre:
   - "tu es plus joli(e) que le ciel et la mer"
   - "ton odeur est une pyramide d'Égypte"
