@@ -1,0 +1,73 @@
+output:
+  - si tu n'existait pas, je piquerais quand même tes frites
+  - tu es plus cool {{ pick "fin_tu_es_mieux_que" }}
+  - tu es plus beau/belle {{ pick "fin_tu_es_mieux_que" }}
+  - tu brilles plus {{ pick "fin_tu_es_mieux_que" }}
+  - tu envoies plus de rêve {{ pick "fin_tu_es_mieux_que" }}
+  - ta peau est plus douce {{ pick "fin_tu_es_mieux_que" }}
+  - tu as le teint rose comme {{ pick "fin_comme" }}
+  - tes yeux vont super bien avec la couleur des {{ pick "objet_cool_pluriel" }}
+  - j'aime bien {{ pick "partie_de_toi" }}
+
+fin_tu_es_mieux_que:
+  - '{{ pick "autre_personne_avec_que" }} {{ pick "adjectif_autre_personne" }}'
+
+fin_comme:
+  - '{{ pick "autre_personne" }} {{ pick "adjectif_autre_personne" }}'
+
+partie_de_toi:
+  - tes doigts de pieds
+  - ton intelligence
+  - ta beauté
+  - ton regard
+  - toi
+
+autre_personne_avec_que:
+  - que le marchand de sable
+  - qu'un chaton
+  - qu'une licorne
+  - que Beyonce
+  - que toi
+  - que Maitre Gims
+  - que moi
+  - que Tony Hawk
+  - que la version améliorée {{ pick "autre_personne_avec_de" }}
+  - qu'Einstein
+  - que Gandi
+  - qu'Iron Man
+
+autre_personne_avec_de:
+  - de moi
+  - de toi
+  - d'un chaton
+  - de Maitre Gims
+  - de Tony Hawk
+  - de Beyonce
+  - du marchand de sable
+  - d'une licorne
+  - d'Einstein
+  - de Gandi
+  - d'Iron Man
+
+autre_personne:
+  - marchand de sable
+  - chaton
+  - licorne
+  - Beyonce
+  - Maitre Gims
+  - moi
+  - Tony Hawk
+  - toi
+  - Einstein
+  - Gandi
+  - Iron Man
+
+objet_cool_pluriel:
+  - paillettes
+  - slips
+  - PQ ultra-moelleux
+  - fraise tagada
+
+adjectif_autre_personne:
+  - déguisé.e en {{ pick "autre_personne" }}
+  - dans un océan de {{ pick "objet_cool_pluriel" }}
