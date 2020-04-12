@@ -1,0 +1,73 @@
+output:
+  - |
+    {{ pick_once "person" }} discute avec {{ pick_once "person" }}.
+    {{ pick_once "question" }}
+    {{ pick_once "phrase_out_of_context" }}
+    {{ pick_once "outro" }}
+
+question:
+  - "crois-tu à la vie après la mort ?"
+  - "c'est quoi la beauté ?"
+  - "tu vois ta mère ?"
+  - "eh, pourquoi t'es en forme de lune toi ?"
+  - "elle s'appelle comment, ta femme ?"
+  - "sais-tu faire un huit avec ta bouche ?"
+  - "que dois-je faire ?"
+  - "qu'est-ce que je fais de la moto ?"
+  - "dis, tu y crois toi, au coup de foudre ?"
+  - 'conjugue-moi au future, la phrase "le voleur a été arrêté hier."'
+  - 'Vous savez pourquoi les grenouilles aiment bien mettre leurs fesses dans la flotte ?'
+  - "Quels sont les fruits que nous trouvons dans toutes les maisons ?"
+  - "Comment vas-tu ma cocotte ?"
+
+phrase_out_of_context:
+  - "j'ai un mari en or."
+  - "mon mari est en taule."
+  - "je ne crois pas à la vie après la mort."
+  - "je ne croyais pas à la vie après la mort, mais depuis que ma belle-mère est morte, je revis !"
+  - "je viens d'écraser un poulet."
+  - "les poules savent faire un oeuf avec leur cul."
+  - "la porte du garage est restée ouverte."
+  - "j'espère que vous n'avez pas aperçu ma superbe Cadillac de luxe."
+  - "nioc-nioc."
+  - "enchanté."
+  - "l'eau poivrée fait éternuer."
+  - "les vachent qui ferment les yeux font du lait concentré."
+  - "la petit souris est l'animal qui a le plus de dents."
+  - 'la devise des chats diaboliques est "Satan est par minou".'
+  - "hier j'ai raconté une blague sur Auchan mais elle a pas supermarché..."
+  - "j'ai une de ces envies de péter moi."
+  - "hey mais c'est dégueulasse, on est à table."
+
+outro:
+  -
+  -
+  -
+  - fin.
+  - ahahahah.
+  - ahahahahah mort de lol.
+  - ahah trop marrant.
+  - c'est rigolo.
+  - elle est bonne hein ?
+
+person:
+  - un allemand
+  - un arabe
+  - un belge
+  - un blanc
+  - un chinois
+  - un comptable
+  - un français
+  - un homme
+  - un noir
+  - un policier
+  - un singe
+  - un suisse
+  - une africaine
+  - une américaine
+  - une anglaise
+  - une championne de body-building
+  - une femme
+  - une française
+  - une institutrice
+  - une otarie
