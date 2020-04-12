@@ -1,0 +1,114 @@
+output:
+- '{{pick "intro"}} {{pick "combo_gens"}} {{pick "crimes"}}'
+- '{{pick "intro"}} {{pick "personne"}} {{pick "crime"}}'
+- '{{pick "intro"}} {{pick "base"}}'
+- '{{pick "combo_gens"}} {{pick "crimes"}}'
+- '{{pick "intro"}} les {{pick "gens"}} {{pick "crimes"}}'
+- 'Les {{pick "gens"}} {{pick "crimes"}}'
+
+intro:
+- "Peu de gens le savent, mais"
+- "Il y a une rumeur qui me parait plausible qui dit que"
+- "Apparemment"
+- "J'ai entendu dire que"
+- "Savais-tu que"
+- "Je sais de source sûre que"
+- "Je dois t'apprendre quelque chose de très important qui va radicalement changer ta vision du monde, mais c'est vrai :"
+- "En fait,"
+
+connecteur:
+- ","
+- ","
+- ","
+- ","
+- "avec l'aide de"
+- "en collaboration avec"
+- "et"
+- ', qui ne sont autres que des {{pick"gens"}} déguisés,'
+- ', qui en réalité sont les descendants des {{pick"gens"}},'
+- ', qui bien évidemment collaborent avec les {{pick"gens"}},'
+- 'que {{pick "personne"}} contrôle par la pensée,'
+
+combo_gens:
+- 'Les {{pick "gens"}} {{pick "connecteur"}} {{pick "personne"}} {{pick "connecteur"}} les {{pick "gens"}} {{pick "connecteur"}} les {{pick "gens"}} et les {{pick "gens"}}'
+- 'Les {{pick "gens"}} {{pick "connecteur"}} les {{pick "gens"}} et les {{pick "gens"}}'
+- '{{pick "personne"}} {{pick "connecteur"}} {{pick "personne"}} et {{pick "personne"}}'
+- 'Les {{pick "gens"}} {{pick "connecteur"}} {{pick "gens"}} {{pick "connecteur"}} les {{pick "gens"}} {{pick "connecteur"}} les {{pick "gens"}} et les {{pick "gens"}}'
+
+crimes:
+- 'ont organisé {{pick "évènement"}}'
+- 'ont organisé {{pick "évènements"}}'
+- 'ont tout fait pour que {{pick "évènement"}} ait lieu'
+- 'ont tout fait pour que {{pick "évènements"}} aient lieu'
+- 'étaient au courant pour {{pick "évènement"}}'
+- 'étaient au courant pour {{pick "évènements}"}'
+
+crime:
+- 'a organisé {{pick "évènement"}}'
+- 'a organisé {{pick "évènements"}}'
+- 'a tout fait pour que {{pick "évènement"}} ait lieu'
+- 'a tout fait pour que {{pick "évènements"}} aient lieu'
+- 'était au courant pour {{pick "évènement"}}'
+- 'était au courant pour {{pick "évènements}"}'
+
+base:
+- 'La base secrète des {{pick "combo_gens"}} se trouve dans {{pick "lieu"}}'
+- 'Les {{pick "combo_gens"}} ont installé leur QG dans {{pick "lieu"}}'
+- 'Les {{pick "combo_gens"}} ont ont un complexe souterrain dans {{pick "lieu"}}'
+- 'La base secrète des {{pick "gens"}} se trouve dans {{pick "lieu"}}'
+- 'Les {{pick "gens"}} ont installé leur QG dans {{pick "lieu"}}'
+- 'Les {{pick "gens"}} ont ont un complexe souterrain dans {{pick "lieu"}}'
+
+évènement:
+- "La shoah"
+- "L'épidémie de coronavirus"
+- "L'explosion de Tchernobyl"
+- "La grippe espagnole"
+- "Le cyclone Irma"
+- "La peste Noire"
+- "L'éruption du Vésuve"
+- "L'épidémie de Sida"
+- "La canicule de 2003"
+- "La catastrophe de Bhopal"
+
+évènements:
+- "Les attentats du 11 Septembre"
+- "Les inondations de 1931 en Chine"
+- "Les explosions nucléaires de Hiroshima et Nagasaki"
+
+lieu:
+- "les pyramides d’Égypte"
+- "les statues de l'Île de Pâques"
+- "la zone 51"
+- "l'Atlantide"
+- "un endroit indiqué par les menhirs de Carnac"
+- "le désert, au croisement de huit symboles Nazca"
+- "Stonehenge"
+- "le triangle des Bermudes"
+- "les sous-sols d'antarctique"
+
+personne:
+- "Le monstre du Loch Ness"
+- "Kim Jong Un"
+- "L'homme au masque de fer"
+- "Le cavalier sans tête"
+- "Toutankhamon"
+- "Tonton Adolf"
+- "Adolf Hitler"
+- "Donald Trump"
+- "Kim Kardashian"
+- "Le fantôme de L'opéra"
+- "Houndini"
+
+
+gens:
+- "illuminati"
+- "francs-maçons"
+- "amazones"
+- "Juifs"
+- "Nazis"
+- "Jésuites"
+- "reptiliens"
+- "aliens"
+- "Communistes"
+- "Nord-Coréens"
