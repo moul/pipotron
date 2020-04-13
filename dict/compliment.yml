@@ -27,6 +27,7 @@ partie_de_toi:
   - ta beauté
   - ton regard
   - toi
+  - ta casquette
 
 autre_personne_avec_que:
   - que le marchand de sable
@@ -41,6 +42,7 @@ autre_personne_avec_que:
   - qu'Einstein
   - que Gandhi
   - qu'Iron Man
+  - le chat inconnu de Tintin
 
 autre_personne_avec_de:
   - de moi
@@ -86,21 +88,24 @@ si_tu_étais_féminin:
   - une vache
   - une chanson
   - à court de liquide vaisselle
+  - une chips
 
 tu_serais_féminin:
   - tu serais une super chanson
   - tu serais quand même la plus belle
   - tu pourrais être la présidente des {{ pick "objet_cool_pluriel" }}
-  - ton odeur serait puissante mais belle
+  - ton odeur serait belle et puissante
+  - tu serais comme une chips
   
 si_tu_étais_masculin:
   - un ordinateur
   - mon slip préféré
   - un poil
   - un tiroir
+  - un paquet de chips
 
 tu_serais_masculin:
-  - tu serais mon préféré
+  - tu serais mon goût préféré
   - tu porterais les plus belles couleurs
   - le monde entier serait fan de toi
   - tes poils seraient les plus doux
