@@ -22,15 +22,21 @@ adjective:
   - auto
   - awesome
   - black
+  - best
+  - new
   - coding
   - dark
   - flex
   - foreach
   - future
   - happy
+  - cool
   - hyper
   - light
+  - net
+  - e
   - next
+  - no
   - nextgen
   - pure
   - simple
@@ -46,12 +52,21 @@ thing:
   - connect
   - crew
   - drive
+  - shop
+  - mood
+  - steady
+  - glitch
+  - fantasy
+  - cool
   - friend
   - layer
+  - API
   - loop
   - mail
+  - hold
   - mocking
   - partner
+  - maker
   - pipeline
   - project
   - span
@@ -67,7 +82,17 @@ suffix:
   - able
   - ary
   - er
+  - gen
+  - cool
+  - li
   - ly
+  - in
+  - nd
+  - fy
+  - maker
+  - tech
+  - bio
+  - eco
 
 technology:
   - APNS
