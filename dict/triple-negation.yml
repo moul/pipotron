@@ -1,0 +1,41 @@
+output:
+  - 'ce n’est pas parce qu’on est {{pick "qualificatif"}} qu’on n’a pas le droit de ne pas dire n’importe quoi, et pourtant ce n’est pas le cas'
+  - 'il ne {{pick_once "verbe"}} ni ne {{pick_once "verbe"}}, ou pas'
+  - 'il n’aime ni {{pick_once "activite"}} ni {{pick_once "activite"}}'
+  - 'ni {{pick_once "prenom"}} ni {{pick_once "prenom"}} n’aime pas ne pas {{pick "verbe_infinitif"}}'
+  - 'on ne peut pas ne pas avoir pas compris'
+  - 'cette phrase n’a peut-être pas l’air de ne pas avoir une chance de ne pas être vide de non sens, et pourtant elle ne l’est pas'
+  - '{{pick_once "prenom"}} ne sait pas s’il ne va pas ne pas arrêter de ne pas {{pick "verbe"}}'
+  - '{{pick "prenom"}} ne sait pas si il n’a pas l’intention de ne rien faire pendant ses vacances, ou pas'
+  - 'pas bien ou pas bien ?'
+  - '{{pick "prenom"}} ne pense pas que sa façon de faire ne sera pas inefficace, enfin il n’est pas sûr'
+
+prenom:
+  - Pierre
+  - Paul
+
+verbe:
+  - danse
+  - chante
+  - travaille
+  - nage
+  - boit
+
+verbe_infinitif:
+  - danser
+  - chanter
+  - travailler
+  - nager
+  - boire
+
+activite:
+  - la danse
+  - le chant
+  - le travail
+
+qualificatif:
+  - jeune
+  - de gauche
+  - de droite
+  - démocrate
+  - communiste
