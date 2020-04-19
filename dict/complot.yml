@@ -16,24 +16,34 @@ intro:
 - "Je dois t'apprendre quelque chose de très important qui va radicalement changer ta vision du monde, mais c'est vrai :"
 - "En fait,"
 
+# TODO
+# - terre plate
+# - dans la matrice
+# - parler des avions
+# - la lune, le soleil
+# - le coronavirus
+# - les antennes 5g
+# - paris
+# - le truman show
+
 connecteur:
 - ","
 - ","
 - ","
 - ","
-- "avec l'aide de"
-- "en collaboration avec"
-- "et"
+- " avec l'aide de"
+- " en collaboration avec"
+- " et"
 - ', qui ne sont autres que des {{pick"gens"}} déguisés,'
 - ', qui en réalité sont les descendants des {{pick"gens"}},'
 - ', qui bien évidemment collaborent avec les {{pick"gens"}},'
-- 'que {{pick "personne"}} contrôle par la pensée,'
+- ' que {{pick "personne"}} contrôle par la pensée,'
 
 combo_gens:
-- 'Les {{pick "gens"}} {{pick "connecteur"}} {{pick "personne"}} {{pick "connecteur"}} les {{pick "gens"}} {{pick "connecteur"}} les {{pick "gens"}} et les {{pick "gens"}}'
-- 'Les {{pick "gens"}} {{pick "connecteur"}} les {{pick "gens"}} et les {{pick "gens"}}'
-- '{{pick "personne"}} {{pick "connecteur"}} {{pick "personne"}} et {{pick "personne"}}'
-- 'Les {{pick "gens"}} {{pick "connecteur"}} {{pick "gens"}} {{pick "connecteur"}} les {{pick "gens"}} {{pick "connecteur"}} les {{pick "gens"}} et les {{pick "gens"}}'
+- 'Les {{pick "gens"}}{{pick "connecteur"}} {{pick "personne"}}{{pick "connecteur"}} les {{pick "gens"}}{{pick "connecteur"}} les {{pick "gens"}} et les {{pick "gens"}}'
+- 'Les {{pick "gens"}}{{pick "connecteur"}} les {{pick "gens"}} et les {{pick "gens"}}'
+- '{{pick "personne"}}{{pick "connecteur"}} {{pick "personne"}} et {{pick "personne"}}'
+- 'Les {{pick "gens"}}{{pick "connecteur"}} {{pick "gens"}}{{pick "connecteur"}} les {{pick "gens"}}{{pick "connecteur"}} les {{pick "gens"}} et les {{pick "gens"}}'
 
 crimes:
 - 'ont organisé {{pick "évènement"}}'
@@ -60,21 +70,21 @@ base:
 - 'Les {{pick "gens"}} ont ont un complexe souterrain dans {{pick "lieu"}}'
 
 évènement:
-- "La shoah"
-- "L'épidémie de coronavirus"
-- "L'explosion de Tchernobyl"
-- "La grippe espagnole"
-- "Le cyclone Irma"
-- "La peste Noire"
-- "L'éruption du Vésuve"
-- "L'épidémie de Sida"
-- "La canicule de 2003"
-- "La catastrophe de Bhopal"
+- "la shoah"
+- "l'épidémie de coronavirus"
+- "l'explosion de Tchernobyl"
+- "la grippe espagnole"
+- "le cyclone Irma"
+- "la peste Noire"
+- "l'éruption du Vésuve"
+- "l'épidémie de Sida"
+- "la canicule de 2003"
+- "la catastrophe de Bhopal"
 
 évènements:
-- "Les attentats du 11 Septembre"
-- "Les inondations de 1931 en Chine"
-- "Les explosions nucléaires de Hiroshima et Nagasaki"
+- "les attentats du 11 Septembre"
+- "les inondations de 1931 en Chine"
+- "les explosions nucléaires de Hiroshima et Nagasaki"
 
 lieu:
 - "les pyramides d’Égypte"
@@ -88,16 +98,16 @@ lieu:
 - "les sous-sols d'antarctique"
 
 personne:
-- "Le monstre du Loch Ness"
+- "le monstre du Loch Ness"
 - "Kim Jong Un"
-- "L'homme au masque de fer"
-- "Le cavalier sans tête"
+- "l'homme au masque de fer"
+- "le cavalier sans tête"
 - "Toutankhamon"
-- "Tonton Adolf"
+- "tonton Adolf"
 - "Adolf Hitler"
 - "Donald Trump"
 - "Kim Kardashian"
-- "Le fantôme de L'opéra"
+- "le fantôme de L'opéra"
 - "Houndini"
 
 
@@ -105,10 +115,11 @@ gens:
 - "illuminati"
 - "francs-maçons"
 - "amazones"
-- "Juifs"
-- "Nazis"
-- "Jésuites"
+- "juifs"
+- "nazis"
+- "jésuites"
 - "reptiliens"
 - "aliens"
-- "Communistes"
-- "Nord-Coréens"
+- "martiens"
+- "communistes"
+- "nord-coréens"
