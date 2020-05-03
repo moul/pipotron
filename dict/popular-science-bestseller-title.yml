@@ -1,0 +1,35 @@
+output:
+- |-
+  {{pick "one" | upper}}
+  WHAT
+  {{pick "two" | upper}}
+  CAN TEACH US ABOUT
+  {{pick "three" | upper}}
+
+one:
+  - bingo!
+  - spark!
+  - quirk!
+  - flump!
+  - doozy!
+  - whizz!
+  - flash!
+  - zilch!
+
+two:
+  - peppa pig
+  - the beatles
+  - golf
+  - mesli
+  - snapchat
+  - batman
+  - zumba
+  - cher
+
+three:
+  - astrophysics
+  - quantum mechanics
+  - molecular biology
+  - crystallography
+  - neuroscience
+  - polymer chemistry
