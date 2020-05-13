@@ -1,6 +1,41 @@
 output:
 - '{{pick "intro"}} {{pick "milieu"}}'
 - '{{pick "intro"}} {{pick "milieu"}} {{pick "fin"}}'
+- '{{pick "intro"}} {{pick "milieu"}}'
+- '{{pick "intro"}} {{pick "milieu"}} {{pick "fin"}}'
+- 'Tu est aussi bête qu’{{pick "bête"}}'
+- 'Tu est aussi inutile qu’{{pick "inutile"}}'
+- 'Tu est aussi moche qu’{{pick "moche"}}'
+- '{{pick "other"}}
+
+bête:
+- 'un tournevis cruciforme essayant de tourner une vis plate'
+- 'une voiture s’arrêtant au feu vert'
+- 'un moustique grillant contre une lampe'
+- 'un lecteur DVD qui essaye de lire un CD'
+- 'un serpent mordant une lime'
+- 'un téléphone tombant dans les toilettes'
+
+inutile:
+- 'une carte-son sans adaptateur'
+- 'une brique triangulaire'
+- 'une gourde trouée'
+- 'un sèche-cheveux asthmatique'
+- 'un calendrier qui a huit ans de retard'
+
+moche:
+- 'un babouin enrhumé'
+- 'un yaourt laissé trop de temps au fond du réfrigérateur'
+- 'un pied de Hobbit'
+- 'un cerveau atteint de lissencéphalie'
+- 'un caillot de sang dans un verre d'eau'
+- 'un doudou oublié dans la machine à laver'
+
+other:
+- 'Tu pues comme un bout de maroual laissé en plein soleil pendant tout un été'
+- 'Tu est aussi dégoutant qu’un sandwich chocolat-moules-anchoies'
+- 'Tu est aussi ennuyant qu’un cours sur la congolexicomatisation des lois du marché en Ukrainien'
+- 'Tu me fais honte comme une clef USB de 2 Méga octets seulement'
 
 intro:
 - '{{pick "intro_with_prefix"}}'
