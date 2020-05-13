@@ -3,12 +3,12 @@ output:
 - '{{pick "intro"}} {{pick "milieu"}} {{pick "fin"}}'
 - '{{pick "intro"}} {{pick "milieu"}}'
 - '{{pick "intro"}} {{pick "milieu"}} {{pick "fin"}}'
-- 'Tu est aussi bête qu’{{pick "bête"}}'
+- 'Tu est aussi bête qu’{{pick "bete"}}'
 - 'Tu est aussi inutile qu’{{pick "inutile"}}'
 - 'Tu est aussi moche qu’{{pick "moche"}}'
 - '{{pick "other"}}
 
-bête:
+bete:
 - 'un tournevis cruciforme essayant de tourner une vis plate'
 - 'une voiture s’arrêtant au feu vert'
 - 'un moustique grillant contre une lampe'
