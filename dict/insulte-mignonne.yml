@@ -6,7 +6,7 @@ output:
 - 'Tu est aussi bête qu’{{pick "bete"}}'
 - 'Tu est aussi inutile qu’{{pick "inutile"}}'
 - 'Tu est aussi moche qu’{{pick "moche"}}'
-- '{{pick "other"}}
+- '{{pick "other"}}'
 
 bete:
 - 'un tournevis cruciforme essayant de tourner une vis plate'
@@ -28,7 +28,7 @@ moche:
 - 'un yaourt laissé trop de temps au fond du réfrigérateur'
 - 'un pied de Hobbit'
 - 'un cerveau atteint de lissencéphalie'
-- 'un caillot de sang dans un verre d'eau'
+- 'un caillot de sang dans un verre d’eau'
 - 'un doudou oublié dans la machine à laver'
 
 other:
