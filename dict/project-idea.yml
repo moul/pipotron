@@ -43,6 +43,8 @@ adjective:
   - super
   - transparent
   - white
+  - black
+  - gray
 
 thing:
   - app
@@ -103,6 +105,7 @@ suffix:
   - people
   - list
   - log
+  - social
 
 technology:
   - APNS
@@ -136,6 +139,7 @@ technology:
   - MIDI
   - Mobile-App
   - Nat
+  - NoCode
   - P2P
   - Proof-of-Stake
   - Proof-of-Work
