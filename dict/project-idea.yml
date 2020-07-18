@@ -75,6 +75,10 @@ thing:
   - transport
   - unicorn
   - watch
+  - music
+  - musician
+  - artist
+  - art
 
 suffix:
   - 42
@@ -93,6 +97,12 @@ suffix:
   - tech
   - bio
   - eco
+  - hub
+  - league
+  - crew
+  - people
+  - list
+  - log
 
 technology:
   - APNS
