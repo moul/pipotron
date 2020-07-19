@@ -23,6 +23,7 @@ adjective:
   - awesome
   - black
   - best
+  - cool
   - new
   - coding
   - dark
@@ -30,7 +31,7 @@ adjective:
   - foreach
   - future
   - happy
-  - cool
+  - indie
   - hyper
   - light
   - net
@@ -67,6 +68,12 @@ thing:
   - mail
   - hold
   - mocking
+  - creator
+  - human
+  - doer
+  - worker
+  - person
+  - indie
   - partner
   - maker
   - pipeline
@@ -106,6 +113,46 @@ suffix:
   - list
   - log
   - social
+  - channel
+  - command
+  - cron
+  - feed
+  - boost
+  - dock
+  - manager
+  - suite
+  - box
+  - post
+  - publish
+  - build
+  - social
+  - tools
+  - unified
+  - layer
+  - stream
+  - companion
+  - bot
+  - assistant
+  - link
+  - panel
+  - console
+  - log
+  - master
+  - cockpit
+  - board
+  - space
+  - streak
+  - connect
+  - sync
+  - hub
+  - man
+  - bridge
+  - dash
+  - club
+  - city
+  - center
+  - win
+  - stream
 
 technology:
   - APNS
