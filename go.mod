@@ -9,7 +9,7 @@ require (
 	github.com/ajg/form v1.5.1
 	github.com/aws/aws-lambda-go v1.23.0
 	github.com/gobuffalo/packr/v2 v2.8.1
-	github.com/gohugoio/hugo v0.82.0
+	github.com/gohugoio/hugo v0.82.1
 	github.com/huandu/xstrings v1.2.1 // indirect
 	github.com/imdario/mergo v0.3.8 // indirect
 	github.com/mitchellh/copystructure v1.0.0 // indirect
