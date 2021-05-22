@@ -7,9 +7,9 @@ require (
 	github.com/Masterminds/semver v1.5.0 // indirect
 	github.com/Masterminds/sprig v2.22.0+incompatible
 	github.com/ajg/form v1.5.1
-	github.com/aws/aws-lambda-go v1.23.0
+	github.com/aws/aws-lambda-go v1.24.0
 	github.com/gobuffalo/packr/v2 v2.8.1
-	github.com/gohugoio/hugo v0.83.0
+	github.com/gohugoio/hugo v0.83.1
 	github.com/huandu/xstrings v1.2.1 // indirect
 	github.com/imdario/mergo v0.3.8 // indirect
 	github.com/mitchellh/copystructure v1.0.0 // indirect
